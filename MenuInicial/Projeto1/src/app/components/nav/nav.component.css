@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #5349c5;
+    z-index: 10;
+    transition: all 0.5s ease;
+    
+    
+  }
+  
+  .sidebar.closes {
+    width: 5rem;
+  }
+  
+  
+  .sidebar .logo-details {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .logo-details img {
+  
+    height:70px;
+    width:70px;
+    min-width: 60px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  
+  .sidebar .nav-links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+  }
+  
+  .sidebar.closes .nav-links {
+    overflow: visible;
+  }
+  
+  .sidebar .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .sidebar .nav-links li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar .nav-links li:hover {
+    background: #190d9e;
+  }
+  
+  
+  .sidebar .nav-links li i {
+    margin-top: 12px;
+    height: 50px;
+    min-width: 70px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+  }
+  h5{
+    font-size: 11px;
+    text-decoration: none;
+  }
+  .sidebar .nav-links li a .link_name {
+    font-size: 10px;
+    font-weight: 100;
+    color: #fff;
+    transition: all 0.4s ease;
+    
+  }
+  
+  .sidebar.closes .nav-links li a .link_name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .sidebar .nav-links li .sub-menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: #0e0289;
+    display: none;
+  }
+  
+  .sidebar .nav-links li.showMenu .sub-menu {
+    display: block;
+  }
+  
+  .sidebar .nav-links li .sub-menu a {
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar .nav-links li .sub-menu a:hover {
+    opacity: 1;
+  }
+  
+  .sidebar.closes .nav-links li .sub-menu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+  }
+  
+  .sidebar.closes .nav-links li:hover .sub-menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+  }
+  
+  
+  .sidebar.closes .nav-links li .sub-menu .link_name {
+    font-size: 17px;
+    opacity: 1;
+    display: block;
+  }
+  
+  

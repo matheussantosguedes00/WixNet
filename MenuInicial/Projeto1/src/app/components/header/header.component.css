@@ -1,0 +1,31 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color:#5349c5;;
+    margin-left: 70px;
+    position: fixed;
+    height: 65px;
+    
+}
+
+.header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo{
+max-height: 40px;
+}
+
+.header .title-group{
+padding-left: 25px;
+}
+
+.header .title-group i{
+    padding-right: 7px;
+    }
+
+.header .title-group a{
+    color: aliceblue;
+}
