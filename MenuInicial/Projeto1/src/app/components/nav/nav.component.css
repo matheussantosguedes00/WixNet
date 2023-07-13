@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+   
     
   }
   
@@ -11,12 +12,13 @@
     top: 0;
     left: 0;
     height: 100%;
-    background: #5349c5;
+    background: #fefefe;
     z-index: 1;
     transition: all 0.5s ease;
   
     
   }
+  
   
   .sidebar.closes {
     width: 4.5rem;
@@ -62,7 +64,10 @@
   }
   
   .sidebar .nav-links li:hover {
-    background: #190d9e;
+    background: #ecf3f5;
+    color: #0e0289;
+    
+    
   }
   
   
@@ -72,10 +77,13 @@
     min-width: 70px;
     text-align: center;
     line-height: 20px;
-    color: #fff;
-    font-size: 15px;
+    color: #a4a0a0;
+    font-size: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+  }
+  .sidebar .nav-links li i :hover{
+    color: #0e0289;
   }
   
   
@@ -105,7 +113,7 @@
   .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background: #0e0289;
+    background:#0e0289;
     display: none;
   }
   
