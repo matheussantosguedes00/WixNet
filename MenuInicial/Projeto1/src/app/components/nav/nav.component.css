@@ -12,10 +12,9 @@
     left: 0;
     height: 100%;
     background: #5349c5;
-    z-index: 10;
+    z-index: 1;
     transition: all 0.5s ease;
-   
-
+  
     
   }
   
@@ -153,5 +152,4 @@
     opacity: 1;
     display: block;
   }
-  
   

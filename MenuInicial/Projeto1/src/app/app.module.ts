@@ -8,11 +8,14 @@ import { HeaderComponent } from './components/header/header.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HeaderComponent
+    HeaderComponent,
+   
   ],
   imports: [
     BrowserModule,
