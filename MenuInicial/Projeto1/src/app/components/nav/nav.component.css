@@ -138,6 +138,7 @@
   
   .sidebar .nav-links li .sub-menu a:hover {
     opacity: 1;
+    color: #2e28f1;
   }
   
   .sidebar.closes .nav-links li .sub-menu {
