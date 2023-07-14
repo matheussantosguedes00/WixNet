@@ -2,18 +2,33 @@
 html, body { height: 100%; }
 body { margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background-color: #ecf3f5;
+    background-color: var(--body);
     
 }
 
-.color-red{
+:root {
+  --icon-menu: blue;
+    --body: #ecf3f5;
+    --menu-lateral: #fffffff5;
+    --menu-superior: #ecf3f5;
+    transition: 2s;
+}
 
-    color: rgb(227, 94, 107);
-}
-.color-white{
-    color: white;
-}
-
-.v-middle{
-    vertical-align:middle ;
-}
+.modo-claro {
+    --icon-menu: blue;
+    --body: #ecf3f5;
+    --menu-lateral: #fffffff5;
+    --menu-superior: #ecf3f5;
+    transition: 5s;
+    --tema-icon:#000000;
+  }
+  
+  .modo-escuro {
+    --icon-menu: #fff;
+    --body: #1c0e0e;
+    --menu-lateral: #000000;
+    --menu-superior: #1c0e0e;
+    transition: 5s;
+    --tema-icon:#fffffff5;
+  }
+  

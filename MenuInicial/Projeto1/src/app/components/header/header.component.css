@@ -1,31 +1,64 @@
-.header{
+.header {
     display: flex;
     align-items: center;
-    background-color:#ecf3f5;
+    background-color: var( --menu-superior);
     margin-left: 70px;
+    margin-right: 100px;
     position: fixed;
-    height: 65px;
-    
+    height: 70px;
 }
 
-.header a{
+.search-container {
     display: flex;
     align-items: center;
-    text-decoration: none;
+    width: 170px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #ecf3f5;
 }
 
-.header .logo{
-max-height: 40px;
+.search-container input[type="text"] {
+    flex: 1;
+    font-size: 11px;
+    border: none;
+    outline: none;
+    background-color: #ecf3f5;
 }
 
-.header .title-group{
-padding-left: 25px;
+.search-container button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.header .title-group i{
-    padding-right: 7px;
-    }
-
-.header .title-group a{
-    color: aliceblue;
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin: 0 85px 0 auto;
 }
+
+.icon-container button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.icon-container button i {
+    font-size: 17px;
+    color: var(--icon-menu);
+}
+
+.icon-container button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.icon-perfil i{
+    margin: 7px;
+}
+

@@ -1,18 +1,41 @@
-<mat-toolbar class="header mat-elevation-z4">
-    <span>
-        <a>
-            <img class="logo" src="assets/img/imglogo.png" alt="logo" srcset="">
-        </a>
-    </span>
- <!--
-    <span class="title-group">
-        <a>
-            <i class="material-icons">
-                home
-            </i>
-            Aplicação Crud
-        </a>
+<mat-toolbar class="header ">
+    <div class="search-container">
+        <button>
+            <i class="bx bx-search"></i>
+        </button>
+        <input type="text" placeholder="Pesquisar . . .">
+    </div>
+   
+    <div class="icon-container">
+        <mat-menu #notificationMenu="matMenu">
+            <button mat-menu-item *ngFor="let notification of notifications">
+                <i class="bx bx-bell"></i>
+                <span>{{ notification.texto }}</span>
+            </button>
+        </mat-menu>
         
-    </span>
- -->   
+        <button mat-icon-button [matMenuTriggerFor]="notificationMenu">
+            <i class="bx bx-bell"></i>
+        </button>
+        
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <img src="assets/img/icon.png" alt="Imagem de Perfil">
+        </button>
+        
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item class="icon-perfil">
+                <i class="bx bx-user"></i>
+                <span>Perfil</span>
+            </button>
+            <button mat-menu-item class="icon-perfil">
+                <i class="bx bx-cog"></i>
+                <span>Configurações</span>
+            </button>
+            <button mat-menu-item class="icon-perfil">
+                <i class="bx bx-log-out"></i>
+                <span>Sair</span>
+            </button>
+        </mat-menu>
+        
+    </div>
 </mat-toolbar>

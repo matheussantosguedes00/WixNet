@@ -1,133 +1,88 @@
-
 <div class="container">
-    <div class="sidebar closes">
-  <div class="logo-details">
-          <img  src="../assets/img/icon2.png"  alt="">
-      </div >
-
-      <ul class="nav-links">
-        <li class="closed">
-          <a href="#">
-            <i class='bx bx-grid-alt'>
-               <h5>Dashboard</h5> 
-            </i>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Dashboard</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <div class="iocn-link">
-            <a href="#">
-              <i class='bx bx-collection'>
-                <h5>Category</h5> 
-              </i>
-            </a>
-          </div>
-          <ul class="sub-menu">
-            <li><a class="link_name" href="#">Category</a></li>
-            <li><a href="#">HTML & CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">PHP & MySQL</a></li>
-          </ul>
-
-        </li>
-
-        <li>
-          <div class="iocn-link">
-            <a href="#">
-              <i class='bx bx-book-alt'>
-                <h5>Posts</h5>
-              </i>
-             
-            </a>
-          </div>
-          <ul class="sub-menu">
-            <li><a class="link_name" href="#">Posts</a></li>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Login Form</a></li>
-            <li><a href="#">Card Design</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class='bx bx-pie-chart-alt-2'>
-              <h5>Analytics</h5>
-            </i>
-          
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Analytics</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class='bx bx-line-chart'>
-              <h5>Chart</h5>
-            </i>
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Chart</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <div class="iocn-link">
-            <a href="#">
-              <i class='bx bx-plug'>
-                <h5>Plugins</h5>
-              </i>
-              
-            </a>
-          </div>
-          <ul class="sub-menu">
-            <li><a class="link_name" href="#">Plugins</a></li>
-            <li><a href="#">UI Face</a></li>
-            <li><a href="#">Pigments</a></li>
-            <li><a href="#">Box Icons</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class='bx bx-compass'>
-              <h5>Explore</h5>
-            </i>
-            
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Explore</a></li>
-          </ul>
-        </li>
-    
-        <li>
-          <a href="#">
-            <i class='bx bx-history'>
-              <h5>History</h5>
-            </i>
-            
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">History</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class='bx bx-cog'>
-              <h5>Setting</h5>
-            </i>
-           
-          </a>
-          <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Setting</a></li>
-          </ul>
-        </li>
-      </ul>
+  <div class="sidebar closes">
+    <div class="logo-details">
+      <img src="../assets/img/icon.png" alt="">
     </div>
-   
-<main></main>
-   
+    <ul class="nav-links">
+
+      
+      <li (click)="activateIcon(1)" [ngClass]="{ 'active': activeIcon === 1 }">
+        <a>
+          <span>
+            <i class="bx bx-grid-alt " [ngClass]="{ 'active': activeIcon === 1 }">
+              <h5 [ngClass]="{ 'active': activeIcon === 1 }">Dashboard</h5>
+            </i>
+          </span>
+         
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(2)" [ngClass]="{ 'active': activeIcon === 2 }">
+        <a>
+          <i class="bx bx-collection" [ngClass]="{ 'active': activeIcon === 2 }">
+            <h5 [ngClass]="{ 'active': activeIcon === 2 }">Category</h5>
+          </i>
+          
+        </a>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">PHP & MySQL</a></li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(3)" [ngClass]="{ 'active': activeIcon === 3 }">
+        <a>
+          <i class="bx bx-pie-chart-alt-2" [ngClass]="{ 'active': activeIcon === 3 }">
+            <h5 [ngClass]="{ 'active': activeIcon === 3 }">Analytics</h5>
+          </i>
+          
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Analytics</a></li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(4)" [ngClass]="{ 'active': activeIcon === 4 }">
+        <a>
+          <i class="bx bx-line-chart" [ngClass]="{ 'active': activeIcon === 4 }">
+            <h5 [ngClass]="{ 'active': activeIcon === 4 }">Chart</h5>
+          </i>
+         
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Chart</a></li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(5)" [ngClass]="{ 'active': activeIcon === 5 }">
+        <a>
+          <i class="bx bx-plug" [ngClass]="{ 'active': activeIcon === 5 }">
+            <h5 [ngClass]="{ 'active': activeIcon === 5 }">Plugins</h5>
+          </i>
+          
+        </a>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Plugins</a></li>
+          <li><a href="#">UI Face</a></li>
+          <li><a href="#">Pigments</a></li>
+          <li><a href="#">Box Icons</a></li>
+        </ul>
+      </li>
+
+      <button class="icon-modoesculo" (click)="alternarModoTema()">
+        <span *ngIf="!isModoEscuroAtivado">
+          <i class="bx bx-sun"></i> <!-- Ícone do sol para o modo claro -->
+        </span>
+        <span *ngIf="isModoEscuroAtivado">
+          <i class="bx bx-moon"></i> <!-- Ícone da lua para o modo escuro -->
+        </span>
+      </button>
+    </ul>
+    
+  </div>
+</div>

@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background: #fefefe;
+    background: var(--menu-lateral);
     z-index: 1;
     transition: all 0.5s ease;
   
@@ -33,12 +33,13 @@
   }
   
   .sidebar .logo-details img {
-  
-    height:70px;
-    width:70px;
-    min-width: 60px;
+    display: flex;
     align-items: center;
-    margin-top: 30px;
+    height:60px;
+    width:60px;
+    min-width: 60px;
+    margin: auto;
+    border-radius: 4px;
     
   }
   
@@ -64,12 +65,23 @@
   }
   
   .sidebar .nav-links li:hover {
-    background: #ecf3f5;
-    color: #0e0289;
-    
+    background: #e7e8ed;
+    color: #9897a2;
+    border-radius: 3px;
+  }
+  .icon-modoesculo{
+    border: none;
+    background-color:transparent;
+    color: var(--tema-icon);
+    margin-top: 12px;
+    height: 50px;
+    min-width: 70px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 25px;
+    transition: all 0.3s ease;
     
   }
-  
   
   .sidebar .nav-links li i {
     margin-top: 12px;
@@ -77,14 +89,12 @@
     min-width: 70px;
     text-align: center;
     line-height: 20px;
-    color: #a4a0a0;
+    color: #828181;
     font-size: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  .sidebar .nav-links li i :hover{
-    color: #0e0289;
-  }
+
   
   
   .sidebar .nav-links li a {
@@ -92,18 +102,13 @@
     align-items: center;
     text-decoration: none;
     color: #fff;
-  }
+    }
+  
   h5{
     font-size: 11px;
     text-decoration: none;
   }
-  .sidebar .nav-links li a .link_name {
-    font-size: 10px;
-    font-weight: 100;
-    color: #fff;
-    transition: all 0.4s ease;
-    
-  }
+  
   
   .sidebar.closes .nav-links li a .link_name {
     opacity: 0;
@@ -113,7 +118,7 @@
   .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background:#0e0289;
+    background:#cbcbcbcf;
     display: none;
   }
   
@@ -122,7 +127,7 @@
   }
   
   .sidebar .nav-links li .sub-menu a {
-    color: #fff;
+    color: rgb(40, 40, 41);
     font-size: 12px;
     padding: 5px 0;
     white-space: nowrap;
@@ -161,3 +166,7 @@
     display: block;
   }
   
+  .sidebar .nav-links li.active i,
+  .sidebar .nav-links li.active h5 {
+    color:var(--icon-menu);
+  }
