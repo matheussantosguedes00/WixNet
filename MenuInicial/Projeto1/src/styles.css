@@ -25,9 +25,9 @@ body { margin: 0;
   
   .modo-escuro {
     --icon-menu: #fff;
-    --body: #585858;
+    --body: #160251;
     --menu-lateral: #000000;
-    --menu-superior: #585858;;
+    --menu-superior: #160251;
     transition: 5s;
     --tema-icon:#fffffff5;
   }
