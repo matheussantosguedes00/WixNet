@@ -10,10 +10,12 @@ export class NavComponent implements OnInit {
   menuAberto = true;
 
   activeIcon: number = 0;
+  
 
   activateIcon(iconIndex: number) {
     this.activeIcon = iconIndex;
   }
+
 
   icon:string=''
   

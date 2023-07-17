@@ -1,3 +1,8 @@
+
+
+
+
+
 .header {
     display: flex;
     align-items: center;
@@ -13,7 +18,7 @@
     align-items: center;
     width: 170px;
     padding: 5px;
-    margin-left: 30px;
+    margin-left: 5px;
     border: 1px solid #ccc;
     border-radius: 20px;
     background-color: #ecf3f5;
@@ -35,6 +40,7 @@
 }
 
 .icon-container {
+    
     display: flex;
     align-items: center;
     margin: 0 85px 0 auto;
@@ -45,7 +51,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    margin-left: 15px;
+    
 }
 
 .icon-container button i {
@@ -60,6 +66,6 @@
 }
 
 .icon-perfil i{
-    margin: 7px;
+    margin: 10px;
 }
 
