@@ -1,0 +1,18 @@
+
+
+table{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  
+}
+
+.edit>i{
+color: #2644d9;
+}
+i{
+    margin: 5px;
+}
+
+i.delete{
+color: #e35e6b;
+}

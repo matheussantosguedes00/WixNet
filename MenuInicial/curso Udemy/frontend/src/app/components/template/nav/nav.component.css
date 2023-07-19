@@ -1,0 +1,27 @@
+
+.sidenav {
+    margin-top: 5px;
+    background-color: #3F51B5;
+    width: 200px;
+    
+}
+
+.list-item-text-icon{
+    display: block;
+    align-items: center;
+    color: aliceblue;
+}
+
+.list-item-text {
+    color:aliceblue; /* Defina a cor desejada aqui */
+}
+.sidenav i {
+    padding-right: 14px;
+    
+}
+
+.content{
+    padding: 10px;
+background-color:#eaeaea ;
+
+}

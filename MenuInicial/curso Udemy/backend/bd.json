@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "Bola",
+      "price": 10
+    },
+    {
+      "name": "Produto de Teste",
+      "price": 125.24,
+      "id": 4
+    },
+    {
+      "name": "Produto de Teste2",
+      "price": "125.243",
+      "id": 5
+    },
+    {
+      "name": "Matheus Santos Guedes",
+      "price": 0,
+      "id": 13
+    },
+    {
+      "name": "Aaa",
+      "price": "23",
+      "id": 14
+    },
+    {
+      "name": "zoi",
+      "price": "54",
+      "id": 15
+    },
+    {
+      "name": "sai",
+      "price": "022",
+      "id": 16
+    },
+    {
+      "name": "notebook",
+      "price": "50000",
+      "id": 17
+    },
+    {
+      "name": "aaaaaa",
+      "price": "2",
+      "id": 18
+    },
+    {
+      "name": "Matheus Santos Guedes",
+      "price": "022",
+      "id": 19
+    },
+    {
+      "name": "notebook",
+      "price": "66",
+      "id": 20
+    },
+    {
+      "name": "",
+      "price": 0,
+      "id": 21
+    },
+    {
+      "name": "",
+      "price": 0,
+      "id": 22
+    },
+    {
+      "name": "",
+      "price": 0,
+      "id": 23
+    }
+  ]
+}
