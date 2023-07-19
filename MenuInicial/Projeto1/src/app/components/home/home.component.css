@@ -1,0 +1,44 @@
+.container {
+    position: relative;
+    height: 100vh;
+    border: none;
+  }
+  
+  .mat-sidenav {
+    width: 72px;
+    
+  }
+  
+  .mat-toolbar {
+    height: 64px;
+  }
+  
+  .mat-main {
+    padding: 0px;
+    margin-bottom: 64px; /* Altura do footer */
+    background-color: var(--body);
+  }
+  
+  .footer {
+    position: absolute;
+    bottom:10;
+    right: 50px;
+    left: -70px;
+    max-width: calc(100% - 1px ) ;
+    height: 64px;
+    margin-left: 72px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .footer{
+      position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    }
+  }

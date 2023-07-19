@@ -7,14 +7,14 @@
     </div>
    
     <div class="icon-container">
-        <mat-menu #notificationMenu="matMenu">
+        <mat-menu class="notificatioNone" #notificationMenu="matMenu">
             <button mat-menu-item *ngFor="let notification of notifications">
-                <i class="bx bx-bell"></i>
+                
                 <span>{{ notification.texto }}</span>
             </button>
         </mat-menu>
         
-        <button mat-icon-button [matMenuTriggerFor]="notificationMenu">
+        <button class="notificatioNone" mat-icon-button [matMenuTriggerFor]="notificationMenu">
             <i class="bx bx-bell"></i>
         </button>
         

@@ -1,0 +1,44 @@
+.grid-container {
+  margin: 0;
+  background-color: var(--menu-superior);
+  border: none;
+ 
+}
+h1{
+  padding: 25px;
+}
+.mat-h1 {
+  margin-left: 10px;
+  color: var(--icon-menu);
+  font-size: 35px;
+}
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+@media (max-width: 540px){
+  .dashboard-card {
+    max-width: 200px; /* Defina o tamanho máximo desejado */
+  }
+  
+  .mat-grid-list-sticky {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}

@@ -1,21 +1,21 @@
 
 html, body { height: 100%; }
 body { margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-family: Roboto, "Helvetica Neue"; 
     background-color: var(--body);
     
 }
 
 :root {
   --icon-menu: blue;
-    --body: #383838;
+    --body: #bcf0fe;
     --menu-lateral: #fffffff5;
     --menu-superior: #bcf0fe;
     transition: 2s;
 }
 
 .modo-claro {
-    --icon-menu: blue;
+    --icon-menu: #5a5a5a;
     --body: #ecf3f5;
     --menu-lateral: #fffffff5;
     --menu-superior: #ecf3f5;
@@ -25,10 +25,10 @@ body { margin: 0;
   
   .modo-escuro {
     --icon-menu: #fff;
-    --body: #160251;
-    --menu-lateral: #000000;
-    --menu-superior: #160251;
+    --body: #0915a0;
+    --menu-lateral: #191919;
+    --menu-superior: #0915a0;
     transition: 5s;
-    --tema-icon:#fffffff5;
+    --tema-icon:#eeecec;
   }
   
