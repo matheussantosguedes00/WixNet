@@ -42,12 +42,12 @@
 .sidebar .nav-links li:hover {
   background: #fafafa;
   color: #464646;
-  border-radius: 25%;
+  border-radius: 25% 0 25% 0;
 }
 
 .sidebar .nav-links li i {
   margin-top: 15px;
-  height: 40px;
+  height: 45px;
   min-width: 70px;
   text-align: center;
   line-height: 11px;
@@ -104,7 +104,7 @@ h5 {
   position: absolute;
   left: 100%;
   top: -10px;
-  margin-top: 5px;
+  margin-top: 1px;
   padding: 10px 20px;
   border-radius: 0 6px 6px 0;
   opacity: 0;
