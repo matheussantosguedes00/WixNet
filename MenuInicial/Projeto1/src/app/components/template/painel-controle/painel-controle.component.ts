@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-painel-controle',
   templateUrl: './painel-controle.component.html',
-  styleUrls: ['./painel-controle.component.css']
+  styleUrls: ['./painel-controle.component.css'],
 })
 export class PainelControleComponent {
   private breakpointObserver = inject(BreakpointObserver);
@@ -22,7 +22,6 @@ export class PainelControleComponent {
           { title: 'Card 2.1', cols: 3, rows: 1 },
           { title: 'Card 2.2', cols: 1, rows: 1 },
           { title: 'Card 3.1', cols: 4, rows: 3 },
-          
         ];
       }
 

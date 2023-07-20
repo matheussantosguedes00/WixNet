@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
@@ -25,8 +25,6 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,8 +34,6 @@ import { MatInputModule } from '@angular/material/input';
     HeaderComponent,
     Home2Component,
     LoginComponent,
-   
-  
   ],
   imports: [
     BrowserModule,
@@ -52,11 +48,10 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    MatFormFieldModule ,
-    MatInputModule
-
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

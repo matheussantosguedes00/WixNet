@@ -3,18 +3,19 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title='Projeto1'
+  title = 'Projeto1';
   isModoEscuroAtivado = false;
 
   ngOnInit() {
     // Verificar o estado do modo escuro no LocalStorage
     const modoEscuroSalvo = localStorage.getItem('modoEscuro');
-    this.isModoEscuroAtivado = modoEscuroSalvo ? JSON.parse(modoEscuroSalvo) : false;
+    this.isModoEscuroAtivado = modoEscuroSalvo
+      ? JSON.parse(modoEscuroSalvo)
+      : false;
     //this.aplicarModoTema();
-    
   }
 
   alternarModoTema() {
@@ -28,7 +29,10 @@ export class AppComponent implements OnInit {
       document.documentElement.classList.add('modo-claro');
       document.documentElement.classList.remove('modo-escuro');
     }
-    localStorage.setItem('modoEscuro', JSON.stringify(this.isModoEscuroAtivado));
+    localStorage.setItem(
+      'modoEscuro',
+      JSON.stringify(this.isModoEscuroAtivado)
+    );
   }
 
   aplicarModoTema() {
@@ -41,5 +45,4 @@ export class AppComponent implements OnInit {
       document.documentElement.classList.remove('modo-escuro');
     }
   }
-  
 }

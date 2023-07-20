@@ -2,9 +2,8 @@
   margin: 0;
   background-color: var(--menu-superior);
   border: none;
- 
 }
-h1{
+h1 {
   padding: 25px;
 }
 .mat-h1 {
@@ -31,11 +30,11 @@ h1{
   text-align: center;
 }
 
-@media (max-width: 540px){
+@media (max-width: 540px) {
   .dashboard-card {
     max-width: 200px; /* Defina o tamanho máximo desejado */
   }
-  
+
   .mat-grid-list-sticky {
     display: flex;
     flex-wrap: nowrap;

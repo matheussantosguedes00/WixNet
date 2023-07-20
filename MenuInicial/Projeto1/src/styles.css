@@ -1,34 +1,35 @@
-
-html, body { height: 100%; }
-body { margin: 0; 
-    font-family: Roboto, "Helvetica Neue"; 
-    background-color: var(--body);
-    
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: var(--body);
 }
 
 :root {
   --icon-menu: blue;
-    --body: #bcf0fe;
-    --menu-lateral: #fffffff5;
-    --menu-superior: #bcf0fe;
-    transition: 2s;
+  --body: #bcf0fe;
+  --menu-lateral: #fffffff5;
+  --menu-superior: #bcf0fe;
+  transition: 2s;
 }
 
 .modo-claro {
-    --icon-menu: #5a5a5a;
-    --body: #ecf3f5;
-    --menu-lateral: #fffffff5;
-    --menu-superior: #ecf3f5;
-    transition: 5s;
-    --tema-icon:#000000;
-  }
-  
-  .modo-escuro {
-    --icon-menu: #fff;
-    --body: #0915a0;
-    --menu-lateral: #191919;
-    --menu-superior: #0915a0;
-    transition: 5s;
-    --tema-icon:#eeecec;
-  }
-  
+  --icon-menu: #5a5a5a;
+  --body: #ecf3f5;
+  --menu-lateral: #fffffff5;
+  --menu-superior: #ecf3f5;
+  transition: 5s;
+  --tema-icon: #000000;
+}
+
+.modo-escuro {
+  --icon-menu: #fff;
+  --body: #0915a0;
+  --menu-lateral: #191919;
+  --menu-superior: #0915a0;
+  transition: 5s;
+  --tema-icon: #eeecec;
+}

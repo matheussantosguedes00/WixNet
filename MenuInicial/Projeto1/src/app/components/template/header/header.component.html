@@ -1,41 +1,45 @@
-<mat-toolbar class="header ">
-    <div class="search-container">
-        <button>
-            <i class="bx bx-search"></i>
+<mat-toolbar class="header">
+  <div class="search-container">
+    <button>
+      <i class="bx bx-search"></i>
+    </button>
+    <input type="text" placeholder="Procurar..." />
+  </div>
+  <div class="icon-container">
+    <div class="icon-notifica">
+      <mat-menu #notificationMenu="matMenu">
+        <button mat-menu-item *ngFor="let notification of notifications">
+          <span>{{ notification.texto }}</span>
         </button>
-        <input type="text" placeholder="Pesquisar . . .">
+      </mat-menu>
+      <i
+        class="notificatioNone"
+        mat-icon-button
+        [matMenuTriggerFor]="notificationMenu"
+        class='bx bx-notification'
+      ></i>
+
+ <i class='bx bxs-cog'></i>
     </div>
-   
-    <div class="icon-container">
-        <mat-menu class="notificatioNone" #notificationMenu="matMenu">
-            <button mat-menu-item *ngFor="let notification of notifications">
-                
-                <span>{{ notification.texto }}</span>
-            </button>
-        </mat-menu>
-        
-        <button class="notificatioNone" mat-icon-button [matMenuTriggerFor]="notificationMenu">
-            <i class="bx bx-bell"></i>
-        </button>
-        
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-            <img src="assets/img/icon.png" alt="Imagem de Perfil">
-        </button>
-        
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item class="icon-perfil">
-                <i class="bx bx-user"></i>
-                <span>Perfil</span>
-            </button>
-            <button mat-menu-item class="icon-perfil">
-                <i class="bx bx-cog"></i>
-                <span>Configurações</span>
-            </button>
-            <button mat-menu-item class="icon-perfil">
-                <i class="bx bx-log-out"></i>
-                <span>Sair</span>
-            </button>
-        </mat-menu>
-        
-    </div>
+    <img
+      src="assets/img/icon.png"
+      alt="Imagem de Perfil"
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+    />
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item class="icon-perfil">
+        <i class="bx bx-user"></i>
+        <span>Perfil</span>
+      </button>
+      <button mat-menu-item class="icon-perfil">
+        <i class="bx bx-cog"></i>
+        <span>Configurações</span>
+      </button>
+      <button mat-menu-item class="icon-perfil">
+        <i class="bx bx-log-out"></i>
+        <span>Sair</span>
+      </button>
+    </mat-menu>
+  </div>
 </mat-toolbar>
