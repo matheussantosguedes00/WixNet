@@ -10,13 +10,15 @@
         (click)="activateIcon(1)"
         [ngClass]="{ active: activeIcon === 1 }"
       >
-        <a routerLink="app-home2">
+        <a routerLink="app-painel-controle">
           <i class="bx bx-grid-alt" [ngClass]="{ active: activeIcon === 1 }">
             <h5>Dashboard</h5>
           </i>
         </a>
         <ul class="sub-menu blank">
-          <li><a routerLink="app-home2" class="link_name" href="#">Dashboard</a></li>
+          <li>
+            <a routerLink="app-home2" class="link_name" routerLink="app-painel-controle">Dashboard</a>
+          </li>
         </ul>
       </li>
 
@@ -25,33 +27,31 @@
         (click)="activateIcon(2)"
         [ngClass]="{ active: activeIcon === 2 }"
       >
-        <a routerLink="app-painel-controle">
+        <a>
           <span>
-            <i class='bx bx-select-multiple' [ngClass]="{ active: activeIcon === 2 }">
+            <i
+              class="bx bx-select-multiple"
+              [ngClass]="{ active: activeIcon === 2 }"
+            >
               <h5 [ngClass]="{ active: activeIcon === 2 }">Tickets</h5>
             </i>
           </span>
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a routerLink="#" class="link_name" href="#"
-              >Tickets</a
-            >
+            <a routerLink="#" class="link_name" href="#">Tickets</a>
           </li>
         </ul>
       </li>
 
       <li (click)="activateIcon(3)" [ngClass]="{ active: activeIcon === 3 }">
-        <a>
-          <i class='bx bx-task' [ngClass]="{ active: activeIcon === 3 }">
+        <a routerLink="app-tasks">
+          <i class="bx bx-task" [ngClass]="{ active: activeIcon === 3 }">
             <h5 [ngClass]="{ active: activeIcon === 3 }">Tasks</h5>
           </i>
         </a>
         <ul class="sub-menu">
-          <li><a class="link_name" href="#">Tasks</a></li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">PHP & MySQL</a></li>
+          <li><a class="link_name" routerLink="app-tasks">Tasks</a></li>
         </ul>
       </li>
 
@@ -71,8 +71,8 @@
 
       <li (click)="activateIcon(5)" [ngClass]="{ active: activeIcon === 5 }">
         <a>
-          <i class='bx bx-detail' [ngClass]="{ active: activeIcon === 5 }">
-            <h5 [ngClass]="{ active: activeIcon === 5 }" >Ordens de Serviço</h5>
+          <i class="bx bx-detail" [ngClass]="{ active: activeIcon === 5 }">
+            <h5 [ngClass]="{ active: activeIcon === 5 }">Ordens de Serviço</h5>
           </i>
         </a>
         <ul class="sub-menu">
@@ -81,7 +81,8 @@
               class="link_name"
               href="#"
               [ngClass]="{ active: activeIcon === 5 }"
-              >Ordens de Serviço</a>
+              >Ordens de Serviço</a
+            >
           </li>
           <li><a routerLink="app-home2">UI Face</a></li>
           <li><a href="#">Pigments</a></li>
@@ -90,7 +91,10 @@
       </li>
       <li (click)="activateIcon(6)" [ngClass]="{ active: activeIcon === 6 }">
         <a>
-          <i class='bx bxs-user-account' [ngClass]="{ active: activeIcon === 6 }">
+          <i
+            class="bx bxs-user-account"
+            [ngClass]="{ active: activeIcon === 6 }"
+          >
             <h5 [ngClass]="{ active: activeIcon === 6 }">Clientes</h5>
           </i>
         </a>
@@ -100,7 +104,7 @@
       </li>
       <li (click)="activateIcon(7)" [ngClass]="{ active: activeIcon === 7 }">
         <a>
-          <i class='bx bx-stats' [ngClass]="{ active: activeIcon === 7 }">
+          <i class="bx bx-stats" [ngClass]="{ active: activeIcon === 7 }">
             <h5 [ngClass]="{ active: activeIcon === 7 }">Rotas</h5>
           </i>
         </a>
@@ -110,9 +114,7 @@
       </li>
       <li (click)="activateIcon(8)" [ngClass]="{ active: activeIcon === 8 }">
         <a>
-          <i class="bx bx-briefcase"
-            [ngClass]="{ active: activeIcon === 8 }"
-          >
+          <i class="bx bx-briefcase" [ngClass]="{ active: activeIcon === 8 }">
             <h5 [ngClass]="{ active: activeIcon === 8 }">Tools</h5>
           </i>
         </a>
@@ -123,16 +125,10 @@
       <div class="logo-details2">
         <img src="../assets/img/iconCaixa.png" alt="" />
       </div>
-
       <button class="icon-modoesculo" (click)="alternarModoTema()">
-        <span *ngIf="!isModoEscuroAtivado">
-          <i class="bx bx-sun"></i>
-          <i class='bx bxs-sun'></i>
-          <!-- Ícone do sol para o modo claro -->
-        </span>
-        <span *ngIf="isModoEscuroAtivado">
-          <i class="bx bx-moon"></i>
-          <!-- Ícone da lua para o modo escuro -->
+        <span>
+          <i *ngIf="isModoEscuroAtivado" class="bx bxs-sun"></i>
+          <i *ngIf="!isModoEscuroAtivado" class="bx bx-sun"></i>
         </span>
       </button>
     </ul>

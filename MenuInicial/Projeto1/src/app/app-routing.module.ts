@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PainelControleComponent } from './components/template/painel-controle/painel-controle.component';
-import { Home2Component } from './components/template/home2/home2.component';
+import { PainelControleComponent } from './components/pages/painel-controle/painel-controle.component';
+import { TasksComponent } from './components/pages/tasks/tasks.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/app-home2', pathMatch: 'full' }, // Rota padrão redireciona para a página de Home2
-  { path: 'app-home2', component: Home2Component },
+  { path: '', redirectTo: '/app-painel-controle', pathMatch: 'full' }, // Rota padrão redireciona para a página de Painel
   { path: 'app-painel-controle', component: PainelControleComponent },
+  { path:'app-tasks',component:TasksComponent}
+  
+  
 ];
 
 @NgModule({

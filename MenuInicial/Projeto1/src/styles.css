@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+
 }
 body {
   margin: 0;
@@ -8,12 +9,15 @@ body {
   background-color: var(--body);
 }
 
+
 :root {
-  --icon-menu: blue;
-  --body: #bcf0fe;
+  --icon-menu: rgb(71, 20, 222);
+  --body: #ebebeb;
   --menu-lateral: #fffffff5;
-  --menu-superior: #bcf0fe;
+  --menu-superior:#ebebeb;
   transition: 2s;
+  --tema-icon: #000000;
+  --icon-menu-color:#000000;
 }
 
 .modo-claro {
@@ -23,13 +27,15 @@ body {
   --menu-superior: #ecf3f5;
   transition: 5s;
   --tema-icon: #000000;
+  --icon-menu-color:#000000;
 }
 
 .modo-escuro {
-  --icon-menu: #fff;
+  --icon-menu: #a8a7a7;
   --body: #0915a0;
   --menu-lateral: #191919;
   --menu-superior: #0915a0;
   transition: 5s;
   --tema-icon: #eeecec;
+  --icon-menu-color:#ffffff;
 }

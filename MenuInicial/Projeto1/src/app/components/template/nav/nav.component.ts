@@ -43,7 +43,7 @@ export class NavComponent implements OnInit {
 
   alternarModoTema() {
     this.isModoEscuroAtivado = !this.isModoEscuroAtivado;
-
+  
     if (this.isModoEscuroAtivado) {
       document.documentElement.classList.add('modo-escuro');
       document.documentElement.classList.remove('modo-claro');
@@ -51,7 +51,7 @@ export class NavComponent implements OnInit {
       document.documentElement.classList.add('modo-claro');
       document.documentElement.classList.remove('modo-escuro');
     }
-
+  
     // Salvar o estado do modo escuro no LocalStorage
     localStorage.setItem(
       'modoEscuro',

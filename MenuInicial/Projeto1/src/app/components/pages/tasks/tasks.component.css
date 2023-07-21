@@ -1,0 +1,138 @@
+.mat-h1 {
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    color: var(--icon-menu);
+    font-size: 35px;
+    background-color:var(--body) ;
+    padding: 20px;
+    margin-bottom: auto;
+  }
+
+
+/* Estilos para o grupo de botões de alternância */
+.botao-toggle-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--body); /* Defina a cor de fundo do grupo de botões */
+  
+  }
+  
+  /* Estilos para cada botão de alternância */
+  .mat-button-toggle {
+    background-color: white; /* Define a cor de fundo do botão */
+    border: none;
+    margin: 10px;
+    border-radius: 10px; /* Define o raio do canto arredondado do botão */
+  
+  }
+  
+  /* Estilos para o efeito de seleção */
+  .mat-button-toggle.mat-button-toggle-checked {
+    border-radius: 10px; /* Define o raio do canto arredondado do botão selecionado */
+    background-color: var(--body); /* Define a cor de fundo do botão selecionado */
+    color: var(--icon-menu-color); /* Define a cor do texto para contrastar com o fundo */
+  
+  }
+  
+  /* Estilos para células de tabela (th e td) */
+  th, td {
+    color: var(--icon-menu-color); /* Define a cor do texto para as células da tabela */
+  
+  }
+  
+  /* Estilos para a visualização em lista */
+  table.table1 {
+    width: 100%; /* Isso garante que a tabela ocupe toda a largura disponível */
+    height: 100vh; /* Isso garante que a tabela ocupe toda a altura da tela */
+    padding: 20px;
+    background-color: var(--body); /* Define a cor de fundo da tabela */
+    margin-bottom: 64px;
+  
+  }
+  
+  /* Estilos para o ponto colorido que representa o status da tarefa */
+  .status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .status-dot--em-progresso {
+    background-color: orange; /* Define a cor do ponto para o status "Em progresso" */
+  }
+  
+  .status-dot--a-fazer {
+    background-color: red; /* Define a cor do ponto para o status "A fazer" */
+  }
+  
+  .status-dot--concluido {
+    background-color: green; /* Define a cor do ponto para o status "Concluído" */
+  }
+  
+  /* Estilos para a visualização em cartão */
+  .cartao-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    margin-bottom: 70px;
+    background-color: var(--body); /* Define a cor de fundo do container de cartões */
+  
+  
+  }
+  
+  .cartao-table {
+    flex: 0 0 20%; /* Define o tamanho fixo de cada cartão (30% da largura do container) */
+    border: none; /* Define a borda do cartão */
+    border-radius: 30px;
+  }
+  
+  .status-column {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #bab7b7; /* Define a cor de fundo do cabeçalho de status */
+    padding: 40px;
+    border-radius: 30px;
+  
+  }
+  
+  .cartao-cell {
+    padding: 20px;
+    border: 1px solid #ccc; /* Define a borda da célula do cartão */
+    box-shadow: 4px 4px 8px rgba(252, 252, 252, 0.637);
+    border-radius: 40px;
+  
+  }
+  
+  .cartao-titulo {
+    font-size: 16px;
+    font-weight: bold; /* Define o estilo do título do cartão */
+  
+  }
+  
+  .cartao-info {
+    margin-top: 10px; /* Define o espaçamento entre as informações do cartão */
+  
+  }
+  
+  .cartao--em-progresso {
+    background-color: #ffc04d; /* Define a cor de fundo para o status "Em progresso" no cartão */
+  
+  }
+  
+  .cartao--a-fazer {
+    background-color: #ff9999; /* Define a cor de fundo para o status "A fazer" no cartão */
+  
+  }
+  
+  .cartao--concluido {
+    background-color: #b3ffb3; /* Define a cor de fundo para o status "Concluído" no cartão */
+  
+  }
+  
