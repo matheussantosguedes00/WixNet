@@ -1,6 +1,7 @@
 .grid-container {
   position: relative;
-  margin: 0 0 64px 0;
+  margin: 0 0 0 0;
+ 
   background-color: var(--menu-superior);
   border: none;
 

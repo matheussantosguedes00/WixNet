@@ -1,14 +1,12 @@
 .mat-h1 {
     display: flex;
-    justify-content:start;
     align-items: center;
     color: var(--icon-menu);
     font-size: 35px;
     background-color:var(--body) ;
     padding: 20px;
-    margin-bottom: auto;
+    margin-bottom: 0;
   }
-
 
 /* Estilos para o grupo de botões de alternância */
 .botao-toggle-group {
@@ -49,7 +47,7 @@
     height: 100vh; /* Isso garante que a tabela ocupe toda a altura da tela */
     padding: 20px;
     background-color: var(--body); /* Define a cor de fundo da tabela */
-    margin-bottom: 64px;
+    margin-bottom: 0;
   
   }
   
