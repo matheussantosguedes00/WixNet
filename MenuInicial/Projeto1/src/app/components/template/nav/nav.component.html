@@ -6,7 +6,6 @@
 
     <ul class="nav-links">
       <li
-        *ngIf="moduloHome"
         (click)="activateIcon(1)"
         [ngClass]="{ active: activeIcon === 1 }"
       >
@@ -23,7 +22,6 @@
       </li>
 
       <li
-        *ngIf="moduloCliente"
         (click)="activateIcon(2)"
         [ngClass]="{ active: activeIcon === 2 }"
       >
