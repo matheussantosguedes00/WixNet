@@ -129,3 +129,13 @@ h1 {
     background-color: #b3ffb3; /* Define a cor de fundo para o status "Concluído" no cartão */
   
   }
+  @media screen and (max-width: 550px) {
+    .botao-toggle-group {
+      display: flex;
+      flex-direction: column; /* Exibe os botões em uma coluna */
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: var(--body); /* Defina a cor de fundo do grupo de botões */
+    }
+  }

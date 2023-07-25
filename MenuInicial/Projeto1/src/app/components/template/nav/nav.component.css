@@ -171,3 +171,11 @@ h5 {
   width: 100%;
   padding: 2px;
 }
+@media screen and (max-width: 1300px){
+  .sidebar .nav-links li {
+    position: relative;
+    margin-top: 1px;
+    list-style: none;
+    transition: all 0.4s ease;
+  }
+}

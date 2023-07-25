@@ -83,25 +83,29 @@
   width: 40px;  
   height: 40px;
   border-radius: 50%;
+  margin: 15px;
 }
+
 .mat-menu-content {
-  padding: 30px;
+  padding: 10px;
+  
 }
 
 .mat-menu-item {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
+
 }
 
-.mat-menu-item i {
-  margin-right: 15px;
-}
 
 .icon-perfil {
   display: flex;
   align-items: center;
-  margin: 20px;
+
+}
+.icon-perfil, i{
+  margin-right: 10px;
 }
 
 @media (max-width: 600px) {
