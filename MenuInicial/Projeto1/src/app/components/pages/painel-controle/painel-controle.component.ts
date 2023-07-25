@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-painel-controle',
@@ -8,30 +7,43 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./painel-controle.component.css'],
 })
 export class PainelControleComponent {
-  private breakpointObserver = inject(BreakpointObserver);
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1.1', cols: 1, rows: 1 },
-          { title: 'Card 1.2', cols: 1, rows: 1 },
-          { title: 'Card 1.3', cols: 1, rows: 1 },
-          { title: 'Card 1.4', cols: 1, rows: 1 },
-          { title: 'Card 2.1', cols: 3, rows: 1 },
-          { title: 'Card 2.2', cols: 1, rows: 1 },
-          { title: 'Card 3.1', cols: 4, rows: 3 },
-        ];
-      }
+  cardsData: any[] = [];
 
-      return [
-        { title: 'Card 1.1', cols: 1, rows: 1 },
-        { title: 'Card 1.2', cols: 1, rows: 1 },
-        { title: 'Card 1.3', cols: 1, rows: 1 },
-        { title: 'Card 1.4', cols: 1, rows: 1 },
-        { title: 'Card 2.1', cols: 3, rows: 1 },
-        { title: 'Card 2.2', cols: 1, rows: 1 },
-        { title: 'Card 3.1', cols: 4, rows: 3 },
-      ];
-    })
-  );
+  constructor() {
+    // Simulando a obtenção de dados da API fictícia (pode ser substituído por uma chamada HTTP real)
+    this.getCardsData();
+  }
+
+  getCardsData() {
+    // Simulando os dados obtidos da API
+    const apiResponse = [
+      { 
+        id: 1, 
+        title: 'Card 1', 
+        description: 'Descrição do Card 1',
+        content: 'Conteúdo do Card 1'
+      },
+      { 
+        id: 2, 
+        title: 'Card 2', 
+        description: 'Descrição do Card 2',
+        content: 'Conteúdo do Card 2'
+      },
+      { 
+        id: 3, 
+        title: 'Card 3', 
+        description: 'Descrição do Card 3',
+        content: 'Conteúdo do Card 3'
+      },
+      { 
+        id: 4, 
+        title: 'Card 4', 
+        description: 'Descrição do Card 4',
+        content: 'Conteúdo do Card 4'
+      }
+    ];
+
+    // Atribuindo os dados obtidos da API à variável cardsData
+    this.cardsData = apiResponse;
+  }
 }

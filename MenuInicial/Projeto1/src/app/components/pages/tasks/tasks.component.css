@@ -1,13 +1,12 @@
-.mat-h1 {
-    display: flex;
-    align-items: center;
-    color: var(--icon-menu);
-    font-size: 35px;
-    background-color:var(--body) ;
-    padding: 20px;
-    margin-bottom: 0;
-  }
-
+h1 {
+  display: flex;
+  align-items: center;
+  color: var(--icon-menu);
+  font-size: 35px;
+  background-color: var(--body);
+  padding: 20px;
+  margin: auto;
+}
 /* Estilos para o grupo de botões de alternância */
 .botao-toggle-group {
     display: flex;
@@ -45,7 +44,7 @@
   table.table1 {
     width: 100%; /* Isso garante que a tabela ocupe toda a largura disponível */
     height: 100vh; /* Isso garante que a tabela ocupe toda a altura da tela */
-    padding: 20px;
+    padding: 0px;
     background-color: var(--body); /* Define a cor de fundo da tabela */
     margin-bottom: 0;
   
@@ -55,7 +54,6 @@
   .status-dot {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
     display: inline-block;
     margin-right: 8px;
   }
@@ -77,17 +75,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px;
-    margin-bottom: 70px;
     background-color: var(--body); /* Define a cor de fundo do container de cartões */
   
   
   }
   
   .cartao-table {
-    flex: 0 0 20%; /* Define o tamanho fixo de cada cartão (30% da largura do container) */
+    flex: 0 0 30%; /* Define o tamanho fixo de cada cartão (30% da largura do container) */
     border: none; /* Define a borda do cartão */
-    border-radius: 30px;
+  
   }
   
   .status-column {
@@ -95,16 +91,16 @@
     font-weight: bold;
     text-align: center;
     background-color: #bab7b7; /* Define a cor de fundo do cabeçalho de status */
-    padding: 40px;
-    border-radius: 30px;
+    padding: 10px;
+
   
   }
   
   .cartao-cell {
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ccc; /* Define a borda da célula do cartão */
     box-shadow: 4px 4px 8px rgba(252, 252, 252, 0.637);
-    border-radius: 40px;
+    
   
   }
   
@@ -133,4 +129,3 @@
     background-color: #b3ffb3; /* Define a cor de fundo para o status "Concluído" no cartão */
   
   }
-  

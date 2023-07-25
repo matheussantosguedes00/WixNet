@@ -1,4 +1,4 @@
-<h1 class="mat-h1">Tarefas</h1>
+<h1>Tarefas</h1>
 <mat-button-toggle-group
   [(ngModel)]="modoVisualizacao"
   name="modoVisualizacao"
@@ -66,7 +66,8 @@
           <td class="cartao-cell" [ngClass]="{
             'cartao--em-progresso': tarefa.status === 'Em progresso',
             'cartao--a-fazer': tarefa.status === 'A fazer',
-            'cartao--concluido': tarefa.status === 'Concluído'
+            'cartao--concluido': tarefa.status === 'Concluído',
+            
           }">
             <!-- Conteúdo do cartão da tarefa -->
             <div class="cartao-titulo">{{ tarefa.descricao }}</div>

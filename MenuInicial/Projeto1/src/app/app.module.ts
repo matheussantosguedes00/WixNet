@@ -27,6 +27,11 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TasksComponent } from './components/pages/tasks/tasks.component';
+import { CommonModule } from '@angular/common';
+
+import { MatSelectModule } from '@angular/material/select'; // Importe o MatSelectModule aqui
+
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -54,7 +59,11 @@ import { TasksComponent } from './components/pages/tasks/tasks.component';
     MatTableModule,
     MatRadioModule,
     MatListModule,
-    MatButtonToggleModule 
+    MatButtonToggleModule,
+    CommonModule,
+    MatSelectModule,
+    MatTabsModule
+     
   ],
   providers: [],
   bootstrap: [AppComponent],
