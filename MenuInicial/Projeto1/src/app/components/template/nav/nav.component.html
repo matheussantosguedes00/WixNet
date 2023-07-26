@@ -16,7 +16,7 @@
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a routerLink="app-home2" class="link_name" routerLink="app-painel-controle">Dashboard</a>
+            <a routerLink="app-painel-controle" class="link_name" >Dashboard</a>
           </li>
         </ul>
       </li>
@@ -54,7 +54,7 @@
       </li>
 
       <li (click)="activateIcon(4)" [ngClass]="{ active: activeIcon === 4 }">
-        <a>
+        <a routerLink="app-tasks">
           <i
             class="bx bx-pie-chart-alt-2"
             [ngClass]="{ active: activeIcon === 4 }"
@@ -63,7 +63,8 @@
           </i>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Projetos</a></li>
+          <li><a routerLink="app-tasks"
+             class="link_name" href="#">Projetos</a></li>
         </ul>
       </li>
 

@@ -14,8 +14,8 @@ h1 {
     align-items: center;
     border: none;
     background-color: var(--body); /* Defina a cor de fundo do grupo de botões */
-  
-  }
+    border-radius: 0;
+}
   
   /* Estilos para cada botão de alternância */
   .mat-button-toggle {

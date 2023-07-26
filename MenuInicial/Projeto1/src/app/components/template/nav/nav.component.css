@@ -6,7 +6,7 @@
   background: var(--menu-lateral);
   z-index: 1;
   transition: all 0.5s ease;
-  width: 4.6rem;
+  width: 4.5rem;
 }
 
 .sidebar .logo-details {
@@ -20,10 +20,10 @@
   display: flex;
   justify-items: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
-  min-width: 40px;
-  margin: 5px auto auto auto;
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  margin: 5px auto 0 auto;
   border-radius: 4px;
 }
 
@@ -37,7 +37,7 @@
 }
 .sidebar .nav-links li {
   position: relative;
-  margin-top: 7px;
+  margin-top: 10px;
   list-style: none;
   transition: all 0.4s ease;
 }
@@ -45,12 +45,13 @@
 .sidebar .nav-links li:hover {
   background: #dbdbdb;
   color: #464646;
+  padding: 3px;
   border-radius: 25% 0 25% 0;
 }
 
 .sidebar .nav-links li i {
   margin-top: 15px;
-  height: 45px;
+  height: 40px;
   min-width: 70px;
   text-align: center;
   line-height: 11px;
@@ -125,6 +126,7 @@ h5 {
 
 .sidebar.sub-closes .nav-links li .sub-menu .link_name {
   font-size: 17px;
+  margin-bottom: 10px;
   opacity: 1;
   display: block;
 }
