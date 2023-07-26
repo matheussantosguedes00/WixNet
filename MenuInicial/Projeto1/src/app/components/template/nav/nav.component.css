@@ -7,6 +7,7 @@
   z-index: 1;
   transition: all 0.5s ease;
   width: 4.5rem;
+  
 }
 
 .sidebar .logo-details {
@@ -179,5 +180,55 @@ h5 {
     margin-top: 1px;
     list-style: none;
     transition: all 0.4s ease;
+  }
+}
+@media screen and (max-width: 320px){
+  .sidebar {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--menu-lateral);
+    z-index: 1;
+    transition: all 0.5s ease;
+    width: 4.5rem;
+    overflow: hidden;
+  }
+  .sidebar .logo-details img {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    min-width: 25px;
+    margin: 5px auto 0 auto;
+    border-radius: 4px;
+  }
+  .sidebar .logo-details2 img {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    margin: 15px ;
+    position: relative;
+    bottom: 20px;
+    border-radius: 10px;
+    color: var(--tema-icon);
+    
+  }
+  .icon-modoesculo {
+    border: none;
+    background-color: transparent;
+    color: var(--tema-icon);
+    height: 20px;
+    text-align: center;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 4px;
   }
 }

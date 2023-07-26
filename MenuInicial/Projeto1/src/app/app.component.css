@@ -6,13 +6,16 @@
   
   .mat-sidenav {
     width:4.5rem;
+    overflow: visible;
     
   }
   
   .mat-toolbar {
-    height: 50px;
+    position: fixed;
+    height: 60px;
+    background-color: var(--body);
+    z-index: 999;
     width: 100%;
-    border: none;
   }
   
   .mat-main {
@@ -48,7 +51,7 @@
   }
 }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
     .footer{
     position: relative;
     left: 0;
@@ -58,5 +61,21 @@
     }
     h2{
       font-size: 14px;
+    }
+    button{
+      position:absolute;
+      margin-top: 0;
+      margin-left:-21px;
+      font-size: 25px;
+      height: 50px;
+      width: 10px;
+      z-index: 999999;
+      border: none;
+      background-color:var(--body) ;
+      color:var(--tema-icon);
+      display: flex ;
+      align-items: center;
+      justify-items: center;
+      
     }
   }
