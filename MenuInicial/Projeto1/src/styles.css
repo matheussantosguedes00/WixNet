@@ -32,9 +32,9 @@ body {
 
 .modo-escuro {
   --icon-menu: #a8a7a7;
-  --body: #0915a0;
+  --body: #252631;
   --menu-lateral: #191919;
-  --menu-superior: #0915a0;
+  --menu-superior: #252631;
   transition: 5s;
   --tema-icon: #eeecec;
   --icon-menu-color:#ffffff;
