@@ -5,7 +5,7 @@ h1 {
   font-size: 35px;
   background-color: var(--body);
   padding: 20px;
-  margin: auto;
+  margin: 50px auto auto auto;
 }
 /* Estilos para o grupo de botões de alternância */
 .botao-toggle-group {

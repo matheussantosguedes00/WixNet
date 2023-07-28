@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0px;
+  margin-top: 50px;
   background-color: var(--body);
   border: 0;
   
