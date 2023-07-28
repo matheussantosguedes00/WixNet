@@ -15,8 +15,8 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: 'app-painel-controle', component: PainelControleComponent }, // Rota para o Painel de Controle dentro de "home"
-      { path: 'app-tasks', component: TasksComponent }, // Rota para a página Tasks dentro de "home"
+      { path: 'painel-controle', component: PainelControleComponent }, // Rota para o Painel de Controle dentro de "home"
+      { path: 'tasks', component: TasksComponent }, // Rota para a página Tasks dentro de "home"
     ]
   },
   

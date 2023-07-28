@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 
 
 @Component({
-  selector: 'app-painel-controle',
+  selector: 'painel-controle',
   templateUrl: './painel-controle.component.html',
   styleUrls: ['./painel-controle.component.css'],
 })

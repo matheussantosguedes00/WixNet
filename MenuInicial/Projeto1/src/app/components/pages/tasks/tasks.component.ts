@@ -13,7 +13,7 @@ interface TarefasAgrupadasPorStatus {
 }
 
 @Component({
-  selector: 'app-tasks',
+  selector: 'tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })

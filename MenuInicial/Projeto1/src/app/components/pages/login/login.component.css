@@ -19,12 +19,13 @@ background-color: #3498db ;
     width: 100%;
     height: 500px;
     border-radius: 20px;
-   
-  
     
     
   }
 
+  h2{
+    color: #001d7b;
+  }
 
   .login-container .image-container {
     flex: 1;

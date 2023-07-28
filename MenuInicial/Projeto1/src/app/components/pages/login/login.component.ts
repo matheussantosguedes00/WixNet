@@ -15,7 +15,7 @@ export class LoginComponent {
   onLogin(username: string, password: string): void {
     if (this.authService.login(username, password)) {
       // Autenticação bem-sucedida, redirecionar para a página protegida (home)
-      this.router.navigate(['/home/app-painel-controle']);
+      this.router.navigate(['/home/painel-controle']);
     } else {
       // Armazenar a mensagem de erro do serviço no componente
       this.errorMessage = this.authService.getErrorMessage();

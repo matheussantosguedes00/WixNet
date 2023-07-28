@@ -9,14 +9,14 @@
         (click)="activateIcon(1)"
         [ngClass]="{ active: activeIcon === 1 }"
       >
-        <a routerLink="app-painel-controle">
+        <a routerLink="painel-controle">
           <i class="bx bx-grid-alt" [ngClass]="{ active: activeIcon === 1 }">
             <h5>Dashboard</h5>
           </i>
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a routerLink="app-painel-controle" class="link_name" >Dashboard</a>
+            <a routerLink="painel-controle" class="link_name" >Dashboard</a>
           </li>
         </ul>
       </li>
@@ -43,18 +43,18 @@
       </li>
 
       <li (click)="activateIcon(3)" [ngClass]="{ active: activeIcon === 3 }">
-        <a routerLink="app-tasks">
+        <a routerLink="tasks">
           <i class="bx bx-task" [ngClass]="{ active: activeIcon === 3 }">
             <h5 [ngClass]="{ active: activeIcon === 3 }">Tasks</h5>
           </i>
         </a>
         <ul class="sub-menu">
-          <li><a class="link_name" routerLink="app-tasks">Tasks</a></li>
+          <li><a class="link_name" routerLink="tasks">Tasks</a></li>
         </ul>
       </li>
 
       <li (click)="activateIcon(4)" [ngClass]="{ active: activeIcon === 4 }">
-        <a routerLink="app-tasks">
+        <a routerLink="tasks">
           <i
             class="bx bx-pie-chart-alt-2"
             [ngClass]="{ active: activeIcon === 4 }"
@@ -63,7 +63,7 @@
           </i>
         </a>
         <ul class="sub-menu blank">
-          <li><a routerLink="app-tasks"
+          <li><a routerLink="tasks"
              class="link_name" href="#">Projetos</a></li>
         </ul>
       </li>
