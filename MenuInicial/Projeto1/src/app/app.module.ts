@@ -32,6 +32,8 @@ import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select'; // Importe o MatSelectModule aqui
 
 import { MatTabsModule } from '@angular/material/tabs';
+import { LoginComponent } from './components/pages/login/login.component';
+import { HomeComponent } from './components/pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     NavComponent,
     HeaderComponent,
     TasksComponent,
+    LoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
