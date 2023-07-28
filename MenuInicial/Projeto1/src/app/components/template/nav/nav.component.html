@@ -121,6 +121,16 @@
           <li><a class="link_name" href="#">Tools</a></li>
         </ul>
       </li>
+      <li (click)="activateIcon(8)" [ngClass]="{ active: activeIcon === 8 }">
+        <a>
+          <i class="bx bx-briefcase" [ngClass]="{ active: activeIcon === 8 }">
+            <h5 [ngClass]="{ active: activeIcon === 8 }">Tools</h5>
+          </i>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Tools</a></li>
+        </ul>
+      </li>
       <div class="logo-details2">
         <img src="../assets/img/iconCaixa.png" alt="" />
       </div>

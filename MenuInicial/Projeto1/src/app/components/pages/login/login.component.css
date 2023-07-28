@@ -89,6 +89,7 @@ body {
     font-size: 12px;
     margin-bottom: 5px;
     color: #001d7b;
+    margin-left: 11px;
   }
 
   .login-container input[type="email"],

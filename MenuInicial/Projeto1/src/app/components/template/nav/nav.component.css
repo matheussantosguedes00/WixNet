@@ -10,6 +10,7 @@
 }
 
 .sidebar .logo-details {
+  margin-top: 10px;
   height: 40px;
   width: 100%;
   display: flex;
@@ -23,42 +24,52 @@
   height: 30px;
   width: 30px;
   min-width: 30px;
-  margin: 5px auto 0 auto;
+  margin: 1px auto 0 auto;
   border-radius: 4px;
 }
 
 .sidebar .nav-links {
   height: 100%;
-  padding: 5px 0 10px 0;
+  padding: 5px 0 5px 0;
   overflow: visible;
+  margin-top:45px;
 }
 .sidebar .nav-links::-webkit-scrollbar {
   display: none;
 }
 .sidebar .nav-links li {
   position: relative;
-  margin-top: 10px;
+  margin-top: -10px;
   list-style: none;
   transition: all 0.4s ease;
+ 
 }
-
+.bx-detail{
+  padding-bottom:10px ;
+}
+.icon-hover:hover {
+  background-color: rgb(146, 142, 142); /* Substitua pela cor desejada */
+  /* Outros estilos que você queira aplicar ao ícone quando o mouse passar sobre ele */
+}
 .sidebar .nav-links li:hover {
   background: #dbdbdb;
   color: #464646;
-  padding: 3px;
+  padding: 1px;
+ 
   border-radius: 25% 0 25% 0;
 }
 
 .sidebar .nav-links li i {
-  margin-top: 15px;
-  height: 40px;
+  margin-top: 10px;
+  height: 38px;
   min-width: 70px;
   text-align: center;
   line-height: 11px;
   color: var(--icon-menu-color);
-  font-size: 27px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  
 }
 
 .sidebar .nav-links li a {
@@ -69,8 +80,9 @@
 
 h5 {
   margin-top: 7px;
-  font-size: 14px;
+  font-size: 9px;
   text-decoration: none;
+  font-family: Arial;
 }
 
 .sidebar .nav-links li a .link_name {
