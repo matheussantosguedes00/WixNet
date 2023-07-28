@@ -122,8 +122,14 @@ background-color: #3498db ;
     background-color: #001d7b;
     color: #fdfdfd;
   }
-
   @media screen and (max-width: 830px){
+    .login-container .image-container img {
+      width: 400px;
+      height: 400px;
+      border-radius: 5px;
+    }
+  }
+  @media screen and (max-width: 800px){
     .login-container {
       display: flex;
       align-items: center;
