@@ -17,6 +17,7 @@ export class AuthService {
       return true;
     } else {
       this.isAuthenticated = false;
+      this.errorMessage = 'Credenciais inválidas. Verifique seu Email e Senha.';
       return false;
     }
   }
@@ -29,6 +30,7 @@ export class AuthService {
   logout(): void {
     this.isAuthenticated = false;
     this.removeToken(); // Remover o token do LocalStorage ao fazer logout
+    this.errorMessage = '';
   }
 
   private saveToken(token: string): void {
