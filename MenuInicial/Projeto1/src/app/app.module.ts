@@ -34,6 +34,12 @@ import { MatSelectModule } from '@angular/material/select'; // Importe o MatSele
 import { MatTabsModule } from '@angular/material/tabs';
 import { LoginComponent } from './components/pages/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { ClientesComponent } from './components/pages/clientes/clientes.component';
+import { LinkPerfilComponent } from './components/pages/clientes/links/link-perfil/link-perfil.component';
+import { LinkGeralComponent } from './components/pages/clientes/links/link-geral/link-geral.component';
+import { LinkContasComponent } from './components/pages/clientes/links/link-contas/link-contas.component';
+import { LinkCaixaComponent } from './components/pages/clientes/links/link-caixa/link-caixa.component';
+import { LinkLabsComponent } from './components/pages/clientes/links/link-labs/link-labs.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +50,12 @@ import { HomeComponent } from './components/pages/home/home.component';
     TasksComponent,
     LoginComponent,
     HomeComponent,
+    ClientesComponent,
+    LinkPerfilComponent,
+    LinkGeralComponent,
+    LinkContasComponent,
+    LinkCaixaComponent,
+    LinkLabsComponent,
   ],
   imports: [
     BrowserModule,

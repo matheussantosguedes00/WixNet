@@ -11,7 +11,7 @@
       >
         <a routerLink="painel-controle">
           <i class="bx bx-grid-alt" [ngClass]="{ active: activeIcon === 1 }">
-            <h5>Dashboard</h5>
+            <h5 [ngClass]="{ active: activeIcon === 8 }">Dashboard</h5>
           </i>
         </a>
         <ul class="sub-menu blank">
@@ -89,9 +89,9 @@
         </ul>
       </li>
       <li (click)="activateIcon(6)" [ngClass]="{ active: activeIcon === 6 }">
-        <a>
+        <a routerLink="clientes/geral">
           <i
-            class="bx bxs-user-account"
+            class='bx bx-user-pin'
             [ngClass]="{ active: activeIcon === 6 }"
           >
             <h5 [ngClass]="{ active: activeIcon === 6 }">Clientes</h5>
@@ -121,19 +121,22 @@
           <li><a class="link_name" href="#">Tools</a></li>
         </ul>
       </li>
-      <li (click)="activateIcon(8)" [ngClass]="{ active: activeIcon === 8 }">
+      <li (click)="activateIcon(9)" [ngClass]="{ active: activeIcon === 9 }">
         <a>
-          <i class="bx bx-briefcase" [ngClass]="{ active: activeIcon === 8 }">
-            <h5 [ngClass]="{ active: activeIcon === 8 }">Tools</h5>
+          <i  class='bx bx-box' [ngClass]="{ active: activeIcon === 9 }">
+            <h5 [ngClass]="{ active: activeIcon === 9 }">IRR</h5>
           </i>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Tools</a></li>
+          <li><a class="link_name" href="#">IRR</a></li>
         </ul>
       </li>
       <div class="logo-details2">
         <img src="../assets/img/iconCaixa.png" alt="" />
+        <p>Ultra Cash</p>
       </div>
+      
+      
       <button class="icon-modoesculo" (click)="alternarModoTema()">
         <span>
           <i *ngIf="isModoEscuroAtivado" class="bx bxs-sun"></i>

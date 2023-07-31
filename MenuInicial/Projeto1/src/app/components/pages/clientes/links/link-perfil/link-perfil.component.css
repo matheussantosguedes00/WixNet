@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+.cliente-info {
+    margin-top: 20px;
+}
+.info-label {
+    font-weight: bold;
+}
+.info-value {
+    margin-left: 10px;
+}
