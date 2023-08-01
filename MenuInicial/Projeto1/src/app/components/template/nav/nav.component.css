@@ -2,12 +2,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   background: var(--menu-lateral);
   z-index: 1;
   transition: all 0.5s ease;
   width: 4.2rem;
-
 }
 
 .sidebar .logo-details {
@@ -123,14 +122,14 @@ h5 {
 .sidebar.sub-closes .nav-links li .sub-menu {
   position: absolute;
   left: 100%;
-  top: -10px;
+  top: 100px;
   margin-top: 1px;
   padding: 10px 20px;
   border-radius: 0 6px 6px 0;
   opacity: 0;
   display: block;
   pointer-events: none;
-  transition: 0s;
+  transition: 0.2s;
 }
 
 .sidebar.sub-closes .nav-links li:hover .sub-menu {
@@ -171,19 +170,21 @@ h5 {
   margin: 60px 10px 5px 10px;
   border-radius: 10px;
   color: var(--tema-icon);
+ 
 }
 
 .sidebar .logo-details2 p {
   display: flex;
   text-align: center;
   margin-top: 1px; /* Espaçamento entre a imagem e a legenda */
-  margin-left: 5px;
-  font-size: 11px;
+  margin-left: 3px;
+  font-size: 10px;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 550;
   color: var(--icon-menu-color);
+  
 }
 
 
@@ -196,7 +197,7 @@ h5 {
   text-align: center;
   font-size: 20px;
   transition: all 0.3s ease;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   width: 100%;
   padding: 2px;
