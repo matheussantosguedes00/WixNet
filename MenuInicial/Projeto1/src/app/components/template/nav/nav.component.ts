@@ -9,7 +9,7 @@ export class NavComponent implements OnInit {
   icon: string = '';
   isModoEscuroAtivado: boolean = false;
   menuAberto = true;
-  activeIcon: number = 1;
+  activeIcon: number = 0;
 
   ngOnInit() {
     this.carregarEstadoDoLocalStorage();
@@ -19,7 +19,9 @@ export class NavComponent implements OnInit {
   activateIcon(iconIndex: number) {
     this.activeIcon = iconIndex;
     localStorage.setItem('activeIcon', JSON.stringify(iconIndex));
+   
   }
+
 
   alternarModoTema() {
     this.isModoEscuroAtivado = !this.isModoEscuroAtivado;
@@ -28,7 +30,15 @@ export class NavComponent implements OnInit {
   }
 
   private carregarEstadoDoLocalStorage() {
-
+    const storedActiveIcon = localStorage.getItem('activeIcon');
+    if (storedActiveIcon) {
+      this.activeIcon = JSON.parse(storedActiveIcon);
+    } else {
+      // Se o ícone ativo não estiver no localStorage, defina-o como 1 e armazene no localStorage
+      this.activeIcon = 1;
+      localStorage.setItem('activeIcon', JSON.stringify(this.activeIcon));
+    }
+  
     const storedModoEscuro = localStorage.getItem('modoEscuro');
     if (storedModoEscuro) {
       this.isModoEscuroAtivado = JSON.parse(storedModoEscuro);

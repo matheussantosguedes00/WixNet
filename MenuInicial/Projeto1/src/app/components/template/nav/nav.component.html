@@ -5,18 +5,15 @@
     </div>
 
     <ul class="nav-links">
-      <li
-        (click)="activateIcon(1)"
-        [ngClass]="{ active: activeIcon === 1 }"
-      >
+      <li (click)="activateIcon(1)" [ngClass]="{ active: activeIcon === 1 }">
         <a routerLink="painel-controle">
           <i class="bx bx-grid-alt" [ngClass]="{ active: activeIcon === 1 }">
-            <h5 [ngClass]="{ active: activeIcon === 8 }">Dashboard</h5>
+            <h5 [ngClass]="{ active: activeIcon === 1 }">Dashboard</h5>
           </i>
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a routerLink="painel-controle" class="link_name" >Dashboard</a>
+            <a routerLink="painel-controle" class="link_name">Dashboard</a>
           </li>
         </ul>
       </li>
