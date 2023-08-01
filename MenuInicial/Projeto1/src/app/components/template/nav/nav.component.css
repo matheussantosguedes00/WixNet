@@ -176,7 +176,7 @@ h5 {
 .sidebar .logo-details2 p {
   display: flex;
   text-align: center;
-  margin-top: 1px; /* Espaçamento entre a imagem e a legenda */
+  margin-top: 0px; /* Espaçamento entre a imagem e a legenda */
   margin-left: 3px;
   font-size: 10px;
   text-decoration: none;
@@ -195,14 +195,14 @@ h5 {
   color: var(--tema-icon);
   height: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
   transition: all 0.3s ease;
   position: fixed;
   bottom: 20px;
   width: 100%;
   padding: 2px;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 380px){
   .sidebar {
     position: relative;
     top: 0;
@@ -228,12 +228,12 @@ h5 {
     display: flex;
     justify-items: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
-    min-width: 40px;
-    margin: 15px ;
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    margin: 60px 0 -1px 0;
     position: relative;
-    bottom: 20px;
+    bottom: 10px;
     border-radius: 10px;
     color: var(--tema-icon);
     
@@ -247,7 +247,7 @@ h5 {
     font-size: 30px;
     transition: all 0.3s ease;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     width: 100%;
     padding: 4px;
   }
