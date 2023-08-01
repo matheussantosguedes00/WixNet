@@ -1,12 +1,16 @@
 h1 {
     text-align: center;
+    color: var(--icon-menu-color);
 }
 .cliente-info {
     margin-top: 20px;
+    color: var(--icon-menu-color);
 }
 .info-label {
     font-weight: bold;
+    color: var(--icon-menu-color);
 }
 .info-value {
     margin-left: 10px;
+    color: var(--icon-menu-color);
 }
