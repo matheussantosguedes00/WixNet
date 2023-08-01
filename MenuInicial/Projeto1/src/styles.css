@@ -12,9 +12,9 @@ body {
 
 :root {
   --icon-menu: rgb(71, 20, 222);
-  --body: #ebebeb;
+  --body: #F5F5F5;
   --menu-lateral: #fffffff5;
-  --menu-superior:#ebebeb;
+  --menu-superior:#F5F5F5;
   transition: 2s;
   --tema-icon: #000000;
   --icon-menu-color:#000000;
