@@ -5,19 +5,19 @@ h1 {
     font-size: 35px;
     background-color: var(--body);
     padding: 20px;
-    margin: 50px auto auto auto;
+    margin: 50px auto 0 auto;
   }
 
   .Menu-Linha ul {
     list-style: none;
-    padding: 0;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
   
   }
   
   .Menu-Linha li {
-    margin: 1px 10px;
+    margin: 1px 40px;
   }
   
   .Menu-Linha a {
@@ -49,13 +49,29 @@ h1 {
     border-radius: 1px;
    
   }
-  @media screen and (max-width: 655px){
+  @media screen and (max-width: 690px){
+    .Menu-Linha li {
+      margin: 0 5px;
+    }
+    .Menu-Linha a {
+      text-decoration: none;
+      color: #000000;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 5px;
+      border:none;
+      text-align: center;
+    }
      .Menu-Linha li a.active {
-      border: none;
+      border-bottom: 4px solid #007bff;
       color: #007bff;
   }
+  .Menu-Linha a:hover{
+    border:none;
+    color: #52a1f6;
+}
   }
-  @media screen and (max-width: 408px){ 
+  @media screen and (max-width: 420px){ 
     .Menu-Linha li {
       margin: 0 5px;
     }
@@ -72,4 +88,8 @@ h1 {
       border: none;
       color: #007bff;
   }
+  .Menu-Linha a:hover{
+    border:none;
+    color: #52a1f6;
+}
   }
