@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
   activeIcon: number = 0;
 
   ngOnInit() {
-    this.carregarEstadoDoLocalStorage();
+    this.carregarEstadoDoLocalStorage();   
     //this.aplicarModoEscuro();manter o modo escuro
   }
 
