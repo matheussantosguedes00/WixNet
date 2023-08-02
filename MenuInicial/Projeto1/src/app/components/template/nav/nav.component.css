@@ -42,7 +42,7 @@ justify-content: center;
 }
 .sidebar .nav-links li {
   position: relative;
-  margin-top: 1px;
+  margin-top: -4px;
   list-style: none;
   transition: all 0.4s ease;
 }
