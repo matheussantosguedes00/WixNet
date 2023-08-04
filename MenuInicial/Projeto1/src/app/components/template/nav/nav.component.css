@@ -246,8 +246,8 @@ h5 {
     text-align: center;
     font-size: 23px;
     transition: all 0.3s ease;
-    position: fixed;
-    bottom: 20px;
+    position: relative;
+    bottom: -2px;
     width: 100%;
     padding: 2px;
   }
