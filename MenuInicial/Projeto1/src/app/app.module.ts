@@ -40,6 +40,8 @@ import { LinkGeralComponent } from './components/pages/clientes/links/link-geral
 import { LinkContasComponent } from './components/pages/clientes/links/link-contas/link-contas.component';
 import { LinkCaixaComponent } from './components/pages/clientes/links/link-caixa/link-caixa.component';
 import { LinkLabsComponent } from './components/pages/clientes/links/link-labs/link-labs.component';
+import { RouterModule } from '@angular/router'; 
+
 
 @NgModule({
   declarations: [
@@ -78,7 +80,10 @@ import { LinkLabsComponent } from './components/pages/clientes/links/link-labs/l
     MatButtonToggleModule,
     CommonModule,
     MatSelectModule,
-    MatTabsModule
+    MatTabsModule,
+    RouterModule,
+    BrowserModule,
+  
      
   ],
   providers: [],

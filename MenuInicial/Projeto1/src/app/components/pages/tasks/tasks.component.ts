@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+ 
 // Interface que define a estrutura de uma tarefa
 interface Tarefa {
   descricao: string;
