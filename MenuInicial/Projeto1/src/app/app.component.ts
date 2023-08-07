@@ -6,7 +6,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Projeto1';
+  title = '';
   menuAberto = true;
   larguraTela: number=0;
 

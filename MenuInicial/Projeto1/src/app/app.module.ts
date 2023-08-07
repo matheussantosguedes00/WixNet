@@ -40,7 +40,18 @@ import { LinkGeralComponent } from './components/pages/clientes/links/link-geral
 import { LinkContasComponent } from './components/pages/clientes/links/link-contas/link-contas.component';
 import { LinkCaixaComponent } from './components/pages/clientes/links/link-caixa/link-caixa.component';
 import { LinkLabsComponent } from './components/pages/clientes/links/link-labs/link-labs.component';
-import { RouterModule } from '@angular/router'; 
+import { RouterModule } from '@angular/router';
+import { AlmoxarifadoComponent } from './components/pages/almoxarifado/almoxarifado.component';
+
+import { CadastroComponent } from './components/pages/almoxarifado/menu-principal/cadastro/cadastro.component';
+import { EntradaComponent } from './components/pages/almoxarifado/menu-principal/entrada/entrada.component';
+import { SaidaComponent } from './components/pages/almoxarifado/menu-principal/saida/saida.component';
+import { EstoqueComponent } from './components/pages/almoxarifado/menu-principal/estoque/estoque.component';
+
+
+import { LinkFornecedorComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-fornecedor/link-fornecedor.component';
+import { LinkLojaComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-loja/link-loja.component';
+import { LinkProdutosComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-produtos/link-produtos.component';
 
 
 @NgModule({
@@ -58,6 +69,15 @@ import { RouterModule } from '@angular/router';
     LinkContasComponent,
     LinkCaixaComponent,
     LinkLabsComponent,
+    AlmoxarifadoComponent,
+    LinkProdutosComponent,
+    EntradaComponent,
+    SaidaComponent,
+    EstoqueComponent,
+    LinkFornecedorComponent,
+    LinkLojaComponent,
+    CadastroComponent
+
   ],
   imports: [
     BrowserModule,

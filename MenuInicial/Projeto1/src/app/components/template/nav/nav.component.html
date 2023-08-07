@@ -128,6 +128,20 @@
           <li><a class="link_name" href="#">IRR</a></li>
         </ul>
       </li>
+
+      <li (click)="activateIcon(10)" [ngClass]="{ active: activeIcon === 10 }">
+        <a routerLink="almoxarifado/cadastro">
+          <i class='bx bx-archive' [ngClass]="{ active: activeIcon === 10 }">
+            <h5 [ngClass]="{ active: activeIcon === 10 }">Warehouse</h5>
+          </i>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="almoxarifado/cadastro" class="link_name">Warehouse</a>
+          </li>
+        </ul>
+      </li>
+      
       <div class="logo-details2">
         <img src="../assets/img/iconCaixa.png" alt="" />
         <p>Ultra Cash</p>
