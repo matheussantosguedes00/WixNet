@@ -58,8 +58,9 @@ h1 {
    
   }
   @media screen and (max-width: 690px){
+   
     .Menu-Linha li {
-      margin: 0 5px;
+      margin: 0 1px;
     }
     .Menu-Linha a {
       text-decoration: none;
@@ -82,8 +83,16 @@ h1 {
   }
   }
   @media screen and (max-width: 420px){ 
+    .Menu-Linha ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    
+    }
     .Menu-Linha li {
-      margin: 0 -6px;
+      margin:0 -10px;
     }
     .Menu-Linha a {
       text-decoration: none;
