@@ -19,7 +19,7 @@ export class NavComponent implements OnInit {
   activateIcon(iconIndex: number) {
     this.activeIcon = iconIndex;
     localStorage.setItem('activeIcon', JSON.stringify(iconIndex));
-   
+  
   }
 
 
