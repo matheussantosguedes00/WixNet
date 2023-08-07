@@ -5,7 +5,7 @@ h1 {
   justify-content: center;
   text-align: center;
   color: var(--icon-menu);
-  font-size: 20px;
+  font-size: 19px;
   background-color: var(--body);
   padding: 3px;
   margin: 5px auto 0 auto;
@@ -22,7 +22,7 @@ h1 {
   
   .Menu-Linha li {
     margin-top:-2px;
-    padding: 11px 14px;
+    padding: 5px 14px;
     
   }
   
