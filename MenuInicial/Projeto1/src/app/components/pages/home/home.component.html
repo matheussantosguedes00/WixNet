@@ -2,9 +2,10 @@
     <mat-sidenav mode="side" [opened]="menuAberto"><app-nav></app-nav></mat-sidenav>
     <mat-toolbar>
       <!-- Adicione a condição para exibir o botão de menu apenas em telas menores ou iguais a 600px -->
-     <button *ngIf="larguraTela <= 600" (click)="alternarMenu()">
-    <i [class]="menuAberto ? 'bx bx-x' : 'bx bx-menu'"></i>
-  </button>
+      <button *ngIf="larguraTela <= 600" (click)="alternarMenu()">
+        <i *ngIf="menuAberto; else menuIcon" class="material-symbols-outlined">close</i>
+        <ng-template #menuIcon><i class="material-symbols-outlined">menu</i></ng-template>
+      </button>
       <app-header></app-header>
     </mat-toolbar>
     <mat-card><router-outlet></router-outlet></mat-card>

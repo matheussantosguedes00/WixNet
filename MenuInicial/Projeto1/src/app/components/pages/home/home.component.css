@@ -87,15 +87,7 @@
       justify-items: center;
       transition: transform 0.3s ease;
 
-      .bx-x {
-        font-size: 25px;
-        transition: transform 0.3s ease;
-      }
     
-      /* Definir a rotação do ícone quando o menu estiver aberto */
-      &.menu-aberto .bx-x {
-        transform: rotate(180deg);
-      }
     }
 
   }
