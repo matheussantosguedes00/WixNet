@@ -42,9 +42,12 @@
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 15px;
+  
 }
-
+.search-container button span {
+  font-size: 17px;
+  font-weight: 400;
+}
 .icon-container {
   display: flex;
   align-items: center;
@@ -65,11 +68,13 @@
 }
 
 
-.icon-notifica  i {
+.icon-notifica span {
  appearance: none;
   color: var(--icon-menu-color);
   margin-right: 3px;
   font-size: 20px;
+  font-weight: 700; 
+  
   
 }
 

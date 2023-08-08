@@ -1,7 +1,9 @@
 <mat-toolbar class="header">
   <div class="search-container">
     <button>
-      <i class="bx bx-search"></i>
+      <span class="material-symbols-outlined">
+        search
+        </span>
     </button>
     <input type="text" placeholder="Procurar..." />
   </div>
@@ -12,14 +14,15 @@
           <span>{{ notification.texto }}</span>
         </button>
       </mat-menu>
-      <i
-        class="notificatioNone"
-        mat-icon-button
-        [matMenuTriggerFor]="notificationMenu"
-        class='bx bx-notification'
-      ></i>
+      
+      <span class="material-symbols-outlined notificatioNone" mat-icon-button
+      [matMenuTriggerFor]="notificationMenu">
+        notifications
+    </span>
 
- <i class='bx bxs-cog'></i>
+    <span class="material-symbols-outlined">
+      settings
+      </span>
     </div>
     <img
       src="assets/img/perfil.png"

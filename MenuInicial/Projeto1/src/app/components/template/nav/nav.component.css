@@ -46,7 +46,7 @@ justify-content: center;
   list-style: none;
   transition: all 0.4s ease;
 }
-.bx-detail{
+.ordensDeServico {
   padding-bottom:10px ;
 }
 
@@ -58,16 +58,26 @@ justify-content: center;
   border-radius: 25% 0 25% 0;
 }
 
+.sidebar .nav-links li .sub-menu:hover {
+  background: #dbdbdb;
+  color: #464646;
+  padding: 1px;
+ width: 4.2rem;
+  border-radius: 25% 0 25% 0;
+}
 
-.sidebar .nav-links li i {
+
+.sidebar .nav-links li span {
   margin-top: 10px;
   margin-left: 1px;
+  margin-bottom: 5px;
+  padding: -4px;
   height: 38px;
   min-width: 70px;
   text-align: center;
   line-height: 11px;
   color: var(--icon-menu-color);
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
   transition: all 0.3s ease;
   
@@ -124,6 +134,7 @@ h5 {
   left: 100%;
   top: 100px;
   margin-top: 1px;
+  width: 150px;
   padding: 10px 20px;
   border-radius: 0 6px 6px 0;
   opacity: 0;
@@ -146,9 +157,10 @@ h5 {
   display: block;
 }
 
-.sidebar .nav-links li.active i,
+.sidebar .nav-links li.active span,
 .sidebar .nav-links li.active h5 {
   color: var(--icon-menu);
+  
 }
 
 
@@ -201,6 +213,11 @@ h5 {
   bottom: 20px;
   width: 100%;
   padding: 2px;
+ 
+}
+.rotated {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease; /* Isso suavizará a transição da rotação */
 }
 @media screen and (max-width: 380px){
   .sidebar {

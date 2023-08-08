@@ -1,1 +1,50 @@
-<h1>Produtos</h1>
+<h1>Cadastro de Produtos</h1>
+<div class="card">
+<form [formGroup]="formulario" (ngSubmit)="enviarFormulario()" class="grid-form">
+    <mat-form-field id="item" class="grid-item grid-item-medium">
+      <mat-label>Item</mat-label>
+      <input matInput formControlName="item" required>
+    </mat-form-field>
+
+    <mat-form-field id="km" class="grid-item grid-item-small">
+        <mat-label>KM</mat-label>
+        <input matInput formControlName="km" required>
+      </mat-form-field>
+
+      <mat-form-field id="estoqueMinimo" class="grid-item grid-item-small">
+        <mat-label>Estoque Mínimo</mat-label>
+        <input matInput formControlName="estoqueMinimo" required>
+      </mat-form-field>
+    
+
+    <mat-form-field id="codigoProduto" class="grid-item grid-item-medium">
+      <mat-label>Código do Produto</mat-label>
+      <input matInput formControlName="codigoProduto" required>
+    </mat-form-field>
+
+    <mat-form-field id="modelo" class="grid-item grid-item-medium">
+        <mat-label>Modelo</mat-label>
+        <input matInput formControlName="modelo" required>
+      </mat-form-field>
+      
+    <mat-form-field id="custoUnitario" class="grid-item grid-item-medium">
+        <mat-label>Custo Unitário</mat-label>
+        <input matInput formControlName="custoUnitario" required>
+      </mat-form-field>
+      
+    
+    <mat-form-field id="unidadeMedida" class="grid-item grid-item-small">
+      <mat-label>Unidade de Medida</mat-label>
+      <input matInput formControlName="unidadeMedida" required>
+    </mat-form-field>
+    
+    <mat-form-field id="serialNumero" class="grid-item grid-item-small">
+      <mat-label>Serial Número</mat-label>
+      <input matInput formControlName="serialNumero" required>
+    </mat-form-field>
+
+    <button class="grid-item-button" type="submit" >Enviar</button>
+    <button class="grid-item-button2" type="submit" >Cancelar</button>
+</form>
+
+</div>

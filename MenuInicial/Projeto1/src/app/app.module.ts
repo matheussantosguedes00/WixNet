@@ -52,7 +52,7 @@ import { EstoqueComponent } from './components/pages/almoxarifado/menu-principal
 import { LinkFornecedorComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-fornecedor/link-fornecedor.component';
 import { LinkLojaComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-loja/link-loja.component';
 import { LinkProdutosComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-produtos/link-produtos.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -103,7 +103,7 @@ import { LinkProdutosComponent } from './components/pages/almoxarifado/menu-prin
     MatTabsModule,
     RouterModule,
     BrowserModule,
-  
+    ReactiveFormsModule 
      
   ],
   providers: [],
