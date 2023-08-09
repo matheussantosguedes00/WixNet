@@ -23,12 +23,12 @@ export class NavComponent implements OnInit {
   }
 
   private carregarTemaDoBancoDeDados() {
-    this.tema = 3; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
+    this.tema = 1; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
   }
 
   private aplicarTema() {
     // Remove todas as classes de tema do elemento raiz do documento
-    //document.documentElement.classList.remove('modo-claro', 'modo-escuro', 'nasaModoClaro', 'nasaModoEscuro');
+    document.documentElement.classList.remove('modo-claro', 'modo-escuro', 'nasaModoClaro', 'nasaModoEscuro');
 
     // Adiciona a classe de tema correspondente com base no valor de 'this.tema'
     if (this.tema === 1) {
@@ -43,7 +43,7 @@ export class NavComponent implements OnInit {
   }
 
   alternarModoTema() {
-    //this.tema = (this.tema % 4) + 1; // Alterna entre os valores de 1 a 4
+    this.tema = (this.tema % 4) + 1; // Alterna entre os valores de 1 a 4
     
     this.isModoAtivado = !this.isModoAtivado; // Inverte o estado do modo escuro
     this.aplicarTema(); // Aplica o novo tema
