@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 60px;
   background-color: var(--body);
   border: 0;
   
@@ -31,6 +31,7 @@ h1 {
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  margin-top: 100px;
 }
 
 h3, p {

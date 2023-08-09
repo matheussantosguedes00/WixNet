@@ -41,19 +41,19 @@ body {
 }
 
 .nasaModoClaro{
-  --icon-menu: #96d7eb;
-  --body: #dcfff7;
-  --menu-lateral: #fbfffe;
-  --menu-superior: #fbfffe;
-  --tema-icon: #000000;
-  --icon-menu-color: #000000;
+  --icon-menu: #f8f8f8;
+  --body: #BFD0D6;
+  --menu-lateral: #eff3f5;
+  --menu-superior: #eff3f5;
+  --tema-icon: #6a6868;
+  --icon-menu-color: #6a6868;
   transition: 5s;
 }
 .nasaModoEscuro{
   --icon-menu: #ffffff;
-  --body: #030b64;
-  --menu-lateral: #423e97;
-  --menu-superior: #423e97;
+  --body: #5d5d5d;
+  --menu-lateral: #979797;
+  --menu-superior: #979797;
   transition: 5s;
   --tema-icon: #eeecec;
   --icon-menu-color:#ffffff;

@@ -13,11 +13,11 @@
 .sidebar .logo-details {
   margin: 0px auto;
   height: 60px;
-  width: 100%;
+  width: 101%;
   display: flex;
   align-items: center;
   background-color: var(--menu-superior);
-  border: none;
+  border: 0;
 }
 
 .sidebar .logo-details img {
