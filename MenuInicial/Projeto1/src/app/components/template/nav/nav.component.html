@@ -79,7 +79,7 @@
       </li>
 
       <li (click)="activateIcon(6)"[ngClass]="{ active: activeIcon === 6 }">
-        <a>
+        <a routerLink="clientes/geral">
           <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 6 }">
               group
               <h5 [ngClass]="{ active: activeIcon === 6 }">Clientes</h5>
@@ -87,7 +87,7 @@
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a routerLink="#" class="link_name" >Clientes</a>
+            <a routerLink="clientes/geral" class="link_name" >Clientes</a>
           </li>
         </ul>
       </li>
