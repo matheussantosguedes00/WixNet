@@ -23,7 +23,7 @@ export class NavComponent implements OnInit {
   }
 
   private carregarTemaDoBancoDeDados() {
-    this.tema = 1; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
+   this.tema = 3; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
   }
 
   private aplicarTema() {
@@ -43,10 +43,10 @@ export class NavComponent implements OnInit {
   }
 
   alternarModoTema() {
-    this.tema = (this.tema % 4) + 1; // Alterna entre os valores de 1 a 4
+    //this.tema = (this.tema % 4) + 1; // Alterna entre os valores de 1 a 4
     
     this.isModoAtivado = !this.isModoAtivado; // Inverte o estado do modo escuro
     this.aplicarTema(); // Aplica o novo tema
-    localStorage.setItem('activeIcon', JSON.stringify(this.isModoAtivado)); // Armazena o estado do modo escuro no armazenamento local
+    localStorage.setItem('tema', JSON.stringify(this.isModoAtivado)); // Armazena o estado do modo escuro no armazenamento local
   }
 }
