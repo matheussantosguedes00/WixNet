@@ -18,10 +18,10 @@
 .search-container {
   display: flex;
   align-items: center;
-  width: 334px;
+  width: 260px;
   height: 19px;
   padding: 5px;
-  margin-left: 134px;
+  margin-left: 10px;
   border:none;
   border-radius: 20px;
   background-color: #D8E0E7;;
@@ -133,10 +133,7 @@
     flex: 1;
   }
 
-  .notificatioNone {
-    display: none;
-  }
-  
+ 
 }
 
 @media (max-width: 444px) {
@@ -152,7 +149,4 @@
     flex: 1;
   }
 
-  .notificatioNone {
-    display: none;
-  }
 }
