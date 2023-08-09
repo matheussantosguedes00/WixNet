@@ -121,7 +121,7 @@
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 500px) {
   .search-container {
     display: none;
   }
