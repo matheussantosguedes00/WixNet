@@ -7,68 +7,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   icon: string = '';
-  isModoEscuroAtivado: boolean = false;
+  tema: number = 0;
   menuAberto = true;
   activeIcon: number = 0;
+  isModoAtivado: boolean = false; // Adicionando a propriedade isModoEscuroAtivado
 
   ngOnInit() {
-    this.carregarEstadoDoLocalStorage();   
-    //this.aplicarModoEscuro();manter o modo escuro
+    this.carregarTemaDoBancoDeDados();
+    this.aplicarTema();
   }
 
   activateIcon(iconIndex: number) {
     this.activeIcon = iconIndex;
     localStorage.setItem('activeIcon', JSON.stringify(iconIndex));
-  
   }
 
+  private carregarTemaDoBancoDeDados() {
+    this.tema = 1;
+  }
+
+  private aplicarTema() {
+    document.documentElement.classList.remove('modo-claro', 'modo-escuro', 'nasaModoClaro', 'nasaModoEscuro');
+    
+    if (this.tema === 1) {
+      document.documentElement.classList.add('modo-claro');
+    } else if (this.tema === 2) {
+      document.documentElement.classList.add('modo-escuro');
+    } else if (this.tema === 3) {
+      document.documentElement.classList.add('nasaModoClaro');
+    } else if (this.tema === 4) {
+      document.documentElement.classList.add('nasaModoEscuro');
+    }
+  }
 
   alternarModoTema() {
-    this.isModoEscuroAtivado = !this.isModoEscuroAtivado;
-    this.aplicarModoEscuro();
-    localStorage.setItem('modoEscuro', JSON.stringify(this.isModoEscuroAtivado));
-  }
-
-  private carregarEstadoDoLocalStorage() {
-  
-    const storedModoEscuro = localStorage.getItem('modoEscuro');
-    if (storedModoEscuro) {
-      this.isModoEscuroAtivado = JSON.parse(storedModoEscuro);
-    }
-  }
-
-  private aplicarModoEscuro() {
-    if (this.isModoEscuroAtivado) {
-      document.documentElement.classList.add('modo-escuro');
-      document.documentElement.classList.remove('modo-claro');
-    } else {
-      document.documentElement.classList.add('modo-claro');
-      document.documentElement.classList.remove('modo-escuro');
-    }
+    this.tema = (this.tema % 4) + 1;
+    this.isModoAtivado = !this.isModoAtivado;
+    this.aplicarTema();
+    localStorage.setItem('modoEscuro', JSON.stringify(this.isModoAtivado));
   }
 }
-/*permissions = [
-    { name: 'home', permission: true },
-    { name: 'clientes', permission: true },
-  ];
-  moduloHome = false;
-  moduloCliente = false;
-  
-  mapPermissions(permissions: any[]) {
-    permissions.forEach((modulo) => {
-      if (modulo.name === 'home') {
-        this.moduloHome = modulo.permission;
-      }
-
-      if (modulo.name === 'clientes') {
-        this.moduloCliente = modulo.permission;
-      }
-    });
-  }
-  ngOnInit() {
-    this.mapPermissions(this.permissions);
-
- no html  *ngIf="moduloCliente"
- *ngIf="moduloHome"
-  }
-*/

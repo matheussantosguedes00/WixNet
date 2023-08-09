@@ -153,9 +153,9 @@
       </div>
       
       
-      <button class="icon-modoesculo" (click)="alternarModoTema()">
-        <span class="material-symbols-outlined" [ngClass]="{'rotated': isModoEscuroAtivado}">
-          {{ isModoEscuroAtivado ? 'brightness_4' : 'brightness_low' }}
+      <button class="icon-modoesculo" (click)="alternarModoTema()" [ngClass]="{'rotated': isModoAtivado}">
+        <span class="material-symbols-outlined">
+          {{ tema === 1 ? 'brightness_low' : tema === 2 ? 'brightness_4' : tema === 3 ? 'sunny' : 'bedtime' }}
         </span>
       </button>
     </ul>

@@ -9,21 +9,23 @@
     width:4.2rem;
     overflow: visible;
     display: flex;
+    border: none;
   }
   
   .mat-toolbar {
     position: fixed;
     height: 60px;
-    background-color: var(--body);
+    background-color:  var(--menu-superior);
     z-index: 999;
     width: 100%;
   }
   
   .mat-main {
     padding: 0;
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 10px; 
     background-color: var(--body);
+    border-radius: 20px;
   }
   
   .footer {
@@ -80,7 +82,7 @@
       width: 10px;
       z-index: 999999;
       border: none;
-      background-color:var(--body) ;
+      background-color:var(--menu-superior) ;
       color:var(--tema-icon);
       display: flex ;
       align-items: center;
