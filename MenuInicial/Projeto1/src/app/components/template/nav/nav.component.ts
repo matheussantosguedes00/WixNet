@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   icon: string = ''; // Variável para armazenar um ícone
-  tema: number = 0; // Variável para armazenar o tema selecionado
   menuAberto = true; // Variável para controlar se o menu está aberto ou não
   activeIcon: number = 0; // Variável para armazenar o ícone ativo
+
+  tema: number = 0; // Variável para armazenar o tema selecionado
   isModoAtivado: boolean = false; // Variável para armazenar se o modo escuro está ativado ou não
 
   ngOnInit() {
@@ -22,6 +23,8 @@ export class NavComponent implements OnInit {
     localStorage.setItem('activeIcon', JSON.stringify(iconIndex)); // Armazena o ícone ativo no armazenamento local
   }
 
+
+  
   private carregarTemaDoBancoDeDados() {
    this.tema = 3; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
   }
@@ -43,7 +46,7 @@ export class NavComponent implements OnInit {
   }
 
   alternarModoTema() {
-    //this.tema = (this.tema % 4) + 1; // Alterna entre os valores de 1 a 4
+    this.tema = (this.tema % 4) + 1; // Alterna entre os valores de 1 a 4
     
     this.isModoAtivado = !this.isModoAtivado; // Inverte o estado do modo escuro
     this.aplicarTema(); // Aplica o novo tema
