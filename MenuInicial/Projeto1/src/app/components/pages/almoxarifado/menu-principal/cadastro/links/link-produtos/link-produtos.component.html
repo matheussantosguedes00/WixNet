@@ -1,6 +1,8 @@
-<h1>Cadastro de Produtos</h1>
-<div class="card">
+
+
+  <h1>Cadastro de Produtos</h1>
 <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()" class="grid-form">
+  
     <mat-form-field id="item" class="grid-item grid-item-medium">
       <mat-label>Item</mat-label>
       <input matInput formControlName="item" required>
@@ -43,8 +45,43 @@
       <input matInput formControlName="serialNumero" required>
     </mat-form-field>
 
-    <button class="grid-item-button" type="submit" >Enviar</button>
+    <button class="grid-item-button" type="submit" >Salvar</button>
     <button class="grid-item-button2" type="submit" >Cancelar</button>
 </form>
 
-</div>
+<h2>Dados inseridos:</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>KM</th>
+      <th>Estoque Mínimo</th>
+      <th>Código do Produto</th>
+      <th>Modelo</th>
+      <th>Custo Unitário</th>
+      <th>Unidade de Medida</th>
+      <th>Serial Número</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produto of produtos; let i = index">
+      <td>{{ produto.item }}</td>
+      <td>{{ produto.km }}</td>
+      <td>{{ produto.estoqueMinimo }}</td>
+      <td>{{ produto.codigoProduto }}</td>
+      <td>{{ produto.modelo }}</td>
+      <td>{{ produto.custoUnitario }}</td>
+      <td>{{ produto.unidadeMedida }}</td>
+      <td>{{ produto.serialNumero }}</td>
+      <td>
+        <button class="material-symbols-outlined edit" (click)="editarProduto(i)">
+          edit
+        </button>
+        <button class="material-symbols-outlined delete" (click)="excluirProduto(i)">
+          delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
