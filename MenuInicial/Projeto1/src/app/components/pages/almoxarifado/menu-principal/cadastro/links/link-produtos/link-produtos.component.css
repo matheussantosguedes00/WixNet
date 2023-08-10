@@ -9,7 +9,11 @@ h1 {
   background-color: #ffffff;
   padding:  10px;
   text-align: center;
-  border-radius: 20px 20px 0 0 ;
+  
+}
+h2{
+  color: var(--icon-menu);
+  background-color:#ffffff ;
 }
 
 .grid-form {
@@ -85,21 +89,30 @@ button:hover{
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   margin-top: 20px;
   
 }
+h2{
+  color: var(--icon-menu);
+  background-color:#ffffff ;
+margin-bottom: -21px;
+padding: 10px;
+border: 1px solid #c4c4c4;
+ text-align: center;
+
+}
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #c4c4c4;
   padding: 8px;
   text-align: left;
-  
+  background-color: #ffffff;
 }
 
 th {
-  background-color: #f2f2f2;
-  
+  background-color: #ffffff;
+ 
 }
 .delete, .edit {
   margin-right: 10px;

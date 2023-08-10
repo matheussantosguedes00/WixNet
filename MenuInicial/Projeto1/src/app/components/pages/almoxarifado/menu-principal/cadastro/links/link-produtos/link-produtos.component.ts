@@ -42,6 +42,26 @@ export class LinkProdutosComponent {
         custoUnitario: 70.00,
         unidadeMedida: 'Unidade',
         serialNumero: 'SN456'
+      },
+      {
+        item: 'Produto 1',
+        km: 100,
+        estoqueMinimo: 10,
+        codigoProduto: 'P123',
+        modelo: 'Modelo A',
+        custoUnitario: 50.00,
+        unidadeMedida: 'Unidade',
+        serialNumero: 'SN123'
+      },
+      {
+        item: 'Produto 2',
+        km: 200,
+        estoqueMinimo: 20,
+        codigoProduto: 'P456',
+        modelo: 'Modelo B',
+        custoUnitario: 70.00,
+        unidadeMedida: 'Unidade',
+        serialNumero: 'SN456'
       }
       // Adicione mais produtos se necessário
     );
