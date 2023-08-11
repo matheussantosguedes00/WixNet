@@ -149,6 +149,22 @@ th {
     width: 100px;
     margin-right: 170px;
   }
+  h2{
+    color: var(--icon-menu);
+    background-color:#ffffff ;
+  margin-bottom: -21px;
+  padding: 10px;
+  border: 1px solid #c4c4c4;
+   text-align: center;
+   font-size: 18px;
+  
+  }
+  th, td {
+    border: 1px solid #c4c4c4;
+    padding: 4px;
+    text-align: left;
+    background-color: #ffffff;
+  }
 }
 @media (max-width: 680px) {
   .grid-form {
@@ -174,7 +190,19 @@ th {
     grid-column: span 1;
     width: 200px;
   }
-  
+  th, td {
+    border: 1px solid #c4c4c4;
+    padding: 0px;
+    text-align: left;
+    background-color: #ffffff;
+    font-size: 12px;
+  }
+ #unidade{
+  display: none;
+ }
+ #km{
+  display: none;
+ }
  
 }
 

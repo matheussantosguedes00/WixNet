@@ -49,17 +49,17 @@
     <button class="grid-item-button2" type="submit" >Cancelar</button>
 </form>
 
-<h2>Tabela de Produtos Cadastrados :</h2>
+<h2>Tabela de Produtos Cadastrados </h2>
 <table>
   <thead>
     <tr>
       <th>Item</th>
-      <th>KM</th>
+      <th id="km">KM</th>
       <th>Estoque Mínimo</th>
       <th>Código do Produto</th>
       <th>Modelo</th>
       <th>Custo Unitário</th>
-      <th>Unidade de Medida</th>
+      <th id="unidade">Unidade de Medida</th>
       <th>Serial Número</th>
       <th>Ações</th>
     </tr>
@@ -67,12 +67,12 @@
   <tbody>
     <tr *ngFor="let produto of produtos; let i = index">
       <td>{{ produto.item }}</td>
-      <td>{{ produto.km }}</td>
+      <td id="km">{{ produto.km }}</td>
       <td>{{ produto.estoqueMinimo }}</td>
       <td>{{ produto.codigoProduto }}</td>
       <td>{{ produto.modelo }}</td>
       <td>{{ produto.custoUnitario }}</td>
-      <td>{{ produto.unidadeMedida }}</td>
+      <td id="unidade">{{ produto.unidadeMedida }}</td>
       <td>{{ produto.serialNumero }}</td>
       <td>
         <button class="material-symbols-outlined edit" (click)="editarProduto(i)">
