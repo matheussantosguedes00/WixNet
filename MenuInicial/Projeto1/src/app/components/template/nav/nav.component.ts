@@ -53,3 +53,28 @@ export class NavComponent implements OnInit {
     localStorage.setItem('tema', JSON.stringify(this.isModoAtivado)); // Armazena o estado do modo escuro no armazenamento local
   }
 }
+/*permissions = [
+    { name: 'home', permission: true },
+    { name: 'clientes', permission: true },
+  ];
+  moduloHome = false;
+  moduloCliente = false;
+  
+  mapPermissions(permissions: any[]) {
+    permissions.forEach((modulo) => {
+      if (modulo.name === 'home') {
+        this.moduloHome = modulo.permission;
+      }
+
+      if (modulo.name === 'clientes') {
+        this.moduloCliente = modulo.permission;
+      }
+    });
+  }
+  ngOnInit() {
+    this.mapPermissions(this.permissions);
+
+ no html  *ngIf="moduloCliente"
+ *ngIf="moduloHome"
+  }
+*/
