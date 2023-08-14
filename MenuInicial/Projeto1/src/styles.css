@@ -25,7 +25,7 @@ body {
   --icon-menu: #5a5a5a;
   --body: #ecf3f5;
   --menu-lateral: #fffffff5;
-  --menu-superior: #ecf3f5;
+  --menu-superior: #ffffff;
   transition: 5s;
   --tema-icon: #000000;
   --icon-menu-color:#000000;
@@ -45,7 +45,7 @@ body {
   --icon-menu: #3300ff;
   --body: #BFD0D6;
   --menu-lateral: #eff3f5;
-  --menu-superior: #eff3f5;
+  --menu-superior: #ffffff;
   --tema-icon: #6a6868;
   --icon-menu-color: #6a6868;
   transition: 5s;
@@ -54,7 +54,7 @@ body {
   --icon-menu:  #c9c9c9;
   --body: #5d5d5d;
   --menu-lateral: #979797;
-  --menu-superior: #979797;
+  --menu-superior: #ffffff;
   transition: 5s;
   --tema-icon: #eeecec;
   --icon-menu-color:#ffffff;
