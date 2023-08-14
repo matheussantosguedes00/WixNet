@@ -2,7 +2,6 @@
     height: 100vh;
     border: none;
     
-    
   }
   
   .mat-sidenav {
@@ -19,13 +18,16 @@
     z-index: 999;
     width: 100%;
   }
-  
+  .meu-card{
+    background-color: var(--menu-superior);
+  }
   .mat-main {
     padding: 0;
     height: 100%;
-    margin-top: 60px;
+    margin-top: 70px;
     margin-bottom: 10px; 
     background-color: var(--body);
+    border-radius: 15px 0 0 0 ;
     
   }
   

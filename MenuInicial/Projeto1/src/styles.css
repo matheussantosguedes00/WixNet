@@ -6,7 +6,8 @@ body {
 body {
   margin: 0;
   font-family:Arial, Helvetica, sans-serif;
-  background-color: rgb(83, 83, 83);
+  
+ 
 }
 
 
@@ -34,7 +35,7 @@ body {
   --icon-menu: #a8a7a7;
   --body: #252631;
   --menu-lateral: #191919;
-  --menu-superior: #252631;
+  --menu-superior: #ffffff;
   transition: 5s;
   --tema-icon: #eeecec;
   --icon-menu-color:#ffffff;
@@ -50,7 +51,7 @@ body {
   transition: 5s;
 }
 .nasaModoEscuro{
-  --icon-menu: #ffffff;
+  --icon-menu:  #c9c9c9;
   --body: #5d5d5d;
   --menu-lateral: #979797;
   --menu-superior: #979797;
