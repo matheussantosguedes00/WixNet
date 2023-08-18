@@ -1,0 +1,163 @@
+<div class="container">
+  <div class="sidebar sub-closes">
+    <div class="logo-details">
+      <img src="../assets/img/logo.png" alt="" />
+    </div>
+
+    <ul class="nav-links">
+      <li (click)="activateIcon(1)" [ngClass]="{ active: activeIcon === 1 }">
+        <a routerLink="painel-controle">
+
+            <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 1 }">
+              dashboard
+              <h5 [ngClass]="{ active: activeIcon === 1 }">Dashboard</h5>
+            </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="painel-controle" class="link_name">Dashboard</a>
+          </li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(2)"[ngClass]="{ active: activeIcon === 2 }">
+        <a>
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 2 }">
+            confirmation_number
+            <h5 [ngClass]="{ active: activeIcon === 2 }">Tickets</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="#" class="link_name" href="#">Tickets</a>
+          </li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(3)"[ngClass]="{ active: activeIcon === 3 }">
+        <a routerLink="tasks">
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 3 }">task
+              <h5 [ngClass]="{ active: activeIcon === 3 }">Tasks</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="#" class="link_name" href="#">Tasks</a>
+          </li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(4)"[ngClass]="{ active: activeIcon === 4 }">
+        <a>
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 4 }">
+              assignment_turned_in
+              <h5 [ngClass]="{ active: activeIcon === 4 }">Projetos</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="#" class="link_name" href="#">Projetos</a>
+          </li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(5)"[ngClass]="{ active: activeIcon === 5 }">
+        <a>
+          <span class="material-symbols-outlined ordensDeServico"[ngClass]="{ active: activeIcon === 5 }">
+              list_alt
+              <h5 [ngClass]="{ active: activeIcon === 5 }">Ordens de<br> Serviço</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="#" class="link_name" href="#">Ordens de Serviço</a>
+          </li>
+          <li><a routerLink="#">UI Face</a></li>
+          <li><a href="#">Pigments</a></li>
+          <li><a href="#">Box Icons</a></li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(6)"[ngClass]="{ active: activeIcon === 6 }">
+        <a routerLink="clientes/geral">
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 6 }">
+              group
+              <h5 [ngClass]="{ active: activeIcon === 6 }">Clientes</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="clientes/geral" class="link_name" >Clientes</a>
+          </li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(7)"[ngClass]="{ active: activeIcon === 7 }">
+        <a>
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 7 }">
+              lan
+              <h5 [ngClass]="{ active: activeIcon === 7 }">Redes</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="#" class="link_name" >Redes</a>
+          </li>
+        </ul>
+      </li>
+      <li (click)="activateIcon(8)"[ngClass]="{ active: activeIcon === 8 }">
+        <a>
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 8 }">
+              handyman
+              <h5 [ngClass]="{ active: activeIcon === 8 }">Tools</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="#" class="link_name" >Tools</a>
+          </li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(9)"[ngClass]="{ active: activeIcon === 9 }">
+        <a>
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 9 }">
+              inventory_2
+              <h5 [ngClass]="{ active: activeIcon === 9 }">IRR</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="#" class="link_name" >IRR</a>
+          </li>
+        </ul>
+      </li>
+
+      <li (click)="activateIcon(10)"[ngClass]="{ active: activeIcon === 10 }">
+        <a routerLink="almoxarifado/cadastro/produtos">
+          <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 10 }">
+            warehouse
+              <h5 [ngClass]="{ active: activeIcon === 10 }">Warehouse</h5>
+          </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a routerLink="almoxarifado/cadastro/produtos" class="link_name" >Warehouse</a>
+          </li>
+        </ul>
+      </li>
+     
+      <div class="logo-details2">
+        <img src="../assets/img/iconCaixa.png" alt="" />
+        <p>Ultra Cash</p>
+      </div>
+      
+      
+      <button class="icon-modoesculo" (click)="alternarModoTema()" [ngClass]="{'rotated': isModoAtivado}">
+        <span class="material-symbols-outlined">
+          {{ tema === 1 ? 'brightness_low' : tema === 2 ? 'brightness_4' : tema === 3 ? 'sunny' : 'bedtime' }}
+        </span>
+      </button>
+    </ul>
+  </div>
+</div>

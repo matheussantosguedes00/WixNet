@@ -1,0 +1,118 @@
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--icon-menu);
+  font-size: 19px;
+  background-color: var(--body);
+  padding: 3px;
+  margin: 1px auto 0 auto;
+}
+
+
+  .Menu-Linha ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  
+  }
+  
+  .Menu-Linha li {
+    margin-top:-2px;
+    padding: 5px 14px;
+    
+  }
+  
+  .Menu-Linha a {
+    background-color: #3d9bff;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px ;
+    border:none;
+    text-align: center;
+    font-size: 13px;
+  }
+  .Menu-Linha a:hover{
+      background-color:  #007bff;
+      color: #ffffff;
+  }
+  
+  .Menu-Linha li a.active {
+      background-color:  #023266;
+      color: #b3d5f8;
+  }
+
+  .card{
+    padding: 10px;
+    margin: 0;
+    background-color:var(--body);
+   height: 100%;
+     
+     
+ }
+
+  @media screen and (max-width: 690px){
+   
+    .Menu-Linha li {
+      margin: 0 1px;
+    }
+    .Menu-Linha a {
+      text-decoration: none;
+      background-color: #3d9bff;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 5px;
+      border:none;
+      text-align: center;
+    }
+    .Menu-Linha a:hover{
+      background-color:  #007bff;
+      color: #ffffff;
+  }
+  
+  .Menu-Linha li a.active {
+      background-color:  #023266;
+      color: #b3d5f8;
+  }
+  
+  }
+  @media screen and (max-width: 420px){ 
+    .Menu-Linha ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    
+    }
+    .Menu-Linha li {
+      margin:0 -10px;
+    }
+    .Menu-Linha a {
+      text-decoration: none;
+      background-color: #3d9bff;
+    color: #ffffff;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 5px;
+      border:none;
+      text-align: center;
+    }
+    .Menu-Linha a:hover{
+      background-color:  #007bff;
+      color: #ffffff;
+  }
+  
+  .Menu-Linha li a.active {
+      background-color:  #023266;
+      color: #b3d5f8;
+  }
+  }
+  

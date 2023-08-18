@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  <h1>Dashboard</h1>
+  <div class="row">
+    <!-- Primeira linha -->
+    <div *ngFor="let card of cardsData.slice(0, 4)" class="card card-small">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+      <div class="content">
+        <strong>Conteúdo:</strong>
+        <p>{{ card.content }}</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <!-- Segunda linha -->
+    <div class="card card-large">
+      <h3>Card Grande</h3>
+      <p>Este é um card maior com mais informações.</p>
+      <div class="content">
+        <strong>Conteúdo:</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus, est quis scelerisque suscipit, urna magna interdum libero, in consequat turpis est et neque.</p>
+      </div>
+    </div>
+    <div *ngFor="let card of cardsData.slice(4, 6)" class="card card-small-2">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+      <div class="content">
+        <strong>Conteúdo:</strong>
+        <p>{{ card.content }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Terceira linha -->
+    <div *ngFor="let card of cardsData.slice(6, 7)" class="card card-full">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+      <div class="content">
+        <strong>Conteúdo:</strong>
+        <p>{{ card.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>
