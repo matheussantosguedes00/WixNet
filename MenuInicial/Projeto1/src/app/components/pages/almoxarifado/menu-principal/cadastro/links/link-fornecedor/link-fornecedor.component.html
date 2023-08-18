@@ -39,17 +39,19 @@
   </thead>
   <tbody>
     <tr *ngFor="let fornecedor of fornecedores; let i = index">
-      <td>{{ fornecedor.empresa }}</td>
-      <td>{{ fornecedor.telefone }}</td>
-      <td>{{ fornecedor.email }}</td>
-      <td>{{ fornecedor.totalCompras }}</td>
+      <td>{{ fornecedor.Empresa }}</td>
+      <td>{{ fornecedor.Telefone }}</td>
+      <td>{{ fornecedor.Email }}</td>
+      <td>{{ fornecedor.TotalCompras }}</td>
       <td>
-        <button class="material-symbols-outlined edit" (click)="editarFornecedor(i)">
-          edit
-        </button>
-        <button class="material-symbols-outlined delete" (click)="excluirFornecedor(i)">
-          delete
-        </button>
+        <div class="ButtonEditDelete">
+          <button class="material-symbols-outlined edit" (click)="editarFornecedor(i)">
+            edit
+          </button>
+          <button class="material-symbols-outlined delete" (click)="excluirFornecedor(i)">
+            delete
+          </button>
+        </div>
       </td>
     </tr>
   </tbody>

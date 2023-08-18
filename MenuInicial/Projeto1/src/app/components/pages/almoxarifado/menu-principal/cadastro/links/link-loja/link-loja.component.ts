@@ -1,63 +1,105 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LojaService } from './loja.service.service'; // Importe o serviço de lojas correspondente
+
 @Component({
   selector: 'loja',
   templateUrl: './link-loja.component.html',
-  styleUrls: ['./link-loja.component.css']
+  styleUrls: ['../style.css']
 })
-export class LinkLojaComponent {
+export class LinkLojaComponent implements OnInit {
   formulario: FormGroup;
-  lojas: any[] = []; // Lista de lojas
-  lojaParaEditar: any = null; // Loja a ser editada (inicializada como null)
+  lojas: any[] = [];
+  lojaParaEditar: any = null;
+  indiceLojaSelecionada: number = -1;
+  mensagemSucesso: string = '';
+  mensagemErro: string = '';
+  mostrarErro: boolean = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private lojasService: LojaService) {
     this.formulario = this.fb.group({
-      loja: [''],
-      telefone: [''],
-      email: [''],
-      endereco: [''],
-      totalVendido: ['']
+      loja: ['', Validators.required],
+      telefone: ['', Validators.required],
+      email: ['', Validators.required],
+      endereco: ['', Validators.required],
+      totalVendido: ['', Validators.required]
     });
-
-    // Exemplo: Adicionar algumas lojas à lista
-    this.lojas.push(
-      {
-        loja: 'Loja A',
-        telefone: '111-111-1111',
-        email: 'lojaA@example.com',
-        endereco: 'Rua Principal, 123',
-        totalVendido: 10000
-      },
-      {
-        loja: 'Loja B',
-        telefone: '222-222-2222',
-        email: 'lojaB@example.com',
-        endereco: 'Avenida Secundária, 456',
-        totalVendido: 15000
-      }
-      // Adicione mais lojas se necessário
-    );
   }
 
-  editarLoja(index: number) {
-    this.lojaParaEditar = this.lojas[index];
-    this.formulario.patchValue(this.lojaParaEditar);
+  ngOnInit() {
+    this.carregarLojas();
+  }
+
+  carregarLojas() {
+    this.lojasService.getLojas().subscribe((lojas) => {
+      this.lojas = lojas;
+      // Realize a ordenação das lojas se necessário
+      console.log(this.lojas);
+    });
   }
 
   enviarFormulario() {
     if (this.formulario.valid) {
-      if (this.lojaParaEditar !== null) {
-        const index = this.lojas.indexOf(this.lojaParaEditar);
-        this.lojas[index] = this.formulario.value;
-        this.lojaParaEditar = null;
+      const loja = this.formulario.value;
+      if (this.lojaParaEditar !== null && this.lojaParaEditar.id) {
+        this.lojasService.atualizarLoja(this.lojaParaEditar.id, loja).subscribe(() => {
+          this.lojaParaEditar = null;
+          this.formulario.reset();
+          this.carregarLojas();
+
+          const mensagem = 'Loja editada com sucesso!';
+          this.mostrarMensagemDeErro(mensagem);
+        });
       } else {
-        this.lojas.push(this.formulario.value);
+        this.lojasService.adicionarLoja(loja).subscribe(() => {
+          this.formulario.reset();
+          this.carregarLojas();
+
+          const mensagem = 'Loja cadastrada com sucesso!';
+          this.mostrarMensagemDeErro(mensagem);
+        });
       }
-      this.formulario.reset();
     }
   }
 
+  editarLoja(index: number) {
+    this.indiceLojaSelecionada = index;
+    const lojaSelecionada = this.lojas[index];
+    if (lojaSelecionada && lojaSelecionada.id) {
+      this.lojaParaEditar = { ...lojaSelecionada };
+      this.formulario.setValue({
+        loja: this.lojaParaEditar.Loja,
+        telefone: this.lojaParaEditar.Telefone,
+        email: this.lojaParaEditar.Email,
+        endereco: this.lojaParaEditar.Endereco,
+        totalVendido: this.lojaParaEditar.TotalVendido,
+      });
+    }
+  }
+
+  cancelarEdicao() {
+    this.indiceLojaSelecionada = -1;
+    this.lojaParaEditar = null;
+    this.formulario.reset();
+  }
+
   excluirLoja(index: number) {
-    this.lojas.splice(index, 1);
+    const loja = this.lojas[index];
+    this.lojasService.excluirLoja(loja.id).subscribe(() => {
+      this.carregarLojas();
+
+      const mensagem = 'Loja excluída com sucesso!';
+      this.mostrarMensagemDeErro(mensagem);
+    });
+  }
+
+  mostrarMensagemDeErro(mensagem: string) {
+    this.mensagemErro = mensagem;
+    this.mostrarErro = true;
+
+    setTimeout(() => {
+      this.mostrarErro = false;
+      this.mensagemErro = '';
+    }, 3000);
   }
 }

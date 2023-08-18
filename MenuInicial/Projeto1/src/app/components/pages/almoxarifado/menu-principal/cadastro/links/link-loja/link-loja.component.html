@@ -46,18 +46,21 @@
   </thead>
   <tbody>
     <tr *ngFor="let loja of lojas; let i = index">
-      <td>{{ loja.loja }}</td>
-      <td>{{ loja.telefone }}</td>
-      <td>{{ loja.email }}</td>
-      <td>{{ loja.endereco }}</td>
-      <td>{{ loja.totalVendido }}</td>
+      <td>{{ loja.Loja }}</td>
+      <td>{{ loja.Telefone }}</td>
+      <td>{{ loja.Email }}</td>
+      <td>{{ loja.Endereco }}</td>
+      <td>{{ loja.TotalVendido }}</td>
       <td>
-        <button class="material-symbols-outlined edit" (click)="editarLoja(i)">
-          edit
-        </button>
-        <button class="material-symbols-outlined delete" (click)="excluirLoja(i)">
-          delete
-        </button>
+        <div class="ButtonEditDelete">
+          <button class="material-symbols-outlined edit" (click)="editarLoja(i)">
+            edit
+          </button>
+          <button class="material-symbols-outlined delete" (click)="excluirLoja(i)">
+            delete
+          </button>
+        </div>
+        
       </td>
     </tr>
   </tbody>
