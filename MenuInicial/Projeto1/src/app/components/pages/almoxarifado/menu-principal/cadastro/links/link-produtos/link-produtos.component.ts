@@ -1,94 +1,119 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProdutosService } from './produto.service.service';
+
 @Component({
   selector: 'produtos',
   templateUrl: './link-produtos.component.html',
-  styleUrls: ['./link-produtos.component.css']
+  styleUrls: ['../style.css']
 })
-export class LinkProdutosComponent {
+export class LinkProdutosComponent implements OnInit {
   formulario: FormGroup;
   produtos: any[] = [];
-  produtoParaEditar: any = null; // Inicialize como null para não preencher o formulário por padrão
-  constructor(private fb: FormBuilder) {
-    this.formulario = this.fb.group({
-      item: [''],
-      km: [''],
-      estoqueMinimo: [''],
-      codigoProduto: [''],
-      modelo: [''],
-      custoUnitario: [''],
-      unidadeMedida: [''],
-      serialNumero: ['']
-    });
+  produtoParaEditar: any = null;
+  indiceProdutoSelecionado: number = -1;
+  mensagemSucesso: string = ''; // Inicializa a mensagem vazia
+  mensagemErro: string = '';
+mostrarErro: boolean = false;
 
-    // Adicionar alguns produtos à lista como exemplo
-    this.produtos.push(
-      {
-        item: 'Produto 1',
-        km: 100,
-        estoqueMinimo: 10,
-        codigoProduto: 'P123',
-        modelo: 'Modelo A',
-        custoUnitario: 50.00,
-        unidadeMedida: 'Unidade',
-        serialNumero: 'SN123'
-      },
-      {
-        item: 'Produto 2',
-        km: 200,
-        estoqueMinimo: 20,
-        codigoProduto: 'P456',
-        modelo: 'Modelo B',
-        custoUnitario: 70.00,
-        unidadeMedida: 'Unidade',
-        serialNumero: 'SN456'
-      },
-      {
-        item: 'Produto 1',
-        km: 100,
-        estoqueMinimo: 10,
-        codigoProduto: 'P123',
-        modelo: 'Modelo A',
-        custoUnitario: 50.00,
-        unidadeMedida: 'Unidade',
-        serialNumero: 'SN123'
-      },
-      {
-        item: 'Produto 2',
-        km: 200,
-        estoqueMinimo: 20,
-        codigoProduto: 'P456',
-        modelo: 'Modelo B',
-        custoUnitario: 70.00,
-        unidadeMedida: 'Unidade',
-        serialNumero: 'SN456'
-      }
-      // Adicione mais produtos se necessário
-    );
+  constructor(private fb: FormBuilder, private produtosService: ProdutosService) {
+    this.formulario = this.fb.group({
+      item: ['', Validators.required],
+      km: ['', Validators.required],
+      estoqueMinimo: ['', Validators.required],
+      codigoProduto: ['', Validators.required],
+      modelo: ['', Validators.required],
+      custoUnitario: ['', Validators.required],
+      unidadeMedida: ['', Validators.required],
+      serialNumero: ['', Validators.required]
+    });
   }
 
- 
+  ngOnInit() {
+    this.carregarProdutos();
+  }
 
-  editarProduto(index: number) {
-    this.produtoParaEditar = this.produtos[index];
-    this.formulario.patchValue(this.produtoParaEditar);
+  carregarProdutos() {
+    this.produtosService.getProdutos().subscribe((produtos) => {
+      this.produtos = produtos;
+      this.produtos.sort((produtoA, produtoB) => {
+        // Compare os produtos pela propriedade que deseja usar para a ordenação.
+        // Suponhamos que cada produto tenha uma propriedade "preco".
+        return produtoB.id - produtoA.id; // Ordenar por preço em ordem decrescente
+      });
+      console.log(this.produtos);
+    });
   }
 
   enviarFormulario() {
     if (this.formulario.valid) {
-      if (this.produtoParaEditar !== null) {
-        const index = this.produtos.indexOf(this.produtoParaEditar);
-        this.produtos[index] = this.formulario.value;
-        this.produtoParaEditar = null;
+      const produto = this.formulario.value;
+      if (this.produtoParaEditar !== null && this.produtoParaEditar.id) {
+          this.produtosService.atualizarProduto(this.produtoParaEditar.id, produto).subscribe(() => {
+          this.produtoParaEditar = null;
+          this.formulario.reset();
+          this.carregarProdutos();
+          
+          const mensagem = 'Produto editado com sucesso!';
+          this.mostrarMensagemDeErro(mensagem);
+          
+        });
       } else {
-        this.produtos.push(this.formulario.value);
+        this.produtosService.adicionarProduto(produto).subscribe(() => {
+          this.formulario.reset();
+          this.carregarProdutos();
+
+          const mensagem = 'Produto cadastrado com sucesso!';
+          this.mostrarMensagemDeErro(mensagem);
+       
+         
+        });
       }
-      this.formulario.reset();
     }
   }
+
+  editarProduto(index: number) {
+    this.indiceProdutoSelecionado = index;
+    const produtoSelecionado = this.produtos[index];
+    if (produtoSelecionado && produtoSelecionado.id) {
+      this.produtoParaEditar = { ...produtoSelecionado };
+      this.formulario.setValue({
+        item: this.produtoParaEditar.Item,
+        km: this.produtoParaEditar.KM,
+        estoqueMinimo: this.produtoParaEditar.EstoqueMinimo,
+        codigoProduto: this.produtoParaEditar.CodigoProduto,
+        modelo: this.produtoParaEditar.Modelo,
+        custoUnitario: this.produtoParaEditar.CustoUnitario,
+        unidadeMedida: this.produtoParaEditar.UnidadeMedida,
+        serialNumero: this.produtoParaEditar.SerialNumero,
+      });
+    }
+  }
+
+  cancelarEdicao() {
+    this.indiceProdutoSelecionado = -1;
+    this.produtoParaEditar = null;
+    this.formulario.reset();
+  }
+  
+
   excluirProduto(index: number) {
-    this.produtos.splice(index, 1);
+    const produto = this.produtos[index];
+    this.produtosService.excluirProduto(produto.id).subscribe(() => {
+      this.carregarProdutos();
+
+      const mensagem ='Produto excluído com sucesso!';
+      this.mostrarMensagemDeErro(mensagem);
+      
+    });
+  }
+  mostrarMensagemDeErro(mensagem: string) {
+    this.mensagemErro = mensagem;
+    this.mostrarErro = true;
+  
+    setTimeout(() => {
+      this.mostrarErro = false;
+      this.mensagemErro = '';
+    }, 3000);
   }
 }
- 
-

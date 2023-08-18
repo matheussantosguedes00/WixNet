@@ -54,21 +54,21 @@ import { LinkLojaComponent } from './components/pages/almoxarifado/menu-principa
 import { LinkProdutosComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-produtos/link-produtos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
     PainelControleComponent,
     NavComponent,
     HeaderComponent,
-    TasksComponent,
     LoginComponent,
     HomeComponent,
     ClientesComponent,
     LinkPerfilComponent,
     LinkGeralComponent,
-    LinkContasComponent,
-    LinkCaixaComponent,
-    LinkLabsComponent,
     AlmoxarifadoComponent,
     LinkProdutosComponent,
     EntradaComponent,
@@ -76,7 +76,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     EstoqueComponent,
     LinkFornecedorComponent,
     LinkLojaComponent,
-    CadastroComponent
+    CadastroComponent,
+    LinkLabsComponent,
+    TasksComponent,
+    LinkContasComponent,
+    LinkCaixaComponent
 
   ],
   imports: [
@@ -103,8 +107,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTabsModule,
     RouterModule,
     BrowserModule,
-    ReactiveFormsModule 
-     
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
