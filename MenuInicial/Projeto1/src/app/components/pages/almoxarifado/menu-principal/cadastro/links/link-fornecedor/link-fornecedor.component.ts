@@ -8,15 +8,16 @@ import { FornecedorService } from './fornecedor.service.service'; // Importe o s
   styleUrls: ['../style.css']
 })
 export class LinkFornecedorComponent implements OnInit {
-  formulario: FormGroup;
-  fornecedores: any[] = [];
-  fornecedorParaEditar: any = null;
-  indiceFornecedorSelecionado: number = -1;
-  mensagemSucesso: string = '';
-  mensagemErro: string = '';
-  mostrarErro: boolean = false;
+  formulario: FormGroup; // O formulário reativo para entrada de dados
+  fornecedores: any[] = []; // Array para armazenar os fornecedores
+  fornecedorParaEditar: any = null; // Informações do fornecedor que está sendo editado
+  indiceFornecedorSelecionado: number = -1; // Índice do fornecedor selecionado para edição
+  mensagemSucesso: string = ''; // Mensagem de sucesso exibida temporariamente
+  mensagemErro: string = ''; // Mensagem de erro exibida temporariamente
+  mostrarErro: boolean = false; // Flag para controlar a exibição da mensagem de erro
 
   constructor(private fb: FormBuilder, private fornecedoresService: FornecedorService) {
+    // Criação do formulário reativo com campos e validações
     this.formulario = this.fb.group({
       empresa: ['', Validators.required],
       telefone: ['', Validators.required],
@@ -26,9 +27,10 @@ export class LinkFornecedorComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.carregarFornecedores();
+    this.carregarFornecedores(); // Carrega os fornecedores ao inicializar o componente
   }
 
+  // Método para carregar os fornecedores da API e atualizar o array
   carregarFornecedores() {
     this.fornecedoresService.getFornecedores().subscribe((fornecedores) => {
       this.fornecedores = fornecedores;
@@ -37,10 +39,12 @@ export class LinkFornecedorComponent implements OnInit {
     });
   }
 
+  // Método para enviar o formulário e adicionar ou atualizar um fornecedor
   enviarFormulario() {
     if (this.formulario.valid) {
       const fornecedor = this.formulario.value;
       if (this.fornecedorParaEditar !== null && this.fornecedorParaEditar.id) {
+        // Atualiza os dados do fornecedor existente
         this.fornecedoresService.atualizarFornecedor(this.fornecedorParaEditar.id, fornecedor).subscribe(() => {
           this.fornecedorParaEditar = null;
           this.formulario.reset();
@@ -50,6 +54,7 @@ export class LinkFornecedorComponent implements OnInit {
           this.mostrarMensagemDeErro(mensagem);
         });
       } else {
+        // Adiciona um novo fornecedor
         this.fornecedoresService.adicionarFornecedor(fornecedor).subscribe(() => {
           this.formulario.reset();
           this.carregarFornecedores();
@@ -61,6 +66,7 @@ export class LinkFornecedorComponent implements OnInit {
     }
   }
 
+  // Método para carregar os dados de um fornecedor para edição
   editarFornecedor(index: number) {
     this.indiceFornecedorSelecionado = index;
     const fornecedorSelecionado = this.fornecedores[index];
@@ -75,12 +81,14 @@ export class LinkFornecedorComponent implements OnInit {
     }
   }
 
+  // Método para cancelar a edição de um fornecedor
   cancelarEdicao() {
     this.indiceFornecedorSelecionado = -1;
     this.fornecedorParaEditar = null;
     this.formulario.reset();
   }
 
+  // Método para excluir um fornecedor
   excluirFornecedor(index: number) {
     const fornecedor = this.fornecedores[index];
     this.fornecedoresService.excluirFornecedor(fornecedor.id).subscribe(() => {
@@ -91,6 +99,7 @@ export class LinkFornecedorComponent implements OnInit {
     });
   }
 
+  // Método para exibir a mensagem de erro temporariamente
   mostrarMensagemDeErro(mensagem: string) {
     this.mensagemErro = mensagem;
     this.mostrarErro = true;
@@ -98,6 +107,6 @@ export class LinkFornecedorComponent implements OnInit {
     setTimeout(() => {
       this.mostrarErro = false;
       this.mensagemErro = '';
-    }, 3000);
+    }, 3000); // Exibir a mensagem de erro por 3 segundos
   }
 }

@@ -8,15 +8,16 @@ import { LojaService } from './loja.service.service'; // Importe o serviço de l
   styleUrls: ['../style.css']
 })
 export class LinkLojaComponent implements OnInit {
-  formulario: FormGroup;
-  lojas: any[] = [];
-  lojaParaEditar: any = null;
-  indiceLojaSelecionada: number = -1;
-  mensagemSucesso: string = '';
-  mensagemErro: string = '';
-  mostrarErro: boolean = false;
+  formulario: FormGroup; // O formulário reativo para entrada de dados
+  lojas: any[] = []; // Array para armazenar as lojas
+  lojaParaEditar: any = null; // Informações da loja que está sendo editada
+  indiceLojaSelecionada: number = -1; // Índice da loja selecionada para edição
+  mensagemSucesso: string = ''; // Mensagem de sucesso exibida temporariamente
+  mensagemErro: string = ''; // Mensagem de erro exibida temporariamente
+  mostrarErro: boolean = false; // Flag para controlar a exibição da mensagem de erro
 
   constructor(private fb: FormBuilder, private lojasService: LojaService) {
+    // Criação do formulário reativo com campos e validações
     this.formulario = this.fb.group({
       loja: ['', Validators.required],
       telefone: ['', Validators.required],
@@ -27,9 +28,10 @@ export class LinkLojaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.carregarLojas();
+    this.carregarLojas(); // Carrega as lojas ao inicializar o componente
   }
 
+  // Método para carregar as lojas da API e atualizar o array
   carregarLojas() {
     this.lojasService.getLojas().subscribe((lojas) => {
       this.lojas = lojas;
@@ -38,10 +40,12 @@ export class LinkLojaComponent implements OnInit {
     });
   }
 
+  // Método para enviar o formulário e adicionar ou atualizar uma loja
   enviarFormulario() {
     if (this.formulario.valid) {
       const loja = this.formulario.value;
       if (this.lojaParaEditar !== null && this.lojaParaEditar.id) {
+        // Atualiza os dados da loja existente
         this.lojasService.atualizarLoja(this.lojaParaEditar.id, loja).subscribe(() => {
           this.lojaParaEditar = null;
           this.formulario.reset();
@@ -51,6 +55,7 @@ export class LinkLojaComponent implements OnInit {
           this.mostrarMensagemDeErro(mensagem);
         });
       } else {
+        // Adiciona uma nova loja
         this.lojasService.adicionarLoja(loja).subscribe(() => {
           this.formulario.reset();
           this.carregarLojas();
@@ -62,6 +67,7 @@ export class LinkLojaComponent implements OnInit {
     }
   }
 
+  // Método para carregar os dados de uma loja para edição
   editarLoja(index: number) {
     this.indiceLojaSelecionada = index;
     const lojaSelecionada = this.lojas[index];
@@ -77,12 +83,14 @@ export class LinkLojaComponent implements OnInit {
     }
   }
 
+  // Método para cancelar a edição de uma loja
   cancelarEdicao() {
     this.indiceLojaSelecionada = -1;
     this.lojaParaEditar = null;
     this.formulario.reset();
   }
 
+  // Método para excluir uma loja
   excluirLoja(index: number) {
     const loja = this.lojas[index];
     this.lojasService.excluirLoja(loja.id).subscribe(() => {
@@ -93,6 +101,7 @@ export class LinkLojaComponent implements OnInit {
     });
   }
 
+  // Método para exibir a mensagem de erro temporariamente
   mostrarMensagemDeErro(mensagem: string) {
     this.mensagemErro = mensagem;
     this.mostrarErro = true;
@@ -100,6 +109,6 @@ export class LinkLojaComponent implements OnInit {
     setTimeout(() => {
       this.mostrarErro = false;
       this.mensagemErro = '';
-    }, 3000);
+    }, 3000); // Exibir a mensagem de erro por 3 segundos
   }
 }
