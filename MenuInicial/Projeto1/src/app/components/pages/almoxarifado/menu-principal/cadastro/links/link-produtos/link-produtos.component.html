@@ -1,9 +1,5 @@
 
   <h1>Cadastro de Produtos</h1>
-  <div *ngIf="mostrarErro" class="custom-snackbar error show">
-    <span>{{ mensagemErro }}</span>
-  </div>
-  
 <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()" class="grid-form">
   
     <mat-form-field id="item" class="grid-item grid-item-medium">
@@ -14,7 +10,6 @@
     <mat-form-field id="km" class="grid-item grid-item-small">
         <mat-label>KM</mat-label>
         <input matInput formControlName="km" required>
-        
       </mat-form-field>
 
       <mat-form-field id="estoqueMinimo" class="grid-item grid-item-small">
@@ -50,7 +45,7 @@
     </mat-form-field>
 
     <button class="grid-item-button" type="submit" >Salvar</button>
-    <button class="grid-item-button2" type="submit" (click)="cancelarEdicao()" >Cancelar</button>
+    <button class="grid-item-button2" type="submit" >Cancelar</button>
 </form>
 
 <h2>Tabela de Produtos Cadastrados </h2>
@@ -70,25 +65,21 @@
   </thead>
   <tbody>
     <tr *ngFor="let produto of produtos; let i = index">
-      <td>{{ produto.Item }}</td>
-      <td id="km">{{ produto.KM }}</td>
-      <td>{{ produto.EstoqueMinimo }}</td>
-      <td>{{ produto.CodigoProduto }}</td> <!-- Aqui está o atributo CodigoProduto -->
-      <td>{{ produto.Modelo }}</td>
-      <td>{{ produto.CustoUnitario }}</td>
-      <td id="unidade">{{ produto.UnidadeMedida }}</td>
-      <td>{{ produto.SerialNumero }}</td>
-    
+      <td>{{ produto.item }}</td>
+      <td id="km">{{ produto.km }}</td>
+      <td>{{ produto.estoqueMinimo }}</td>
+      <td>{{ produto.codigoProduto }}</td>
+      <td>{{ produto.modelo }}</td>
+      <td>{{ produto.custoUnitario }}</td>
+      <td id="unidade">{{ produto.unidadeMedida }}</td>
+      <td>{{ produto.serialNumero }}</td>
       <td>
-        <div class="ButtonEditDelete">
-          <button class="material-symbols-outlined edit" (click)="editarProduto(i)">
+        <button class="material-symbols-outlined edit" (click)="editarProduto(i)">
           edit
         </button>
         <button class="material-symbols-outlined delete" (click)="excluirProduto(i)">
           delete
         </button>
-        </div>
-        
       </td>
     </tr>
   </tbody>
