@@ -124,6 +124,40 @@ app.delete('/api/fornecedores/:id', (req, res) => {
     res.send(result);
   });
 });
+
+
+
+
+app.get('/api/tarefas', (req, res) => {
+  db.query('SELECT * FROM tarefas ORDER BY id DESC', (err, results) => {
+    if (err) throw err;
+    res.send(results);
+  });
+});
+app.post('/api/tarefas', (req, res) => {
+  const novoLoja = req.body;
+  db.query('INSERT INTO tarefas SET ?', novoLoja, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.put('/api/tarefas/:id', (req, res) => {
+  const id = req.params['id'];
+  const lojaAtualizado = req.body;
+  db.query('UPDATE tarefas SET ? WHERE id = ?', [lojaAtualizado, id], (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.delete('/api/tarefas/:id', (req, res) => {
+  const id = req.params['id'];
+  db.query('DELETE FROM tarefas WHERE id = ?', id, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

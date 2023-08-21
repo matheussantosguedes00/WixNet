@@ -90,3 +90,15 @@ SELECT * FROM cadastrodelojas;
 
 -- Selecionar todos os registros da tabela "cadastrodeprodutos"
 SELECT * FROM cadastrodeprodutos;
+
+CREATE TABLE tarefas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tarefa VARCHAR(255) NOT NULL,
+    dataInicio DATE NOT NULL,
+    dataVencimento DATE NOT NULL,
+    responsavel VARCHAR(255) NOT NULL,
+    prioridade ENUM('alta', 'media', 'baixa') NOT NULL,
+    status ENUM('pendente', 'emAndamento', 'concluido') NOT NULL
+);
+
+SELECT * FROM tarefas;

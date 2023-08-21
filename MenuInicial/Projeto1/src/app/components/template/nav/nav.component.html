@@ -35,14 +35,14 @@
       </li>
 
       <li (click)="activateIcon(3)"[ngClass]="{ active: activeIcon === 3 }">
-        <a routerLink="tasks">
+        <a routerLink="tasks/tarefas">
           <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 3 }">task
               <h5 [ngClass]="{ active: activeIcon === 3 }">Tasks</h5>
           </span>
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a routerLink="#" class="link_name" href="#">Tasks</a>
+            <a routerLink="tasks/tarefas" class="link_name" href="#">Tasks</a>
           </li>
         </ul>
       </li>
@@ -101,8 +101,11 @@
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a routerLink="#" class="link_name" >Redes</a>
+            <a routerLink="#" class="link_name" href="#">Redes</a>
           </li>
+          <li><a routerLink="#">Ativos</a></li>
+          <li><a href="#">Rotas</a></li>
+          <li><a href="#">Circuitos</a></li>
         </ul>
       </li>
       <li (click)="activateIcon(8)"[ngClass]="{ active: activeIcon === 8 }">

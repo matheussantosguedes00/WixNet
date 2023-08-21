@@ -1,0 +1,84 @@
+<h1>Cadastro de Tarefas</h1>
+<div *ngIf="mostrarErro" class="custom-snackbar error show">
+  <span>{{ mensagemErro }}</span>
+</div>
+
+<form [formGroup]="formulario" (ngSubmit)="enviarFormulario()" class="grid-form">
+
+  <mat-form-field id="tarefa" class="grid-item grid-item-medium">
+    <mat-label>Tarefa</mat-label>
+    <input matInput formControlName="tarefa" required>
+  </mat-form-field>
+
+  <mat-form-field id="dataInicio" class="grid-item grid-item-small">
+    <mat-label>Data de Início</mat-label>
+    <input matInput type="date" formControlName="dataInicio" required>
+  </mat-form-field>
+
+  <mat-form-field id="dataVencimento" class="grid-item grid-item-small">
+    <mat-label>Data de Vencimento</mat-label>
+    <input matInput type="date" formControlName="dataVencimento" required>
+  </mat-form-field>
+  
+  <mat-form-field id="responsavel" class="grid-item grid-item-medium">
+    <mat-label>Responsável</mat-label>
+    <input matInput formControlName="responsavel" required>
+  </mat-form-field>
+  
+  <mat-form-field id="prioridade" class="grid-item grid-item-small">
+    <mat-label>Prioridade</mat-label>
+    <mat-select formControlName="prioridade" required>
+      <mat-option value="alta">Alta</mat-option>
+      <mat-option value="media">Média</mat-option>
+      <mat-option value="baixa">Baixa</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field id="status" class="grid-item grid-item-small">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status" required>
+      <mat-option value="pendente">Pendente</mat-option>
+      <mat-option value="emAndamento">Em Andamento</mat-option>
+      <mat-option value="concluido">Concluído</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button class="grid-item-button" type="submit">Salvar</button>
+  <button class="grid-item-button2" type="submit" (click)="cancelarEdicao()">Cancelar</button>
+</form>
+
+<h2>Tabela de Tarefas Cadastradas</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Tarefa</th>
+      <th>Responsável</th>
+      <th>Data de Início</th>
+      <th>Data de Vencimento</th>
+      <th>Prioridade</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tarefa of tarefas; let i = index">
+      <td>{{ tarefa.tarefa }}</td>
+      <td>{{ tarefa.responsavel }}</td>
+      <td>{{ tarefa.dataInicio }}</td>
+      <td>{{ tarefa.dataVencimento }}</td>
+      <td>{{ tarefa.prioridade }}</td>
+      <td>{{ tarefa.status }}</td>
+
+      <td>
+        <div class="ButtonEditDelete">
+          <button class="material-symbols-outlined edit" (click)="editarTarefa(i)">
+            edit
+          </button>
+          <button class="material-symbols-outlined delete" (click)="excluirTarefa(i)">
+            delete
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

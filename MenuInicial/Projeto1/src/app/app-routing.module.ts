@@ -19,6 +19,8 @@ import { EstoqueComponent } from './components/pages/almoxarifado/menu-principal
 import { LinkProdutosComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-produtos/link-produtos.component';
 import { LinkLojaComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-loja/link-loja.component';
 import { LinkFornecedorComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-fornecedor/link-fornecedor.component';
+import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefas/tarefas.component';
+
 
 
 const routes: Routes = [
@@ -29,7 +31,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'painel-controle', component: PainelControleComponent }, // Rota para o Painel de Controle dentro de "home"
-      { path: 'tasks', component: TasksComponent }, // Rota para a página Tasks dentro de "home"
+
+      { path: 'tasks', component: TasksComponent,canActivate: [AuthGuard],
+      children: [
+         { path: 'tarefas', component: TarefasComponent },
+       
+      ]}, 
 
       { path: 'clientes',component:ClientesComponent,  
       canActivate: [AuthGuard],

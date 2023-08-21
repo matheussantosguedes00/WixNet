@@ -1,141 +1,100 @@
 h1 {
   display: flex;
   align-items: center;
-  color: var(--icon-menu);
-  font-size: 25px;
+  text-align: center;
+  color:var(--icon-menu);
+  font-size: 22px;
   background-color: var(--body);
-  padding: 20px;
-  margin: 50px auto auto auto;
+  padding: 15px;
+  margin: 60px auto 0 auto;
 }
-/* Estilos para o grupo de botões de alternância */
-.botao-toggle-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: var(--body); /* Defina a cor de fundo do grupo de botões */
-    border-radius: 0;
-}
-  
-  /* Estilos para cada botão de alternância */
-  .mat-button-toggle {
-    background-color: white; /* Define a cor de fundo do botão */
-    border: none;
-    margin: 10px;
-    border-radius: 10px; /* Define o raio do canto arredondado do botão */
-    box-shadow: 4px 4px 8px rgba(252, 252, 252, 0.983);
-  }
-  
-  /* Estilos para o efeito de seleção */
-  .mat-button-toggle.mat-button-toggle-checked {
-    border-radius: 10px; /* Define o raio do canto arredondado do botão selecionado */
-    background-color: var(--body); /* Define a cor de fundo do botão selecionado */
-    color: var(--icon-menu-color); /* Define a cor do texto para contrastar com o fundo */
-  
-  }
-  
-  /* Estilos para células de tabela (th e td) */
-  th, td {
-    color: var(--icon-menu-color); /* Define a cor do texto para as células da tabela */
-  
-  }
-  
-  /* Estilos para a visualização em lista */
-  table.table1 {
-    width: 100%; /* Isso garante que a tabela ocupe toda a largura disponível */
-    height: 100vh; /* Isso garante que a tabela ocupe toda a altura da tela */
-    padding: 0px;
-    background-color: var(--body); /* Define a cor de fundo da tabela */
-    margin-bottom: 0;
-  
-  }
-  
-  /* Estilos para o ponto colorido que representa o status da tarefa */
-  .status-dot {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    margin-right: 8px;
-  }
-  
-  .status-dot--em-progresso {
-    background-color: orange; /* Define a cor do ponto para o status "Em progresso" */
-  }
-  
-  .status-dot--a-fazer {
-    background-color: red; /* Define a cor do ponto para o status "A fazer" */
-  }
-  
-  .status-dot--concluido {
-    background-color: green; /* Define a cor do ponto para o status "Concluído" */
-  }
-  
-  /* Estilos para a visualização em cartão */
-  .cartao-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: var(--body); /* Define a cor de fundo do container de cartões */
-  
-  
-  }
-  
-  .cartao-table {
-    flex: 0 0 30%; /* Define o tamanho fixo de cada cartão (30% da largura do container) */
-    border: none; /* Define a borda do cartão */
-  
-  }
-  
-  .status-column {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #bab7b7; /* Define a cor de fundo do cabeçalho de status */
-    padding: 10px;
 
-  
+.Menu-Linha ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: -5px;
+
+}
+
+.Menu-Linha li {
+  margin: 1px 40px;
+}
+
+.Menu-Linha a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px ;
+  border:none;
+  text-align: center;
+  font-size: 13px;
+
+}
+.Menu-Linha a:hover{
+    border-bottom: 4px solid #007bff;
+    color: #52a1f6;
+}
+
+.Menu-Linha li a.active {
+    border-bottom: 4px solid #007bff;
+    color: #007bff;
+}
+
+  .card{
+    height: 100%;
+    width: auto;
+    padding: 10px;
+    margin-top: -6px;
+    background-color: var(--body);
+    border-radius: 1px;
   }
   
-  .cartao-cell {
-    padding: 30px;
-    border: 1px solid #ccc; /* Define a borda da célula do cartão */
-   
-    
-  
+
+@media screen and (max-width: 690px){
+  .Menu-Linha li {
+    margin: 0 5px;
   }
-  
-  .cartao-titulo {
-    font-size: 16px;
-    font-weight: bold; /* Define o estilo do título do cartão */
-  
+  .Menu-Linha a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    border:none;
+    text-align: center;
   }
-  
-  .cartao-info {
-    margin-top: 10px; /* Define o espaçamento entre as informações do cartão */
-  
+   .Menu-Linha li a.active {
+    border-bottom: 4px solid #007bff;
+    color: #007bff;
+}
+.Menu-Linha a:hover{
+  border:none;
+  color: #52a1f6;
+}
+}
+@media screen and (max-width: 420px){ 
+  .Menu-Linha li {
+    margin: 0 5px;
   }
-  
-  .cartao--em-progresso {
-    background-color: #ffc04d; /* Define a cor de fundo para o status "Em progresso" no cartão */
-  
+  .Menu-Linha a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    border:none;
+    text-align: center;
   }
-  
-  .cartao--a-fazer {
-    background-color: #ff9999; /* Define a cor de fundo para o status "A fazer" no cartão */
-  
-  }
-  
-  .cartao--concluido {
-    background-color: #b3ffb3; /* Define a cor de fundo para o status "Concluído" no cartão */
-  
-  }
-  @media screen and (max-width: 550px) {
-    .botao-toggle-group {
-      display: flex;
-      flex-direction: column; /* Exibe os botões em uma coluna */
-      justify-content: center;
-      align-items: center;
-      border: none;
-      background-color: var(--body); /* Defina a cor de fundo do grupo de botões */
-    }
-  }
+  .Menu-Linha li a.active {
+    border: none;
+    color: #007bff;
+}
+.Menu-Linha a:hover{
+  border:none;
+  color: #52a1f6;
+}
+}

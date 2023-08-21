@@ -27,7 +27,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { TasksComponent } from './components/pages/tasks/tasks.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 import { MatSelectModule } from '@angular/material/select'; // Importe o MatSelectModule aqui
 
@@ -57,6 +57,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefas/tarefas.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -80,7 +84,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     LinkLabsComponent,
     TasksComponent,
     LinkContasComponent,
-    LinkCaixaComponent
+    LinkCaixaComponent,
+    TarefasComponent
 
   ],
   imports: [
@@ -111,7 +116,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HttpClientModule,
     MatSnackBarModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
+
 })
 export class AppModule {}
