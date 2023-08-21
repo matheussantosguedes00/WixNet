@@ -6,15 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  gerarNotificacoes(): any[] {
-    let notificacoes: any[] = [
-      { texto: 'Notificação 1' },
-      { texto: 'Notificação 2' },
-    ];
-
-    return notificacoes;
-  }
-
-  // Exemplo de uso
-  notifications: any[] = this.gerarNotificacoes();
+ 
 }

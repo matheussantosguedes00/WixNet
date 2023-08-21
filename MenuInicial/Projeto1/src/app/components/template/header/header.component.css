@@ -15,11 +15,15 @@
 
 }
 
+
+
+
 .search-container {
   display: flex;
   align-items: center;
-  width: 260px;
-  height: 19px;
+  width: 300px;
+height: 25px;
+flex-shrink: 0;
   padding: 5px;
   margin-left: 10px;
   border:none;
@@ -53,6 +57,9 @@
   align-items: center;
   
 }
+h4{
+  margin: 10px;
+}
 
 .icon-notifica {
   display: flex;
@@ -60,10 +67,11 @@
   align-items: center;
   width: 75px;
   height: 19px;
-  padding: 5px;
-  background-color: #c2c1c1;
+  padding: 15px;
+  background:none;
   border-radius: 20px;
   margin: 5px;
+  
   
 }
 
@@ -71,9 +79,10 @@
 .icon-notifica span {
  appearance: none;
   color: var(--icon-menu-color);
-  margin-right: 3px;
-  font-size: 17px;
-  font-weight: 700; 
+  margin-right: 0px;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: 900; 
   
   
 }
@@ -86,8 +95,8 @@
 
 
 .icon-container img {
-  width: 30px;  
-  height: 30px;
+  width: 35px;  
+  height: 35px;
   border-radius: 50%;
   margin: 5px;
 }
@@ -119,6 +128,38 @@
   .header {
     height: 50px;
   }
+  .search-container {
+    display: flex;
+    align-items: center;
+    width: 240px;
+  height: 25px;
+  flex-shrink: 0;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border:none;
+    border-radius: 20px;
+    background-color: #D8E0E7;;
+  }
+  .icon-notifica {
+    display: flex;
+    justify-content: flex-end; /* Alinha os elementos no final do contêiner */
+    align-items: center;
+    width: 75px;
+    height: 19px;
+    padding: 15px;
+    background:none;
+    border-radius: 20px;
+    margin: 15px 5px 5px 5px;
+    
+  }
+  .icon-container img {
+    width: 35px;  
+    height: 35px;
+    border-radius: 50%;
+    margin: 15px 5px 5px 5px;
+  }
+  
 }
 
 @media (max-width: 500px) {
