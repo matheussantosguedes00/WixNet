@@ -18,20 +18,19 @@ export class NavComponent implements OnInit {
     this.aplicarTema(); // Chama a função para aplicar o tema carregado
   }
 
-
-
   activateIcon(iconIndex: number) {
     this.activeIcon = iconIndex; // Define o ícone ativo com base no índice passado
     localStorage.setItem('activeIcon', JSON.stringify(iconIndex)); // Armazena o ícone ativo no armazenamento local
   }
 
-
-
-
-
   private aplicarTema() {
     // Remove todas as classes de tema do elemento raiz do documento
-    document.documentElement.classList.remove('modo-claro', 'modo-escuro', 'nasaModoClaro', 'nasaModoEscuro');
+    document.documentElement.classList.remove(
+      'modo-claro',
+      'modo-escuro',
+      'nasaModoClaro',
+      'nasaModoEscuro'
+    );
 
     // Adiciona a classe de tema correspondente com base no valor de 'this.tema'
     if (this.tema === 1) {
@@ -45,15 +44,13 @@ export class NavComponent implements OnInit {
     }
   }
 
-
-  
   private carregarTemaDoBancoDeDados() {
     this.tema = 3; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
-   }
+  }
 
   alternarModoTema() {
     this.tema = (this.tema % 4) + 1; // Alterna entre os valores de 1 a 4
-    
+
     this.isModoAtivado = !this.isModoAtivado; // Inverte o estado do modo escuro
     this.aplicarTema(); // Aplica o novo tema
     localStorage.setItem('tema', JSON.stringify(this.isModoAtivado)); // Armazena o estado do modo escuro no armazenamento local
