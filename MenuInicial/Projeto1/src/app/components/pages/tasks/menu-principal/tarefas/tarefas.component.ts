@@ -80,20 +80,16 @@ export class TarefasComponent implements OnInit {
 
   editarTarefa(index: number) {
     this.indiceTarefaSelecionada = index;
-    
     const tarefaSelecionada = this.tarefas[index];
-  
     if (tarefaSelecionada && tarefaSelecionada.id) {
-      // Obtenha o controle "status" do formulário
       this.tarefaParaEditar = { ...tarefaSelecionada };
-      this.formulario.patchValue({
+      this.formulario.setValue({
         tarefa: this.tarefaParaEditar.tarefa,
         responsavel: this.tarefaParaEditar.responsavel,
-        dataInicio: this.tarefaParaEditar.dataInicio,
-        dataVencimento: this.tarefaParaEditar.dataVencimento,
+        dataInicio: this.tarefaParaEditar.dataInicio, // Mantém a data de início original
+        dataVencimento: this.tarefaParaEditar.dataVencimento, // Limpa o valor da data de vencimento
         prioridade: this.tarefaParaEditar.prioridade,
         status: this.tarefaParaEditar.status,
-        
       });
       // Desabilita o campo de data de início
       const dataInicioControl = this.formulario.get('dataInicio');
