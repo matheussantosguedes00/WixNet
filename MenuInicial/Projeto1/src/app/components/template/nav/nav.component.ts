@@ -45,7 +45,7 @@ export class NavComponent implements OnInit {
   }
 
   private carregarTemaDoBancoDeDados() {
-    this.tema = 4; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
+    //this.tema = 4; // Simula o carregamento do tema do banco de dados (valor fixo para exemplo)
   }
 
   alternarModoTema() {

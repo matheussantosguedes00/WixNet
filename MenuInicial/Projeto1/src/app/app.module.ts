@@ -58,7 +58,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefas/tarefas.component';
+import { ListaComponent } from './components/pages/tasks/menu-principal/lista/lista.component';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
+@NgModule({
+  imports: [
+    // ... Outros módulos
+    MatDatepickerModule,
+    // ... Outros módulos
+  ],
+  // ...
+})
+export class SeuModulo { }
 
 
 
@@ -85,7 +98,8 @@ import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefa
     TasksComponent,
     LinkContasComponent,
     LinkCaixaComponent,
-    TarefasComponent
+    TarefasComponent,
+    ListaComponent
 
   ],
   imports: [
@@ -114,7 +128,9 @@ import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefa
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],

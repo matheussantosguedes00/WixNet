@@ -1,0 +1,72 @@
+<!-- Filtros -->
+<h2>Tarefas</h2>
+<div class="filtro">
+  <div class="filtro-container">
+    <mat-form-field class="filtro1">
+      <mat-label>Filtrar por Responsável</mat-label>
+      <input matInput type="text" id="responsavel" [(ngModel)]="filtroResponsavel">
+    </mat-form-field>
+    
+    <!-- Adicione um campo de filtro para Prioridade -->
+    <mat-form-field class="filtro1">
+      <mat-label>Filtrar por Prioridade</mat-label>
+      <mat-select [(ngModel)]="filtroPrioridade">
+        <mat-option value="Todas">Todas</mat-option>
+        <mat-option value="Alta">Alta</mat-option>
+        <mat-option value="Media">Média</mat-option>
+        <mat-option value="Baixa">Baixa</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+  
+  <div class="button-container">
+    <button class="botao-filtro icon" (click)="aplicarFiltro()">
+      <span class="material-symbols-outlined">
+        filter_alt
+      </span>
+      Aplicar Filtro
+    </button>
+  
+    <button class="botao-limpar icon" (click)="limparFiltro()">
+      <span class="material-symbols-outlined">
+        filter_alt_off
+      </span>
+      Limpar Filtro
+    </button>
+  </div>
+</div>
+
+<h2 class="h2-1">Tabela de Tarefas</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Tarefa</th>
+      <th>Responsável</th>
+      <th class="dtInicio">Data de Início</th>
+      <th>Data de Vencimento</th>
+      <th>Prioridade</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tarefa of tarefasFiltradas; let i = index">
+      <td>{{ tarefa.tarefa }}</td>
+      <td>{{ tarefa.responsavel }}</td>
+      <td class="dtInicio">{{ tarefa.dataInicio }}</td>
+      <td>{{ tarefa.dataVencimento }}</td>
+      <td>
+        <span class="bolinha" [ngClass]="{
+          'alta': tarefa.prioridade === 'Alta',
+          'media': tarefa.prioridade === 'Media',
+          'baixa': tarefa.prioridade === 'Baixa'
+        }"></span>{{ tarefa.prioridade }}
+      </td>
+      <td [ngClass]="{
+        'concluido': tarefa.status === 'Concluido',
+        'pendente': tarefa.status === 'Pendente',
+        'emAndamento': tarefa.status === 'Em Andamento'
+      }">{{ tarefa.status }}</td>
+    </tr>
+  </tbody>
+</table>

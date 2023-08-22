@@ -1,0 +1,174 @@
+
+    .card{
+      height: 100%;
+      width: auto;
+      padding: 10px;
+      margin-top: -6px;
+      background-color: var(--body);
+      border-radius: 1px;
+    }
+    h2{
+      color: var(--icon-menu);
+      background-color:var(--body);
+    margin-bottom: 30px;
+    padding: 10px;
+    border: none;
+     text-align: center;
+    
+    }
+    .filtro1{
+     width: 250px;
+    padding: 20px; 
+     margin-top: 20px;
+    }
+    .filtro {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      border: 1px solid rgb(216, 216, 216);
+    }
+    
+    label {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    
+   
+    
+   .icon{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+   }
+    .botao-filtro, .botao-limpar {
+      padding: 10px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 16px; /* Espaçamento entre os botões */
+    }
+    .botao-filtro:hover, .botao-limpar:hover {
+      background-color: #0056b3;
+    }
+    
+    .botao-filtro {
+      margin-left: 10px;
+    }
+    
+    .botao-limpar {
+      background-color: #dc3545;
+      margin-left: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #ffffff;
+      margin-top: 20px;
+      margin-bottom: 250px;
+      
+    }
+
+    .h2-1{
+    color: var(--icon-menu);
+    background-color:#ffffff ;
+    margin-bottom: -21px;
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+     text-align: center;
+    
+    }
+    th, td {
+      border: 1px solid #c4c4c4;
+      padding: 8px;
+      text-align: left;
+      background-color: #ffffff;
+    }
+    
+    th {
+      background-color: #ffffff;
+      text-align: center;
+     
+    }
+    .bolinha {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%; /* Isso cria uma bolinha */
+      margin-right: 5px; /* Espaço à direita da bolinha */
+    }
+    
+    /* Cores para as prioridades */
+    .alta { background-color: red; }
+    .media { background-color: yellow; }
+    .baixa { background-color: green; }
+
+/* Cores para os status */
+.concluido { color: green; }
+.pendente { color: red; }
+.emAndamento { color: orange; }
+ 
+    @media (max-width: 1088px) {
+   
+      h2{
+        color: var(--icon-menu);
+        background-color:var(--body) ;
+      margin-bottom: 21px;
+      padding: 10px;
+      border: none;
+       text-align: center;
+       font-size: 18px;
+      
+      }
+      th, td {
+        border: 1px solid #c4c4c4;
+        padding: 0px;
+        text-align: center;
+        background-color: #ffffff;
+        font-size: 12px;
+      }
+    
+    }
+
+    @media (max-width: 889px) {
+      .filtro-container, .button-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 16px; /* Espaçamento entre os botões */
+      }
+      .dtInicio{
+        display: none;
+      }
+    }
+    @media (max-width: 680px) {
+      .filtro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      th, td {
+        border: 1px solid #c4c4c4;
+        padding: 0px;
+        text-align: center;
+        background-color: #ffffff;
+        font-size: 12px;
+      }
+    
+    }
+    
+   

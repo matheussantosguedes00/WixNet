@@ -20,6 +20,7 @@ import { LinkProdutosComponent } from './components/pages/almoxarifado/menu-prin
 import { LinkLojaComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-loja/link-loja.component';
 import { LinkFornecedorComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-fornecedor/link-fornecedor.component';
 import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefas/tarefas.component';
+import { ListaComponent } from './components/pages/tasks/menu-principal/lista/lista.component';
 
 
 
@@ -35,6 +36,7 @@ const routes: Routes = [
       { path: 'tasks', component: TasksComponent,canActivate: [AuthGuard],
       children: [
          { path: 'tarefas', component: TarefasComponent },
+         { path: 'lista', component: ListaComponent },
        
       ]}, 
 
