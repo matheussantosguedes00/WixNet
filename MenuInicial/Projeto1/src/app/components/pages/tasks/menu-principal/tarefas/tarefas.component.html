@@ -5,38 +5,38 @@
 
 <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()" class="grid-form">
 
-  <mat-form-field id="tarefa" class="grid-item grid-item-medium">
-    <mat-label>Tarefa</mat-label>
-    <input matInput formControlName="tarefa" required>
+  <mat-form-field class="grid-item grid-item-medium">
+    <mat-label for="tarefa">Tarefa</mat-label>
+    <input matInput formControlName="tarefa" required id="tarefa">
   </mat-form-field>
 
-  <mat-form-field id="dataInicio" class="grid-item grid-item-small">
-    <mat-label>Data de Início</mat-label>
-    <input matInput type="date" formControlName="dataInicio" required>
+  <mat-form-field class="grid-item grid-item-small">
+    <mat-label for="dataInicio">Data de Início</mat-label>
+    <input matInput type="date" formControlName="dataInicio" required id="dataInicio">
   </mat-form-field>
 
-  <mat-form-field id="dataVencimento" class="grid-item grid-item-small">
-    <mat-label>Data de Vencimento</mat-label>
-    <input matInput type="date" formControlName="dataVencimento" required>
+  <mat-form-field class="grid-item grid-item-small">
+    <mat-label for="dataVencimento">Data de Vencimento</mat-label>
+    <input matInput type="date" formControlName="dataVencimento" required id="dataVencimento">
   </mat-form-field>
   
-  <mat-form-field id="responsavel" class="grid-item grid-item-medium">
-    <mat-label>Responsável</mat-label>
-    <input matInput formControlName="responsavel" required>
+  <mat-form-field class="grid-item grid-item-medium">
+    <mat-label for="responsavel">Responsável</mat-label>
+    <input matInput formControlName="responsavel" required id="responsavel">
   </mat-form-field>
   
-  <mat-form-field id="prioridade" class="grid-item grid-item-small">
-    <mat-label>Prioridade</mat-label>
-    <mat-select formControlName="prioridade" required>
+  <mat-form-field class="grid-item grid-item-small">
+    <mat-label for="prioridade">Prioridade</mat-label>
+    <mat-select formControlName="prioridade" required id="prioridade">
       <mat-option value="Alta">Alta</mat-option>
       <mat-option value="Media">Média</mat-option>
       <mat-option value="Baixa">Baixa</mat-option>
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field id="status" class="grid-item grid-item-small">
-    <mat-label>Status</mat-label>
-    <mat-select formControlName="status" required>
+  <mat-form-field class="grid-item grid-item-small">
+    <mat-label for="status">Status</mat-label>
+    <mat-select formControlName="status" required id="status">
       <mat-option value="Pendente">Pendente</mat-option>
       <mat-option value="Em Andamento">Em Andamento</mat-option>
       <mat-option value="Concluido">Concluído</mat-option>
