@@ -1,0 +1,68 @@
+<!-- Filtros -->
+<h2>Tarefas</h2>
+<div class="filtro">
+  <div class="filtro-container">
+    <mat-form-field class="filtro1">
+      <mat-label>Filtrar por Responsável</mat-label>
+      <input matInput type="text" id="responsavel" [(ngModel)]="filtroResponsavel">
+    </mat-form-field>
+    
+    <!-- Adicione um campo de filtro para Prioridade -->
+    <mat-form-field class="filtro1">
+      <mat-label>Filtrar por Prioridade</mat-label>
+      <mat-select [(ngModel)]="filtroPrioridade">
+        <mat-option value="Todas">Todas</mat-option>
+        <mat-option value="Alta">Alta</mat-option>
+        <mat-option value="Media">Média</mat-option>
+        <mat-option value="Baixa">Baixa</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+  
+  <div class="button-container">
+    <button class="botao-filtro icon" (click)="aplicarFiltro()">
+      <span class="material-symbols-outlined">
+        filter_alt
+      </span>
+      Aplicar Filtro
+    </button>
+  
+    <button class="botao-limpar icon" (click)="limparFiltro()">
+      <span class="material-symbols-outlined">
+        filter_alt_off
+      </span>
+      Limpar Filtro
+    </button>
+  </div>
+</div>
+<h2 class="h2-1">Tarefas por Status</h2>
+<div class="status-container">
+  <div class="status-card" *ngFor="let status of getStatusList()">
+    <h3>{{ status }}</h3>
+    <div class="tarefas-column">
+      <div class="tarefa-card" *ngFor="let tarefa of tarefasFiltradasPorStatus(status)">
+        <div class="card">
+          <div class="card-header">
+            {{ tarefa.tarefa }}
+          </div>
+          <div class="card-body">
+            <p>Responsável: {{ tarefa.responsavel }}</p>
+            <p>Data de Início: {{ tarefa.dataInicio }}</p>
+            <p>Data de Vencimento: {{ tarefa.dataVencimento }}</p>
+            <p class="prioridade">
+              Prioridade:
+              <span class="prioridade-bolinha" [ngClass]="{
+                'alta': tarefa.prioridade === 'Alta',
+                'media': tarefa.prioridade === 'Media',
+                'baixa': tarefa.prioridade === 'Baixa'
+              }"></span>
+              {{ tarefa.prioridade }}
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

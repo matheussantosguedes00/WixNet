@@ -21,6 +21,7 @@ import { LinkLojaComponent } from './components/pages/almoxarifado/menu-principa
 import { LinkFornecedorComponent } from './components/pages/almoxarifado/menu-principal/cadastro/links/link-fornecedor/link-fornecedor.component';
 import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefas/tarefas.component';
 import { ListaComponent } from './components/pages/tasks/menu-principal/lista/lista.component';
+import { CardsComponent } from './components/pages/tasks/menu-principal/cards/cards.component';
 
 
 
@@ -37,6 +38,7 @@ const routes: Routes = [
       children: [
          { path: 'tarefas', component: TarefasComponent },
          { path: 'lista', component: ListaComponent },
+         {path: 'cards', component:CardsComponent}
        
       ]}, 
 

@@ -62,15 +62,11 @@ import { ListaComponent } from './components/pages/tasks/menu-principal/lista/li
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CardsComponent } from './components/pages/tasks/menu-principal/cards/cards.component';
 
-@NgModule({
-  imports: [
-    // ... Outros módulos
-    MatDatepickerModule,
-    // ... Outros módulos
-  ],
-  // ...
-})
+import { FiltroPrioridadePipe } from './components/pages/tasks/menu-principal/cards/filtro-prioridade.pipe';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 export class SeuModulo { }
 
 
@@ -99,7 +95,9 @@ export class SeuModulo { }
     LinkContasComponent,
     LinkCaixaComponent,
     TarefasComponent,
-    ListaComponent
+    ListaComponent,
+    CardsComponent,
+    FiltroPrioridadePipe 
 
   ],
   imports: [
@@ -130,7 +128,7 @@ export class SeuModulo { }
     HttpClientModule,
     MatSnackBarModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],
