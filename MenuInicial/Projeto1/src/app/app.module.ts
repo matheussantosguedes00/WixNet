@@ -35,11 +35,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { LoginComponent } from './components/pages/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ClientesComponent } from './components/pages/clientes/clientes.component';
-import { LinkPerfilComponent } from './components/pages/clientes/links/link-perfil/link-perfil.component';
-import { LinkGeralComponent } from './components/pages/clientes/links/link-geral/link-geral.component';
-import { LinkContasComponent } from './components/pages/clientes/links/link-contas/link-contas.component';
-import { LinkCaixaComponent } from './components/pages/clientes/links/link-caixa/link-caixa.component';
-import { LinkLabsComponent } from './components/pages/clientes/links/link-labs/link-labs.component';
+
 import { RouterModule } from '@angular/router';
 import { AlmoxarifadoComponent } from './components/pages/almoxarifado/almoxarifado.component';
 
@@ -66,6 +62,7 @@ import { CardsComponent } from './components/pages/tasks/menu-principal/cards/ca
 
 import { FiltroPrioridadePipe } from './components/pages/tasks/menu-principal/cards/filtro-prioridade.pipe';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { FormularioComponent } from './components/pages/clientes/formulario/formulario.component';
 
 export class SeuModulo { }
 
@@ -80,8 +77,7 @@ export class SeuModulo { }
     LoginComponent,
     HomeComponent,
     ClientesComponent,
-    LinkPerfilComponent,
-    LinkGeralComponent,
+    
     AlmoxarifadoComponent,
     LinkProdutosComponent,
     EntradaComponent,
@@ -90,14 +86,14 @@ export class SeuModulo { }
     LinkFornecedorComponent,
     LinkLojaComponent,
     CadastroComponent,
-    LinkLabsComponent,
+  
     TasksComponent,
-    LinkContasComponent,
-    LinkCaixaComponent,
+    
     TarefasComponent,
     ListaComponent,
     CardsComponent,
-    FiltroPrioridadePipe 
+    FiltroPrioridadePipe,
+    FormularioComponent 
 
   ],
   imports: [

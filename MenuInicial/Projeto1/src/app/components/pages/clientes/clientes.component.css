@@ -1,94 +1,120 @@
+/* Estilize o cabeçalho "Clientes" */
 h1 {
-    display: flex;
-    align-items: center;
-    color:var(--icon-menu);
-    font-size: 25px;
-    background-color: var(--body);
-    padding: 20px;
-    margin: 50px auto 0 auto;
-  }
+  display: flex;
+  align-items: center;
+  color: var(--icon-menu);
+  font-size: 25px;
+  background-color: var(--body);
+  padding: 20px;
+  margin: 50px auto 0 auto;
+}
 
-  .Menu-Linha ul {
-    list-style: none;
-    padding: 0px;
-    display: flex;
-    justify-content: space-between;
-  
-  }
-  
-  .Menu-Linha li {
-    margin: 1px 40px;
-  }
-  
-  .Menu-Linha a {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--tema-icon);
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 3px ;
-    border:none;
-    text-align: center;
-    font-size: 13px;
-  }
-  .Menu-Linha a:hover{
-      border-bottom: 4px solid #007bff;
-      color: #52a1f6;
-  }
-  
-  .Menu-Linha li a.active {
-      border-bottom: 4px solid #007bff;
-      color: #007bff;
-  }
-  .card{
-    height: 800px;
-    width: auto;
-    padding: 10px;
-    margin-top: -6px;
-    background-color: var(--body);
-    border-radius: 1px;
-  }
-  @media screen and (max-width: 690px){
-    .Menu-Linha li {
-      margin: 0 5px;
-    }
-    .Menu-Linha a {
-      text-decoration: none;
-      color: var(--tema-icon);
-      cursor: pointer;
-      padding: 5px;
-      border-radius: 5px;
-      border:none;
-      text-align: center;
-    }
-     .Menu-Linha li a.active {
-      border-bottom: 4px solid #007bff;
-      color: #007bff;
-  }
-  .Menu-Linha a:hover{
-    border:none;
-    color: #52a1f6;
+/* Adicione o espaçamento ao redor do site */
+body {
+  height: 100%;
+  margin: 20px;
 }
-  }
-  @media screen and (max-width: 420px){ 
-    .Menu-Linha li {
-      margin: 0 5px;
-    }
-    .Menu-Linha a {
-      text-decoration: none;
-      color: var(--tema-icon);
-      cursor: pointer;
-      padding: 5px;
-      border-radius: 5px;
-      border:none;
-      text-align: center;
-    }
-    .Menu-Linha li a.active {
-      border: none;
-      color: #007bff;
-  }
-  .Menu-Linha a:hover{
-    border:none;
-    color: #52a1f6;
+
+/* Estilize a div dos botões */
+.botoes {
+  display: flex;
+  justify-content: start; /* Centralize horizontalmente */
+  align-items: center; /* Centralize verticalmente */
+  text-align: center;
+  border: 1px solid gray ;
+  border-left: none;
+  border-right: none;
+  background-color: #dddddd;
+  padding: 5px;
 }
-  }
+
+
+/* Estilize os botões */
+button {
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  display: flex; /* Permitir alinhamento horizontal */
+  align-items: center; /* Centralizar verticalmente */
+}
+button:hover{
+  background-color: #1a16ff;
+  color: #ffffff;
+  transition: 0.3s;
+}
+/* Estilize o ícone */
+.buttonIcon {
+  margin-right: 5px; /* Espaço entre o ícone e o texto */
+  font-size: 15px;
+}
+
+/* Estilize o texto */
+h4 {
+  margin: 0; /* Remover margem padrão do h4 */
+  font-size: 10x;
+}
+
+/* Estilize a tabela */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Remova as bordas das células, exceto a borda inferior */
+th,
+td {
+  border: none;
+  border-bottom: 1px solid #464646; /* Adicione a borda de baixo */
+  text-align: left;
+  padding: 8px;
+}
+
+.text-Table{
+ padding-top: -15px;
+}
+/* Estilize o ícone na tabela */
+.iconLinha {
+  padding-top: 7px;
+  
+  text-align: center;
+  width: 33px;
+height: 28px;
+  margin-right: 5px; /* Espaço entre o ícone e o texto */
+  font-size: 20px;
+  background-color: #dadada;
+  color: #000000;
+  border-radius: 50%;
+}
+
+/* Estilize o cabeçalho da tabela */
+th {
+  background-color: #f2f2f2;
+}
+
+/* Adicione um espaçamento no topo da tabela */
+table thead {
+  border-top: 1px solid #dddddd;
+}
+
+/* Adicione um espaçamento na parte inferior da tabela (opcional) */
+table tbody {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Estilize o contêiner "card" */
+.card {
+  height: 100%;
+  width: auto;
+  padding: 10px;
+  margin-top: -6px;
+  background-color: var(--body);
+  border-radius: 1px;
+}
+
+.iconTable{
+  display: flex;
+  justify-content: end;
+}

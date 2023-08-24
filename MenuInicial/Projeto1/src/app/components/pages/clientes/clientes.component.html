@@ -1,16 +1,34 @@
+
+
 <h1>Clientes</h1>
-<div class="Menu-Linha">
-    <ul>
-        <li><a routerLink="geral"  routerLinkActive="active">Geral</a></li>
-        <li><a routerLink="perfil" routerLinkActive="active">Perfil</a></li>
-        <li><a routerLink="contas"routerLinkActive="active">Contas </a></li>
-        <li><a routerLink="caixa"routerLinkActive="active">Caixa</a></li>
-        <li><a routerLink="labs"routerLinkActive="active">Labs</a></li>
-       
-       
-    </ul>
+<div class="card">
+    <body>
+
+        <div class="botoes">
+            <button>
+                <span class="material-symbols-outlined buttonIcon">
+                add
+                </span>
+                <h4>Novo</h4>
+            </button>
+         
+        </div>
+        <table>
+            
+            <tbody>
+                <tr *ngFor="let tarefa of tarefas; let i = index">
+                    <td><span class="material-symbols-outlined iconLinha">account_circle</span>
+                       <span class="text-Table">{{ tarefa.nome }}</span></td>
+                    <td>{{ tarefa.id }}</td>
+                    <td>
+                        <span class="material-symbols-outlined iconTable">
+                            more_vert
+                            </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </body>
 </div>
 
-<div class="card">
-    <router-outlet></router-outlet>
-</div>
+

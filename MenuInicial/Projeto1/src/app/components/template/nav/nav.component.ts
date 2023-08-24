@@ -56,6 +56,13 @@ export class NavComponent implements OnInit {
     localStorage.setItem('tema', JSON.stringify(this.isModoAtivado)); // Armazena o estado do modo escuro no armazenamento local
   }
 }
+
+
+
+
+
+
+
 /*permissions = [
     { name: 'home', permission: true },
     { name: 'clientes', permission: true },

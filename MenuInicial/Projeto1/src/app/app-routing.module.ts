@@ -7,11 +7,7 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AuthGuard } from './components/pages/login/auth.guard';
 import { ClientesComponent } from './components/pages/clientes/clientes.component';
-import { LinkPerfilComponent } from './components/pages/clientes/links/link-perfil/link-perfil.component';
-import { LinkGeralComponent } from './components/pages/clientes/links/link-geral/link-geral.component';
-import { LinkCaixaComponent } from './components/pages/clientes/links/link-caixa/link-caixa.component';
-import { LinkLabsComponent } from './components/pages/clientes/links/link-labs/link-labs.component';
-import { LinkContasComponent } from './components/pages/clientes/links/link-contas/link-contas.component';
+
 import { AlmoxarifadoComponent } from './components/pages/almoxarifado/almoxarifado.component';
 import { EntradaComponent } from './components/pages/almoxarifado/menu-principal/entrada/entrada.component';
 import { SaidaComponent } from './components/pages/almoxarifado/menu-principal/saida/saida.component';
@@ -45,11 +41,7 @@ const routes: Routes = [
       { path: 'clientes',component:ClientesComponent,  
       canActivate: [AuthGuard],
       children: [
-         { path: 'perfil', component: LinkPerfilComponent },
-         { path:'geral', component:LinkGeralComponent},
-         {path:'caixa',component:LinkCaixaComponent},
-         {path:'labs',component:LinkLabsComponent},
-         {path:'contas',component:LinkContasComponent},
+        
       ]},
 
       {path:'almoxarifado',component:AlmoxarifadoComponent ,

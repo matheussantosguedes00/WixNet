@@ -123,3 +123,38 @@ h2{
 .baixa {
   background-color: green;
 }
+
+ 
+@media (max-width: 1088px) {
+   
+    h2{
+      color: var(--icon-menu);
+      background-color:var(--body) ;
+    margin-bottom: 21px;
+    padding: 10px;
+    border: none;
+     text-align: center;
+     font-size: 18px;
+    
+    }
+  }
+
+  @media (max-width: 889px) {
+    .filtro-container, .button-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+   
+  }
+  @media (max-width: 680px) {
+    .filtro{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+  
+ 

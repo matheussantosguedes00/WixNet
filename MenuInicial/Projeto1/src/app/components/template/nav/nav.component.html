@@ -13,11 +13,7 @@
               <h5 [ngClass]="{ active: activeIcon === 1 }">Dashboard</h5>
             </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="painel-controle" class="link_name">Dashboard</a>
-          </li>
-        </ul>
+        
       </li>
 
       <li (click)="activateIcon(2)"[ngClass]="{ active: activeIcon === 2 }">
@@ -27,11 +23,7 @@
             <h5 [ngClass]="{ active: activeIcon === 2 }">Tickets</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="#" class="link_name" href="#">Tickets</a>
-          </li>
-        </ul>
+      
       </li>
 
       <li (click)="activateIcon(3)"[ngClass]="{ active: activeIcon === 3 }">
@@ -40,25 +32,17 @@
               <h5 [ngClass]="{ active: activeIcon === 3 }">Tasks</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="tasks/tarefas" class="link_name" href="#">Tasks</a>
-          </li>
-        </ul>
+        
       </li>
 
       <li (click)="activateIcon(4)"[ngClass]="{ active: activeIcon === 4 }">
         <a>
           <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 4 }">
-              assignment_turned_in
+               <div>assignment_turned_in</div>
               <h5 [ngClass]="{ active: activeIcon === 4 }">Projetos</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="#" class="link_name" href="#">Projetos</a>
-          </li>
-        </ul>
+        
       </li>
 
       <li (click)="activateIcon(5)"[ngClass]="{ active: activeIcon === 5 }">
@@ -68,28 +52,16 @@
               <h5 [ngClass]="{ active: activeIcon === 5 }">Ordens de<br> Serviço</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="#" class="link_name" href="#">Ordens de Serviço</a>
-          </li>
-          <li><a routerLink="#">UI Face</a></li>
-          <li><a href="#">Pigments</a></li>
-          <li><a href="#">Box Icons</a></li>
-        </ul>
       </li>
 
       <li (click)="activateIcon(6)"[ngClass]="{ active: activeIcon === 6 }">
-        <a routerLink="clientes/geral">
+        <a routerLink="clientes">
           <span class="material-symbols-outlined"[ngClass]="{ active: activeIcon === 6 }">
               group
               <h5 [ngClass]="{ active: activeIcon === 6 }">Clientes</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="clientes/geral" class="link_name" >Clientes</a>
-          </li>
-        </ul>
+       
       </li>
 
       <li (click)="activateIcon(7)"[ngClass]="{ active: activeIcon === 7 }">
@@ -99,14 +71,7 @@
               <h5 [ngClass]="{ active: activeIcon === 7 }">Redes</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="#" class="link_name" href="#">Redes</a>
-          </li>
-          <li><a routerLink="#">Ativos</a></li>
-          <li><a href="#">Rotas</a></li>
-          <li><a href="#">Circuitos</a></li>
-        </ul>
+       
       </li>
       <li (click)="activateIcon(8)"[ngClass]="{ active: activeIcon === 8 }">
         <a>
@@ -115,11 +80,7 @@
               <h5 [ngClass]="{ active: activeIcon === 8 }">Tools</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="#" class="link_name" >Tools</a>
-          </li>
-        </ul>
+       
       </li>
 
       <li (click)="activateIcon(9)"[ngClass]="{ active: activeIcon === 9 }">
@@ -129,11 +90,7 @@
               <h5 [ngClass]="{ active: activeIcon === 9 }">IRR</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="#" class="link_name" >IRR</a>
-          </li>
-        </ul>
+        
       </li>
 
       <li (click)="activateIcon(10)"[ngClass]="{ active: activeIcon === 10 }">
@@ -143,11 +100,8 @@
               <h5 [ngClass]="{ active: activeIcon === 10 }">Warehouse</h5>
           </span>
         </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a routerLink="almoxarifado/cadastro/produtos" class="link_name" >Warehouse</a>
-          </li>
-        </ul>
+      
+       
       </li>
      
       <div class="logo-details2">
