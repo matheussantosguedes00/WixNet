@@ -63,6 +63,7 @@ import { CardsComponent } from './components/pages/tasks/menu-principal/cards/ca
 import { FiltroPrioridadePipe } from './components/pages/tasks/menu-principal/cards/filtro-prioridade.pipe';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormularioComponent } from './components/pages/clientes/formulario/formulario.component';
+import { TabelaComponent } from './components/pages/clientes/tabela/tabela.component';
 
 export class SeuModulo { }
 
@@ -93,7 +94,8 @@ export class SeuModulo { }
     ListaComponent,
     CardsComponent,
     FiltroPrioridadePipe,
-    FormularioComponent 
+    FormularioComponent,
+    TabelaComponent 
 
   ],
   imports: [
@@ -130,4 +132,5 @@ export class SeuModulo { }
   bootstrap: [AppComponent],
 
 })
+
 export class AppModule {}

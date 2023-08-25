@@ -55,6 +55,7 @@ export class NavComponent implements OnInit {
     this.aplicarTema(); // Aplica o novo tema
     localStorage.setItem('tema', JSON.stringify(this.isModoAtivado)); // Armazena o estado do modo escuro no armazenamento local
   }
+  
 }
 
 

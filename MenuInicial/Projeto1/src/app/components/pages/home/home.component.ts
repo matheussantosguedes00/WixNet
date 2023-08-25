@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,13 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'Projeto1';
   menuAberto = true;
-  larguraTela: number=0;
+  larguraTela: number = 0;
+
+  constructor(private router: Router) {}
 
   alternarMenu() {
     this.menuAberto = !this.menuAberto;
+    console.log('Menu alternado');
   }
 
   ngOnInit() {

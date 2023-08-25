@@ -1,0 +1,32 @@
+<h1>Clientes</h1>
+
+<div class="card">
+    <body> 
+        <div class="botoes">
+            <a routerLink="../formulario" >
+                <button>
+                    <span class="material-symbols-outlined buttonIcon">
+                        add
+                    </span>
+                    <h4>Novo</h4>
+                </button>
+            </a>
+        </div>
+        
+        <table>
+            
+            <tbody>
+                <tr *ngFor="let tarefa of tarefas; let i = index">
+                    <td><span class="material-symbols-outlined iconLinha">account_circle</span>
+                       <span class="text-Table">{{ tarefa.nome }}</span></td>
+                    <td>{{ tarefa.id }}</td>
+                    <td>
+                        <span class="material-symbols-outlined iconTable">
+                            more_vert
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </body>
+</div>

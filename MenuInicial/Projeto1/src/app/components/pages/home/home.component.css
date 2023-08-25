@@ -1,22 +1,26 @@
 .container {
     height: 100vh;
     border: none;
+    z-index: 1;
     
   }
   
   .mat-sidenav {
+    position: absolute;
     width:4.2rem;
     overflow: visible;
     display: flex;
     border: none;
     background-color: var(--menu-lateral);
+    z-index: 1;
+
   }
   
   .meuMenuSuperior {
     position: fixed;
     height: 60px;
     background-color:  var(--menu-superior);
-    z-index: 999;
+    z-index: 1;
     width: 100%;
   }
   .meu-card{

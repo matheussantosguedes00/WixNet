@@ -18,6 +18,8 @@ import { LinkFornecedorComponent } from './components/pages/almoxarifado/menu-pr
 import { TarefasComponent } from './components/pages/tasks/menu-principal/tarefas/tarefas.component';
 import { ListaComponent } from './components/pages/tasks/menu-principal/lista/lista.component';
 import { CardsComponent } from './components/pages/tasks/menu-principal/cards/cards.component';
+import { FormularioComponent } from './components/pages/clientes/formulario/formulario.component';
+import { TabelaComponent } from './components/pages/clientes/tabela/tabela.component';
 
 
 
@@ -41,6 +43,8 @@ const routes: Routes = [
       { path: 'clientes',component:ClientesComponent,  
       canActivate: [AuthGuard],
       children: [
+        {path: 'tabela',component:TabelaComponent},
+        {path:'formulario', component:FormularioComponent},
         
       ]},
 
