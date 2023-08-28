@@ -64,7 +64,13 @@ import { FiltroPrioridadePipe } from './components/pages/tasks/menu-principal/ca
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormularioComponent } from './components/pages/clientes/formulario/formulario.component';
 import { TabelaComponent } from './components/pages/clientes/tabela/tabela.component';
+import { InfoEditerComponent } from './components/pages/clientes/menu/Menu-Prinipal/info-editer/info-editer.component';
+import { MenuComponent } from './components/pages/clientes/menu/menu.component';
+import { CircutosComponent } from './components/pages/clientes/menu/Menu-Prinipal/circutos/circutos.component';
+import { ContratosComponent } from './components/pages/clientes/menu/Menu-Prinipal/contratos/contratos.component';
+import { TicketsComponent } from './components/pages/clientes/menu/Menu-Prinipal/tickets/tickets.component';
 
+import { DadosService } from './components/pages/clientes/services/dados.service';
 export class SeuModulo { }
 
 
@@ -95,7 +101,12 @@ export class SeuModulo { }
     CardsComponent,
     FiltroPrioridadePipe,
     FormularioComponent,
-    TabelaComponent 
+    TabelaComponent,
+    InfoEditerComponent,
+    MenuComponent,
+    CircutosComponent,
+    ContratosComponent,
+    TicketsComponent 
 
   ],
   imports: [

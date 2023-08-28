@@ -1,0 +1,72 @@
+
+    <div class="card">
+        <div class="container">
+
+            <form>
+                <div class="linha">
+                    <div class="campo">
+                        <label for="apelido">Apelido</label>
+                        <input type="text" id="apelido" name="apelido" [readonly]="!emModoEdicao" [(ngModel)]="dadosFormulario.apelido">
+                    </div>
+                    <div class="campo">
+                        <label class="id" for="id">ID</label>
+                        <input type="text" id="id" name="id" [readonly]="!emModoEdicao" [(ngModel)]="dadosFormulario.id">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="razaoSocial">Razão Social</label>
+                        <input type="text" id="razaoSocial" name="razaoSocial" [readonly]="!emModoEdicao"[(ngModel)]="dadosFormulario.razaoSocial">
+                    </div>
+                   
+                </div>
+                <div class="linha">
+                  
+                    <div class="campo">
+                        <label for="nomeFantasia">Nome Fantasia</label>
+                        <input type="text" id="nomeFantasia" name="nomeFantasia" [readonly]="!emModoEdicao"[(ngModel)]="dadosFormulario.nomeFantasia">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" name="cnpj" [readonly]="!emModoEdicao"[(ngModel)]="dadosFormulario.cnpj">
+                    </div>
+                   
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="endereco" [readonly]="!emModoEdicao"[(ngModel)]="dadosFormulario.endereco">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" [readonly]="!emModoEdicao"[(ngModel)]="dadosFormulario.cep">
+                    </div>
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado" [readonly]="!emModoEdicao"[(ngModel)]="dadosFormulario.estado">
+                    </div>
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" [readonly]="!emModoEdicao"[(ngModel)]="dadosFormulario.cidade">
+                    </div>
+                </div>
+
+               
+
+                <div class="botoes">
+                    <button class="grid-item-button" type="submit" (click)="alternarEdicao()">
+                      {{ emModoEdicao ? 'Salvar' : 'Editar' }}
+                    </button>
+                    <button class="grid-item-button2" type="button">Cancelar</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+

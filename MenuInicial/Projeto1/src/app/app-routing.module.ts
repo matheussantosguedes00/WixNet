@@ -1,5 +1,5 @@
 import { CadastroComponent } from './components/pages/almoxarifado/menu-principal/cadastro/cadastro.component';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PainelControleComponent } from './components/pages/painel-controle/painel-controle.component';
 import { TasksComponent } from './components/pages/tasks/tasks.component';
@@ -20,6 +20,11 @@ import { ListaComponent } from './components/pages/tasks/menu-principal/lista/li
 import { CardsComponent } from './components/pages/tasks/menu-principal/cards/cards.component';
 import { FormularioComponent } from './components/pages/clientes/formulario/formulario.component';
 import { TabelaComponent } from './components/pages/clientes/tabela/tabela.component';
+import { InfoEditerComponent } from './components/pages/clientes/menu/Menu-Prinipal/info-editer/info-editer.component';
+import { MenuComponent } from './components/pages/clientes/menu/menu.component';
+import { CircutosComponent } from './components/pages/clientes/menu/Menu-Prinipal/circutos/circutos.component';
+import { ContratosComponent } from './components/pages/clientes/menu/Menu-Prinipal/contratos/contratos.component';
+import { TicketsComponent } from './components/pages/clientes/menu/Menu-Prinipal/tickets/tickets.component';
 
 
 
@@ -45,6 +50,14 @@ const routes: Routes = [
       children: [
         {path: 'tabela',component:TabelaComponent},
         {path:'formulario', component:FormularioComponent},
+        {path:'menu-info',component:MenuComponent,canActivate: [AuthGuard],
+        children: [
+          {path:'information',component:InfoEditerComponent},
+          {path:'circutos',component:CircutosComponent},
+          {path:'contratos',component:ContratosComponent},
+          {path:'tickets',component:TicketsComponent},
+          
+        ]}
         
       ]},
 

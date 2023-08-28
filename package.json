@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "@angular/material": "^16.1.7"
+  },
+  "devDependencies": {
+    "@types/d3-selection": "^3.0.6"
   }
 }

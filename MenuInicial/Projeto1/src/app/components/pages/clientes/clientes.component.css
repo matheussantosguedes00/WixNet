@@ -18,7 +18,7 @@ body {
 /* Estilize a div dos botões */
 .botoes {
   display: flex;
-  justify-content: start; /* Centralize horizontalmente */
+  justify-content: flex-start; /* Centralize horizontalmente */
   align-items: center; /* Centralize verticalmente */
   text-align: center;
   border: 1px solid gray ;
@@ -116,5 +116,5 @@ table tbody {
 
 .iconTable{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }

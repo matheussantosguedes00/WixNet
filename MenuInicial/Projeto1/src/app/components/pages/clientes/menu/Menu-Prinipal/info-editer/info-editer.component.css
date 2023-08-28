@@ -1,0 +1,224 @@
+.card {
+    height: 100%;
+    width: 650px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--body);
+    border-radius: 1px;
+  }
+  h1 {
+    color: #333;
+  }
+  
+  .linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px 10px 10px 10px;
+    background: none;
+  }
+  
+  .campo {
+    flex: 1;
+    margin-right: 25px;
+    margin-left: -10px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: start;
+    font-size: 12px;
+    
+  }
+  
+  input[type="text"] {
+    all: unset;
+    width: 85%;
+    padding: 10px;
+    margin: 30px;
+    border-bottom: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+   background: none
+  }
+  input[type="text"]:focus,
+  input[type="text"]:hover,
+  input:active
+  {
+    border-bottom: 1px solid #000000;
+  }
+
+  #apelido{
+    margin: 0 150px 10px -10px ;
+    width: 100%;
+  }
+
+  #endereco,#apelido,#razaoSocial,#cnpj,#nomeFantasia{
+    margin: 0 150px 10px -10px ;
+    width:95%;
+  }
+  #cep,#cidade,#estado{
+    margin: 0 150px 5px -10px;
+    
+    
+    
+  }
+
+  #id{
+    margin: 0 150px 5px 5px;
+    width: 85%;
+  }
+  .id{
+    padding-left: 20px;
+  }
+  .botoes {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .grid-item-button,.grid-item-button2 {
+   
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    
+  }
+  
+  .grid-item-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 810px){
+  
+    .card {
+      height: 100%;
+      width: 600px;
+      padding: 10px;
+      margin-top: 60px;
+      background-color: var(--body);
+      border-radius: 1px;
+    }
+    #apelido{
+      margin: 0 150px 10px -10px ;
+      width: 100%;
+    }
+  
+    #endereco,#apelido,#razaoSocial,#cnpj,#nomeFantasia{
+      width:95%;
+    }
+    #cep,#cidade,#estado{
+      margin: 0 150px 5px -10px;
+      
+      
+      
+    }
+  
+    #id{
+      margin: 0 150px 5px 5px;
+      width: 85%;
+    }
+    .id{
+      padding-left: 20px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 640px) {
+    .pagina-em-branco {
+      position: fixed;
+      top: 0;
+      left:0;
+      width:100%;
+      height: 100%;
+      background-color: white; /* Cor de fundo da página em branco */
+      z-index: 99999; /* Certifique-se de que a página está na frente de outros elementos */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 20px; /* Espaçamento interno para o botão "X" */
+      overflow: auto;
+    }
+    button {
+      background-color: transparent;
+      display: flex;
+      align-self: start;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 20px;
+      margin-left: 3px;
+    }
+    .card {
+      height: 100%;
+      width: 400px;
+      padding: 10px;
+      margin-top: 60px;
+      background-color: var(--body);
+      border-radius: 1px;
+    }
+    .linha {
+      display: flex;
+      flex-direction: column; /* Empilha os campos verticalmente */
+      align-items: flex-start;
+      margin-top: 0;
+      padding: 5px ;
+      width:100%;
+  }
+  
+  .campo {
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 0;
+  }
+  #endereco,#apelido,
+  #cep,#cnpj,#razaoSocial,
+  #id,#cidade,#estado,
+  #nomeFantasia{
+    margin: 5px 150px 10px -10px ;
+    width:100%;
+  }
+  .botoes {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .grid-item-button,.grid-item-button2 {
+   
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    
+  }
+  
+  .grid-item-button:hover {
+    background-color: #0056b3;
+  }
+  
+  }
+  @media screen and (max-width: 408px) {
+    .card {
+      height: 100%;
+      width: 300px;
+      padding: 10px;
+      margin-top: 60px;
+      background-color: var(--body);
+      border-radius: 1px;
+    }
+  }

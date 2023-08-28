@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: '/formulario',
@@ -7,13 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
- 
+  constructor(private router: Router) {}
   sairPagina(): void {
-    // Adicione aqui a lógica para fechar a página em branco,
-    // por exemplo, redirecionando para outra rota ou fechando um modal.
-    window.history.back();
-
- 
+    // Redireciona de volta para a página de tabela de clientes
+    this.router.navigate(['/home/clientes/tabela']);
   }
   
 }
