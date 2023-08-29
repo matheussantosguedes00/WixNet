@@ -31,16 +31,13 @@ export class TabelaComponent implements OnInit {
     );
   }
 
-  navegarParaInformation(ip: number) {
-    // Você pode usar o IP como necessário aqui
-    console.log('IP do cliente:',ip);
+  navegarParaInformation(id: number) {
+  // Você pode usar o IP como necessário aqui
+  console.log('ID do cliente:', id);
 
-    // Defina o modo de edição como false (visualização)
-    this.emModoEdicao = false;
-
-    // Redirecione para a página do formulário
-    this.router.navigate(['/home/clientes/menu-info/information']);
-  }
+  // Redirecione para a página do formulário com o ID como parâmetro de rota
+  this.router.navigate(['menu-info/information', id]);
+}
 
   alternarEdicao() {
     // Alterne o modo de edição entre true e false
