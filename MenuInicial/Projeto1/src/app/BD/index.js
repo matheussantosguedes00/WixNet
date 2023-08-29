@@ -182,6 +182,42 @@ app.get('/api/tarefas/filtrar', (req, res) => {
   });
 });
 
+
+
+
+app.get('/api/clientes', (req, res) => {
+  db.query('SELECT * FROM clientes ORDER BY id DESC', (err, results) => {
+    if (err) throw err;
+    res.send(results);
+  });
+});
+
+app.post('/api/clientes', (req, res) => {
+  const novoClientes = req.body;
+  db.query('INSERT INTO clientes SET ?', novoClientes , (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.put('/api/clientes/:id', (req, res) => {
+  const id = req.params.id;
+  const clientesAtualizada = req.body;
+  db.query('UPDATE clientes SET ? WHERE id = ?', [clientesAtualizada, id], (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+app.delete('/api/clientes/:id', (req, res) => {
+  const id = req.params.id;
+  db.query('DELETE FROM clientes WHERE id = ?', id, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

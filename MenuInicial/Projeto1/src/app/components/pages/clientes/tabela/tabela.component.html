@@ -14,19 +14,19 @@
         </div>
         
         <table>
-            
+         
             <tbody>
-                <tr *ngFor="let tarefa of tarefas; let i = index">
-                    <td><span class="material-symbols-outlined iconLinha">account_circle</span>
-                       <span class="text-Table">{{ tarefa.nome }}</span></td>
-                    <td>{{ tarefa.id }}</td>
+                <tr *ngFor="let cliente of tarefas; let i = index">
+                    <td>{{ cliente.apelido }}</td>
+                    <td> Wix-{{ cliente.id }}</td>
                     <td>
-                        <span class="material-symbols-outlined iconTable" (click)="navegarParaInformation()">
+                        <span class="material-symbols-outlined iconTable" (click)="navegarParaInformation(cliente.ip)">
                             more_vert
-                        </span>
+                          </span>
                     </td>
-                </tr>
+                  </tr>
             </tbody>
-        </table>
+          </table>
+          
         </body>
 </div>

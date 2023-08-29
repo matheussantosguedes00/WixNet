@@ -1,4 +1,6 @@
 <h1>Clientes</h1>
+<div class="mensagem-sucesso" *ngIf="clienteAdicionado">Cliente adicionado com sucesso!</div>
+
 <div class="pagina-em-branco">
     <button (click)="sairPagina()">
         <span class="material-symbols-outlined">
@@ -9,58 +11,59 @@
         <div class="container">
             <h1>Formulário</h1>
 
-            <div class="linha">
-                <div class="campo">
-                    <label for="apelido">Apelido</label>
-                    <input type="text" id="apelido" name="apelido" placeholder="Ex: Cliente123">
+            <form (submit)="adicionarCliente()">
+                <div class="linha">
+                    <div class="campo">
+                        <label for="apelido">Apelido</label>
+                        <input type="text" id="apelido" name="apelido" placeholder="Ex: Cliente123" [(ngModel)]="novoCliente.apelido">
+                    </div>
                 </div>
-              
-            </div>
 
-            <div class="linha">
-                <div class="campo">
-                    <label for="razaoSocial">Razão Social</label>
-                    <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Ex: Minha Empresa Ltda.">
+                <div class="linha">
+                    <div class="campo">
+                        <label for="razaoSocial">Razão Social</label>
+                        <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Ex: Minha Empresa Ltda." [(ngModel)]="novoCliente.razaoSocial">
+                    </div>
+                    <div class="campo">
+                        <label for="nomeFantasia">Nome Fantasia</label>
+                        <input type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Ex: Minha Empresa" [(ngModel)]="novoCliente.nomeFantasia">
+                    </div>
                 </div>
-                <div class="campo">
-                    <label for="nomeFantasia">Nome Fantasia</label>
-                    <input type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Ex: Minha Empresa">
-                </div>
-            </div>
 
-            <div class="linha">
-                <div class="campo">
-                    <label for="cnpj">CNPJ</label>
-                    <input type="text" id="cnpj" name="cnpj" placeholder="Ex: 12.345.678/0001-90">
+                <div class="linha">
+                    <div class="campo">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="Ex: 12.345.678/0001-90" [(ngModel)]="novoCliente.cnpj">
+                    </div>
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo" [(ngModel)]="novoCliente.cidade">
+                    </div>
                 </div>
-                <div class="campo">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo">
-                </div>
-            </div>
 
-            <div class="linha">
-                <div class="campo">
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" placeholder="Ex: 12345-678">
+                <div class="linha">
+                    <div class="campo">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" placeholder="Ex: 12345-678" [(ngModel)]="novoCliente.cep">
+                    </div>
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado" placeholder="Ex: SP" [(ngModel)]="novoCliente.estado">
+                    </div>
                 </div>
-                <div class="campo">
-                    <label for="estado">Estado</label>
-                    <input type="text" id="estado" name="estado" placeholder="Ex: SP">
-                </div>
-            </div>
 
-            <div class="linha">
-                <div class="campo">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" name="endereco" placeholder="Ex: Rua Exemplo, 123">
+                <div class="linha">
+                    <div class="campo">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Ex: Rua Exemplo, 123" [(ngModel)]="novoCliente.endereco">
+                    </div>
                 </div>
-            </div>
 
-            <div class="botoes">
-                <button class="grid-item-button" type="submit">Adicionar</button>
-                <button class="grid-item-button2" type="button"(click)="sairPagina()" >Cancelar</button>
-            </div>
+                <div class="botoes">
+                    <button class="grid-item-button" type="submit">Adicionar</button>
+                    <button class="grid-item-button2" type="button" (click)="sairPagina()">Cancelar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

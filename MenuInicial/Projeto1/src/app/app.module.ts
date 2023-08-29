@@ -70,7 +70,7 @@ import { CircutosComponent } from './components/pages/clientes/menu/Menu-Prinipa
 import { ContratosComponent } from './components/pages/clientes/menu/Menu-Prinipal/contratos/contratos.component';
 import { TicketsComponent } from './components/pages/clientes/menu/Menu-Prinipal/tickets/tickets.component';
 
-import { DadosService } from './components/pages/clientes/services/dados.service';
+
 export class SeuModulo { }
 
 

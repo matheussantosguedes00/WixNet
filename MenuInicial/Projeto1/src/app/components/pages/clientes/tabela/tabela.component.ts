@@ -1,52 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ClientesService } from '../services/dados.service';
+
 @Component({
   selector: 'tabela',
   templateUrl: './tabela.component.html',
   styleUrls: ['./tabela.component.css']
 })
-export class TabelaComponent {
-  constructor(private router: Router) {}
-  navegarParaInformation() {
+export class TabelaComponent implements OnInit {
+  constructor(private router: Router, private clientesService: ClientesService) {}
+  tarefas: any[] = []; // Array para armazenar os dados dos clientes
+  emModoEdicao: boolean = false; // Adicione a variável de modo de edição
+  dadosFormulario: any = {}; // Dados do formulário
+
+  ngOnInit() {
+    // Ao inicializar o componente, busque os clientes da API
+    this.getClientes();
+  }
+
+  getClientes() {
+    this.clientesService.getClientes().subscribe(
+      (response) => {
+        // Armazene os dados dos clientes na variável 'tarefas'
+        this.tarefas = response;
+      },
+      (error) => {
+        console.error('Erro ao buscar clientes:', error);
+        // Lógica adicional para lidar com erros, como exibição de mensagem de erro, pode ser adicionada aqui.
+      }
+    );
+  }
+
+  navegarParaInformation(ip: number) {
+    // Você pode usar o IP como necessário aqui
+    console.log('IP do cliente:',ip);
+
+    // Defina o modo de edição como false (visualização)
+    this.emModoEdicao = false;
+
+    // Redirecione para a página do formulário
     this.router.navigate(['/home/clientes/menu-info/information']);
-}
-  tarefas = [
-    {  // Substitua isso pelos dados reais do seu cliente
-      nome: 'ClienteX',
-      id: 1,
-      nomeFantasia: 'Empresa ABC',
-      razaoSocial: 'Razão Social Ltda',
-      cnpj: '12.345.678/0001-90',
-      endereco: 'Rua da Empresa, 123',
-      cep: '12345-678',
-      cidade: 'Cidade',
-      estado: 'UF'
-    },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    // Adicione mais dados aqui conforme necessário
-  ];
-  
+  }
+
+  alternarEdicao() {
+    // Alterne o modo de edição entre true e false
+    this.emModoEdicao = !this.emModoEdicao;
+  }
 }
