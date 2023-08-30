@@ -185,6 +185,26 @@ app.get('/api/tarefas/filtrar', (req, res) => {
 
 
 
+// Rota para buscar um cliente pelo ID
+app.get('/api/clientes/:id', (req, res) => {
+  const id = req.params.id;
+  db.query('SELECT * FROM clientes WHERE id = ?', id, (err, result) => {
+    if (err) {
+      console.error('Erro ao buscar cliente:', err);
+      res.status(500).send('Erro ao buscar cliente');
+    } else {
+      if (result.length > 0) {
+        // Se encontrar um cliente com o ID especificado, retorne-o
+        res.send(result[0]);
+      } else {
+        // Se não encontrar nenhum cliente com o ID especificado, retorne um status 404 (Não Encontrado)
+        res.status(404).send('Cliente não encontrado');
+      }
+    }
+  });
+});
+
+// Outras rotas relacionadas a clientes
 app.get('/api/clientes', (req, res) => {
   db.query('SELECT * FROM clientes ORDER BY id DESC', (err, results) => {
     if (err) throw err;
@@ -216,7 +236,6 @@ app.delete('/api/clientes/:id', (req, res) => {
     res.send(result);
   });
 });
-
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

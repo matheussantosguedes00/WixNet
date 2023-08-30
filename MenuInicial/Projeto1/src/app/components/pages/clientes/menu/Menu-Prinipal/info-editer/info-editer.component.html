@@ -1,77 +1,66 @@
-
-    <div class="card">
-        <div class="container">
-
-            <form>
-                <div class="linha">
-                    <div class="campo">
-                        <label for="apelido">Apelido</label>
-                        <input type="text" id="apelido" name="apelido" [(ngModel)]="dadosFormulario.apelido">
-                    </div>
-                    <div class="campo">
-                        <label class="id" for="id">ID</label>
-                        <input type="text" id="id" name="id"  [(ngModel)]="dadosFormulario.id">
-                    </div>
+<div class="card">
+    <div class="container">
+        <form>
+            <div class="linha">
+                <div class="campo">
+                    <label for="apelido">Apelido</label>
+                    <input type="text" id="apelido" name="apelido" [(ngModel)]="dadosFormulario.apelido" readonly>
                 </div>
-
-                <div class="linha">
-                    <div class="campo">
-                        <label for="razaoSocial">Razão Social</label>
-                        <input type="text" id="razaoSocial" name="razaoSocial" [(ngModel)]="dadosFormulario.razaoSocial">
-                    </div>
-                   
+                <div class="campo">
+                    <label class="id" for="id">ID</label>
+                    <input type="text" id="id" name="id"  [(ngModel)]="dadosFormulario.id" readonly>
                 </div>
-                <div class="linha">
-                  
-                    <div class="campo">
-                        <label for="nomeFantasia">Nome Fantasia</label>
-                        <input type="text" id="nomeFantasia" name="nomeFantasia" [(ngModel)]="dadosFormulario.nomeFantasia">
-                    </div>
-                </div>
+            </div>
 
-                <div class="linha">
-                    <div class="campo">
-                        <label for="cnpj">CNPJ</label>
-                        <input type="text" id="cnpj" name="cnpj" [(ngModel)]="dadosFormulario.cnpj">
-                    </div>
-                   
+            <div class="linha">
+                <div class="campo">
+                    <label for="razaoSocial">Razão Social</label>
+                    <input type="text" id="razaoSocial" name="razaoSocial" [(ngModel)]="dadosFormulario.razaoSocial" readonly>
                 </div>
-
-                <div class="linha">
-                    <div class="campo">
-                        <label for="endereco">Endereço</label>
-                        <input type="text" id="endereco" name="endereco" [(ngModel)]="dadosFormulario.endereco">
-                    </div>
+            </div>
+            <div class="linha">
+                <div class="campo">
+                    <label for="nomeFantasia">Nome Fantasia</label>
+                    <input type="text" id="nomeFantasia" name="nomeFantasia" [(ngModel)]="dadosFormulario.nomeFantasia" readonly>
                 </div>
-                <div class="linha">
-                    <div class="campo">
-                        <label for="cep">CEP</label>
-                        <input type="text" id="cep" name="cep" [(ngModel)]="dadosFormulario.cep">
-                    </div>
-                    <div class="campo">
-                        <label for="estado">Estado</label>
-                        <input type="text" id="estado" name="estado" [(ngModel)]="dadosFormulario.estado">
-                    </div>
-                    <div class="campo">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" [(ngModel)]="dadosFormulario.cidade">
-                    </div>
+            </div>
+
+            <div class="linha">
+                <div class="campo">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="cnpj" [(ngModel)]="dadosFormulario.cnpj" readonly>
                 </div>
+            </div>
 
-               
-
-                <div class="botoes">
-                    <div>
-                        <button class="grid-item-button" type="submit" >
-                            Editar
-                          </button>
-                    </div>
-                    <div>
-                        <button class="grid-item-button2" type="button">Editar</button>
-                    </div>
-                    
-                  </div>
-            </form>
-        </div>
+            <div class="linha">
+                <div class="campo">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" [(ngModel)]="dadosFormulario.endereco" readonly>
+                </div>
+            </div>
+            <div class="linha">
+                <div class="campo">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" [(ngModel)]="dadosFormulario.cep" readonly>
+                </div>
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" name="estado" [(ngModel)]="dadosFormulario.estado" readonly>
+                </div>
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" [(ngModel)]="dadosFormulario.cidade" readonly>
+                </div>
+            </div>
+            
+            <div class="botoes">
+                <div>
+                    <button class="grid-item-button" type="submit">Editar</button>
+                </div>
+                <div>
+                    <button class="grid-item-button2" type="button">Editar</button>
+                </div>
+            </div>
+        </form>
     </div>
-
+</div>

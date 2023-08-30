@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ClienteIdService } from '../services/cliente-id.service';
+
 @Component({
   selector: 'tabela',
   templateUrl: './tabela.component.html',
   styleUrls: ['./tabela.component.css']
 })
+
 export class TabelaComponent implements OnInit {
   constructor(private router: Router, private clienteIdService: ClienteIdService) {}
   tarefas: any[] = []; // Array para armazenar os dados dos clientes
@@ -32,12 +34,15 @@ export class TabelaComponent implements OnInit {
   }
 
   navegarParaInformation(id: number) {
-    
-    console.log('IP do cliente:',id);
+    // Exibe o ID do cliente no console (não é um endereço IP)
+    console.log('ID do cliente:', id);
 
     // Defina o modo de edição como false (visualização)
     this.emModoEdicao = false;
-  
+
+    // Chame o método do serviço e passe o ID como argumento
+    this.clienteIdService.setIdSelecionado(id);
+
     // Redirecione para a página do formulário com o ID como parte da URL
     this.router.navigate(['/home/clientes/menu-info/information']);
   }
