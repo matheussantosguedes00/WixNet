@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { MenuService } from 'src/app/service/menu.service';
 
 @Component({
   selector: 'clientes',
@@ -6,32 +7,6 @@ import { Component} from '@angular/core';
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent{
-  
-  tarefas = [
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    { nome: 'Cliente 1', id: 1 },
-    { nome: 'Cliente 2', id: 2 },
-    { nome: 'Cliente 3', id: 3 },
-    // Adicione mais dados aqui conforme necessário
-  ];
+ 
+ 
 }

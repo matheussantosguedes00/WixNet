@@ -1,6 +1,6 @@
 .card {
     height: 100%;
-    width: 650px;
+    width: 630px;
     padding: 10px;
     margin-top: 20px;
     background-color: var(--body);
@@ -75,21 +75,27 @@
     padding-left: 20px;
   }
   .botoes {
-    display: flex;
-    justify-content: center;
+    .botoes {
+      display: flex;
+      flex-direction: column;
+    }
     
   }
-  
+ 
   .grid-item-button,.grid-item-button2 {
    
-    padding: 10px 20px;
+    padding: 20px;
     background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
+    color: #fffdfd;
+    text-align: center;
+    font-weight: bold;
+    border: 5px solid rgb(5, 5, 183);
+    width: 110px;
+    height: 70px;
     cursor: pointer;
     font-size: 14px;
-    margin-left: 10px;
+    margin-top: 10px;
+    
     
   }
   

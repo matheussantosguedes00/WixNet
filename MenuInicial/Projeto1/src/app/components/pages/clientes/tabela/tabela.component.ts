@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ClientesService } from '../services/dados.service';
 
+import { ClienteIdService } from '../services/cliente-id.service';
 @Component({
   selector: 'tabela',
   templateUrl: './tabela.component.html',
   styleUrls: ['./tabela.component.css']
 })
 export class TabelaComponent implements OnInit {
-  constructor(private router: Router, private clientesService: ClientesService) {}
+  constructor(private router: Router, private clienteIdService: ClienteIdService) {}
   tarefas: any[] = []; // Array para armazenar os dados dos clientes
   emModoEdicao: boolean = false; // Adicione a variável de modo de edição
   dadosFormulario: any = {}; // Dados do formulário
@@ -19,7 +19,7 @@ export class TabelaComponent implements OnInit {
   }
 
   getClientes() {
-    this.clientesService.getClientes().subscribe(
+    this.clienteIdService.getClientes().subscribe(
       (response) => {
         // Armazene os dados dos clientes na variável 'tarefas'
         this.tarefas = response;
@@ -32,12 +32,15 @@ export class TabelaComponent implements OnInit {
   }
 
   navegarParaInformation(id: number) {
-  // Você pode usar o IP como necessário aqui
-  console.log('ID do cliente:', id);
+    // Você pode usar o IP como necessário aqui
+    console.log('IP do cliente:',id);
 
-  // Redirecione para a página do formulário com o ID como parâmetro de rota
-  this.router.navigate(['menu-info/information', id]);
-}
+    // Defina o modo de edição como false (visualização)
+    this.emModoEdicao = false;
+  
+    // Redirecione para a página do formulário com o ID como parte da URL
+    this.router.navigate(['/home/clientes/menu-info/information']);
+  }
 
   alternarEdicao() {
     // Alterne o modo de edição entre true e false

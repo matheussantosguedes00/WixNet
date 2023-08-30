@@ -1,22 +1,28 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ClientesService } from '../services/dados.service';
+import { ClienteIdService } from '../services/cliente-id.service'; 
+import { MenuService } from 'src/app/service/menu.service';
 
 @Component({
-  selector: '/formulario',
+  selector: 'formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
-  constructor(private router: Router, private clientesService: ClientesService) {}
+  constructor(
+    private router: Router,
+    private clienteIdService: ClienteIdService,
+    public menuService: MenuService
+  ) {}
+  
   novoCliente: any = {};
   clienteAdicionado: boolean = false; // Flag para exibir a mensagem de sucesso
 
   adicionarCliente() {
     // Desabilitar o botão enquanto a operação está em andamento
     this.clienteAdicionado = false;
-  
-    this.clientesService.adicionarCliente(this.novoCliente).subscribe(
+
+    this.clienteIdService.adicionarCliente(this.novoCliente).subscribe(
       (response) => {
         console.log('Cliente adicionado com sucesso:', response);
         // Limpe o formulário e exiba a mensagem de sucesso

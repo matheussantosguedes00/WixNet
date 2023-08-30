@@ -11,11 +11,13 @@ h1 {
   
   .Menu-Linha ul {
     list-style: none;
-    padding: 20px;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
     padding-top: -5px;
-    width: 550px;
+    width: 530px;
+    margin-left: 10px;
+  
     
   
   }
@@ -32,11 +34,10 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     color:#000000ad;
     cursor: pointer;
-    padding: 18px;
+    padding: 16px;
     border-bottom:1px solid rgb(0, 0, 0);
-   
     text-align: center;
-    font-size: 21px;
+    font-size: 20px;
     background: none;
  
   }
@@ -55,6 +56,7 @@ h1 {
       height: 100%;
       width: auto;
       padding: 10px;
+      
       margin-top: -6px;
       background-color: var(--body);
       border-radius: 1px;
