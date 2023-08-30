@@ -1,5 +1,5 @@
 <h1>Clientes</h1>
-<div class="mensagem-sucesso" *ngIf="clienteAdicionado">Cliente adicionado com sucesso!</div>
+
 
 <div class="pagina-em-branco">
     <button (click)="sairPagina()">
@@ -9,8 +9,16 @@
     </button>
     <div class="card">
         <div class="container">
+            
             <h1>Formulário</h1>
-
+            <div class="mensagem-carregamento" *ngIf="exibirMensagemCarregamento">
+                <span class="material-symbols-outlined" *ngFor="let classe of classesDeCarregamento.slice(0, indiceExibicao)">{{ classe }}</span>
+              </div>
+              
+              <div class="mensagem-sucesso" *ngIf="cadastroConcluido">
+                <span class="material-symbols-outlined">check </span>
+                <p>Cadastro concludo!</p>
+              </div>
             <form (submit)="adicionarCliente()">
                 <div class="linha">
                     <div class="campo">

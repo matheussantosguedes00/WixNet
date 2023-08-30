@@ -13,6 +13,22 @@
   padding: 10px; /* Espaçamento interno para o botão "X" */
   overflow: auto;
 }
+.mensagem-sucesso, .mensagem-carregamento{
+color: rgb(36, 161, 74);
+}
+.mensagem-sucesso {
+  display: flex;
+  flex-direction: row; /* Coloca o ícone e o texto um em cima do outro */
+  justify-content: center;
+  align-items: center; /* Centraliza horizontalmente */
+  transition: 0.3s;
+  
+}
+.mensagem-sucesso p{
+  font-size: 15px;
+  color:#558d5f ;
+  
+}
 h1{
   margin-top: 5px;
   font-size: 20px;
