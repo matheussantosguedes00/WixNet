@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -23,6 +23,13 @@ export class HomeComponent implements OnInit {
     this.larguraTela = window.innerWidth;
     // Verifica se o menu deve ser fechado no carregamento inicial com base na largura da tela
     this.atualizarMenu();
+
+    // Ouve eventos de mudança de rota para atualizar o menu quando a rota muda
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.atualizarMenu();
+      }
+    });
   }
 
   // Ouve eventos de redimensionamento da janela e atualiza a largura da tela
@@ -33,11 +40,14 @@ export class HomeComponent implements OnInit {
     this.atualizarMenu();
   }
 
-  // Método para atualizar o estado do menu com base na largura da tela
+  // Método para atualizar o estado do menu com base na largura da tela e na URL atual
   atualizarMenu() {
-    if (this.larguraTela <= 600) {
+    if (this.larguraTela <= 600 || this.router.url === '/home/clientes/formulario') {
+      // Se a largura da tela for menor ou igual a 600 OU se estiver na página '/home/clientes/formulario',
+      // o menu deve ficar fechado
       this.menuAberto = false;
     } else {
+      // Para todas as outras páginas e larguras de tela maiores que 600 pixels, o menu deve estar aberto
       this.menuAberto = true;
     }
   }

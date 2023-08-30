@@ -32,7 +32,7 @@ export class TabelaComponent implements OnInit {
   }
 
   navegarParaInformation(id: number) {
-    // Você pode usar o IP como necessário aqui
+    
     console.log('IP do cliente:',id);
 
     // Defina o modo de edição como false (visualização)
