@@ -6,6 +6,58 @@
     background-color: var(--body);
     border-radius: 1px;
   }
+  .card-flutuante {
+    position: fixed;
+    top: 50%; /* Ajuste a posição vertical conforme necessário */
+    left: 50%; /* Ajuste a posição horizontal conforme necessário */
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Garanta que o card flutuante esteja na parte superior */
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto branco */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.material-symbols-outlined{
+background-color: #fff;
+border-radius: 40px;
+color: #4CAF50;
+font-weight: bold;
+}
+
+.card-flutuante p {
+    margin-left: 10px; /* Espaçamento entre o ícone e o texto */
+    font-size: 16px;
+    font-weight: bold;
+}
+.card-erro {
+  background-color: #d53714; /* Cor de fundo vermelha para mensagem de erro */
+  color: #fff;
+  font-weight: bold;
+}
+
+.mensagem-erro {
+  background-color: #d53714; /* Cor de fundo vermelha para mensagem de erro */
+  color: #fff;
+  font-weight: bold;
+}
+
+.mensagem-erro p {
+  margin-left: 10px; /* Espaçamento entre o ícone e o texto */
+  font-size: 16px;
+}
+.iconError{
+  background-color: #fff;
+  border-radius: 40px;
+  color: #ff4652;
+  font-weight: bold;
+}
+
   h1 {
     color: #333;
   }
@@ -74,13 +126,14 @@
   .id{
     padding-left: 20px;
   }
-  .botoes {
+  
     .botoes {
       display: flex;
+      justify-content: flex-start;
       flex-direction: column;
     }
     
-  }
+  
  
   .grid-item-button,.grid-item-button2 {
    
@@ -98,11 +151,28 @@
     
     
   }
-  
-  .grid-item-button:hover {
+  .grid-item-button3 {
+   
+    padding: 20px;
+    background-color: #ff1d2c;
+    color: #fffdfd;
+    text-align: center;
+    font-weight: bold;
+    border: 5px solid rgb(203, 39, 39);
+    width: 110px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    
+    
+  }
+  .grid-item-button:hover, .grid-item-button2:hover {
     background-color: #0056b3;
   }
-  
+  .grid-item-button3:hover{
+    background-color: #ff0011;
+  }
   @media screen and (max-width: 810px){
   
     .card {

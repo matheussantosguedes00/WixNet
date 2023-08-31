@@ -9,16 +9,28 @@
     </button>
     <div class="card">
         <div class="container">
-            
+             <!-- Card flutuante para a mensagem de carregamento -->
+             <div class="card-flutuante" *ngIf="exibirMensagemCarregamento">
+                <div class="mensagem-carregamento">
+                    <span class="material-symbols-outlined" *ngFor="let classe of classesDeCarregamento.slice(0, indiceExibicao)">{{ classe }}</span>
+                </div>
+            </div>
+
+            <!-- Card flutuante para a mensagem de sucesso -->
+            <div class="card-flutuante" *ngIf="cadastroConcluido">
+                <div class="mensagem-sucesso">
+                    <span class="material-symbols-outlined iconCheck">check</span>
+                    <p>Cadastro concluído!</p>
+                </div>
+            </div>
+            <div class="card-flutuante card-erro" *ngIf="exibirMensagemErro">
+                <div class="mensagem-erro">
+                    <span class="material-symbols-outlined iconErro">error</span>
+                    <p>{{ mensagemErro }}</p>
+                </div>
+            </div>
             <h1>Formulário</h1>
-            <div class="mensagem-carregamento" *ngIf="exibirMensagemCarregamento">
-                <span class="material-symbols-outlined" *ngFor="let classe of classesDeCarregamento.slice(0, indiceExibicao)">{{ classe }}</span>
-              </div>
-              
-              <div class="mensagem-sucesso" *ngIf="cadastroConcluido">
-                <span class="material-symbols-outlined">check </span>
-                <p>Cadastro concludo!</p>
-              </div>
+           
             <form (submit)="adicionarCliente()">
                 <div class="linha">
                     <div class="campo">

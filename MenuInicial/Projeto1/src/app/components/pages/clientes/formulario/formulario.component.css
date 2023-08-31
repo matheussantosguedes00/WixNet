@@ -13,22 +13,65 @@
   padding: 10px; /* Espaçamento interno para o botão "X" */
   overflow: auto;
 }
-.mensagem-sucesso, .mensagem-carregamento{
-color: rgb(36, 161, 74);
-}
-.mensagem-sucesso {
+.card-flutuante {
+  position: fixed;
+  top: 50%; /* Ajuste a posição vertical conforme necessário */
+  left: 50%; /* Ajuste a posição horizontal conforme necessário */
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Garanta que o card flutuante esteja na parte superior */
+  background-color: #4CAF50; /* Cor de fundo verde para carregamento ou outra cor desejada */
+  padding: 20px;
+  border-radius: 5px;
+  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: row; /* Coloca o ícone e o texto um em cima do outro */
-  justify-content: center;
-  align-items: center; /* Centraliza horizontalmente */
-  transition: 0.3s;
-  
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px; /* Espaço entre o card flutuante e o conteúdo abaixo */
 }
-.mensagem-sucesso p{
-  font-size: 15px;
-  color:#558d5f ;
-  
+
+.card-flutuante p {
+  margin-left: 10px; /* Espaçamento entre o ícone e o texto */
+  font-size: 16px;
 }
+.iconCheck{
+  background-color: #fff;
+  border-radius: 40px;
+  color: #4CAF50;
+  font-weight: bold;
+  }
+
+/* Estilos específicos para a mensagem de carregamento (ajuste conforme necessário) */
+.mensagem-carregamento {
+
+  color: #f8f8f8;
+}
+
+/* Estilos específicos para a mensagem de sucesso (ajuste conforme necessário) */
+.mensagem-sucesso {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-erro {
+  background-color: #d53714; /* Cor de fundo vermelha para mensagem de erro */
+  color: #fff;
+  font-weight: bold;
+}
+
+.mensagem-erro {
+  background-color: #d53714; /* Cor de fundo vermelha para mensagem de erro */
+  color: #fff;
+  font-weight: bold;
+}
+
+.mensagem-erro p {
+  margin-left: 10px; /* Espaçamento entre o ícone e o texto */
+  font-size: 16px;
+}
+
 h1{
   margin-top: 5px;
   font-size: 20px;

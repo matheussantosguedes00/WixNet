@@ -1,64 +1,92 @@
 <div class="card">
     <div class="container">
+        <div class="card-flutuante" *ngIf="mensagemSucesso">
+            <div class="mensagem-sucesso">
+                <span class="material-symbols-outlined">check</span>
+                <p>{{ mensagemSucesso }}</p>
+            </div>
+        </div>
+        <div class="card-flutuante card-erro" *ngIf="mensagemErro">
+            <div class="mensagem-erro">
+              <span class="material-symbols-outlined iconError">error</span>
+              <p>{{ mensagemErro }}</p>
+            </div>
+          </div>
         <form>
             <div class="linha">
                 <div class="campo">
                     <label for="apelido">Apelido</label>
-                    <input type="text" id="apelido" name="apelido" [(ngModel)]="dadosFormulario.apelido" readonly>
+                    <input type="text" id="apelido" name="apelido" [(ngModel)]="dadosFormulario.apelido" [readonly]="!modoEdicao">
                 </div>
                 <div class="campo">
                     <label class="id" for="id">ID</label>
-                    <input type="text" id="id" name="id"  [(ngModel)]="dadosFormulario.id" readonly>
+                    <input type="text" id="id" name="id" [(ngModel)]="dadosFormulario.id" [readonly]="true">
                 </div>
             </div>
 
             <div class="linha">
                 <div class="campo">
                     <label for="razaoSocial">Razão Social</label>
-                    <input type="text" id="razaoSocial" name="razaoSocial" [(ngModel)]="dadosFormulario.razaoSocial" readonly>
+                    <input type="text" id="razaoSocial" name="razaoSocial" [(ngModel)]="dadosFormulario.razaoSocial" [readonly]="!modoEdicao">
                 </div>
             </div>
             <div class="linha">
                 <div class="campo">
                     <label for="nomeFantasia">Nome Fantasia</label>
-                    <input type="text" id="nomeFantasia" name="nomeFantasia" [(ngModel)]="dadosFormulario.nomeFantasia" readonly>
+                    <input type="text" id="nomeFantasia" name="nomeFantasia" [(ngModel)]="dadosFormulario.nomeFantasia" [readonly]="!modoEdicao">
                 </div>
             </div>
 
             <div class="linha">
                 <div class="campo">
                     <label for="cnpj">CNPJ</label>
-                    <input type="text" id="cnpj" name="cnpj" [(ngModel)]="dadosFormulario.cnpj" readonly>
+                    <input type="text" id="cnpj" name="cnpj" [(ngModel)]="dadosFormulario.cnpj" [readonly]="!modoEdicao">
                 </div>
             </div>
 
             <div class="linha">
                 <div class="campo">
                     <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" name="endereco" [(ngModel)]="dadosFormulario.endereco" readonly>
+                    <input type="text" id="endereco" name="endereco" [(ngModel)]="dadosFormulario.endereco" [readonly]="!modoEdicao">
                 </div>
             </div>
             <div class="linha">
                 <div class="campo">
                     <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" [(ngModel)]="dadosFormulario.cep" readonly>
+                    <input type="text" id="cep" name="cep" [(ngModel)]="dadosFormulario.cep" [readonly]="!modoEdicao">
                 </div>
                 <div class="campo">
                     <label for="estado">Estado</label>
-                    <input type="text" id="estado" name="estado" [(ngModel)]="dadosFormulario.estado" readonly>
+                    <input type="text" id="estado" name="estado" [(ngModel)]="dadosFormulario.estado" [readonly]="!modoEdicao">
                 </div>
                 <div class="campo">
                     <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" [(ngModel)]="dadosFormulario.cidade" readonly>
+                    <input type="text" id="cidade" name="cidade" [(ngModel)]="dadosFormulario.cidade" [readonly]="!modoEdicao">
                 </div>
             </div>
             
             <div class="botoes">
-                <div>
-                    <button class="grid-item-button" type="submit">Editar</button>
+                <div *ngIf="!modoEdicao">
+                    <div>
+                        <button class="grid-item-button" type="button" (click)="modoEdicao = true">Editar</button>
+                    </div>
+                  <div>
+                    <button class="grid-item-button2" type="button" (click)="sairPagina()">Voltar</button>
+                  </div>
+
+                  <div>
+                    <button class="grid-item-button3" type="button" (click)="excluirCliente()">Excluir</button>
+                  </div>
+                    
                 </div>
-                <div>
-                    <button class="grid-item-button2" type="button">Editar</button>
+                <div *ngIf="modoEdicao">
+                    <div>
+                        <button class="grid-item-button" type="button" (click)="salvarEdicao()">Salvar</button>
+                    </div>
+                    <div>
+                        <button class="grid-item-button2" type="button" (click)="cancelarEdicao()">Cancelar</button>
+                    </div>
+                    
                 </div>
             </div>
         </form>
