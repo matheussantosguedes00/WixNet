@@ -48,6 +48,9 @@ export class InfoEditerComponent implements OnInit {
   }
 
   salvarEdicao() {
+    // Remove o texto "Wix-" do valor do id antes de enviar para atualização
+    this.dadosFormulario.id = this.dadosFormulario.id.replace('Wix-', '');
+
     this.clienteIdService.atualizarCliente(this.dadosFormulario).subscribe(
         (response) => {
             console.log('Cliente atualizado com sucesso:', response);
