@@ -9,6 +9,9 @@ import { catchError } from 'rxjs/operators';
 export class ClienteIdService {
   private baseUrl = 'http://localhost:3000/api/clientes';
   idSelecionado: number | null = null;
+ 
+ 
+
 
   constructor(private http: HttpClient) {}
 
@@ -19,6 +22,7 @@ export class ClienteIdService {
   getClientes(): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl);
   }
+
 
   getClientePorId(id: number): Observable<any> {
     const url = `${this.baseUrl}/${id}`;

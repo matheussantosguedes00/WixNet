@@ -20,7 +20,7 @@ export class InfoEditerComponent implements OnInit {
       this.clienteIdService.getClientePorId(idSelecionado).subscribe(
         (cliente) => {
           this.dadosFormulario = {
-            id: 'Wix-'+cliente.id,
+            id: 'Wix-' + cliente.id,
             apelido: cliente.apelido,
             razaoSocial: cliente.razaoSocial,
             nomeFantasia: cliente.nomeFantasia,
@@ -30,6 +30,8 @@ export class InfoEditerComponent implements OnInit {
             estado: cliente.estado,
             cidade: cliente.cidade
           };
+
+        
         },
         (error) => {
           console.error('Erro ao obter informações do cliente:', error);

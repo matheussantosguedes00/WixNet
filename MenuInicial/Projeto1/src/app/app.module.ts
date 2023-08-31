@@ -71,6 +71,8 @@ import { ContratosComponent } from './components/pages/clientes/menu/Menu-Prinip
 import { TicketsComponent } from './components/pages/clientes/menu/Menu-Prinipal/tickets/tickets.component';
 
 
+
+
 export class SeuModulo { }
 
 
@@ -106,7 +108,9 @@ export class SeuModulo { }
     MenuComponent,
     CircutosComponent,
     ContratosComponent,
-    TicketsComponent 
+    TicketsComponent,
+  
+   
 
   ],
   imports: [
