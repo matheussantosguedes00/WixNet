@@ -23,9 +23,10 @@ export class InfoEditerComponent implements OnInit {
     if (idSelecionado) {
       this.clienteIdService.getClientePorId(idSelecionado).subscribe(
         (cliente) => {
+          const textoAntesDoId = "Wix-";
           this.dadosFormulario = {
            
-              id: cliente.id,
+              id: textoAntesDoId+ cliente.id,
               apelido: cliente.apelido,
               razaoSocial: cliente.razaoSocial,
               nomeFantasia: cliente.nomeFantasia,
@@ -48,26 +49,27 @@ export class InfoEditerComponent implements OnInit {
 
   salvarEdicao() {
     this.clienteIdService.atualizarCliente(this.dadosFormulario).subscribe(
-      (response) => {
-        console.log('Cliente atualizado com sucesso:', response);
-        this.modoEdicao = false;
-        this.mensagemSucesso = 'Cadastro atualizado com sucesso!';
-        this.mensagemErro = null;
-
-        setTimeout(() => {
-          this.mensagemSucesso = null;
-        }, 2000);
-      },
-      (error) => {
-        console.error('Erro ao atualizar cliente:', error);
-        this.mensagemErro = 'Erro ao atualizar cliente. Por favor, verifique os dados e tente novamente.';
-        setTimeout(() => {
-          this.mensagemErro= null;
-        }, 3000);
-        this.mensagemSucesso = null;
-      }
+        (response) => {
+            console.log('Cliente atualizado com sucesso:', response);
+            this.modoEdicao = false;
+            this.mensagemSucesso = 'Cadastro atualizado com sucesso!';
+            this.mensagemErro = null;
+ // Adiciona novamente o texto "Wix-" ao valor do id após a atualização
+ this.dadosFormulario.id = 'Wix-' + this.dadosFormulario.id;
+            setTimeout(() => {
+                this.mensagemSucesso = null;
+            }, 2000);
+        },
+        (error) => {
+            console.error('Erro ao atualizar cliente:', error);
+            this.mensagemErro = 'Erro ao atualizar cliente. Por favor, verifique os dados e tente novamente.';
+            setTimeout(() => {
+                this.mensagemErro = null;
+            }, 3000);
+            this.mensagemSucesso = null;
+        }
     );
-  }
+}
 
   cancelarEdicao() {
     this.modoEdicao = false;
