@@ -10,7 +10,7 @@ export class ClienteIdService {
   private baseUrl = 'http://localhost:3000/api/clientes';
   idSelecionado: number | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   setIdSelecionado(id: number) {
     this.idSelecionado = id;

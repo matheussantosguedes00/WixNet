@@ -9,7 +9,7 @@ import { ClienteIdService } from '../services/cliente-id.service';
 export class MenuComponent implements OnInit {
   titleApelido: string = '';
 
-  constructor(private clienteIdService: ClienteIdService) {}
+  constructor(private clienteIdService: ClienteIdService) { }
 
   ngOnInit() {
     const idSelecionado = this.clienteIdService.idSelecionado;

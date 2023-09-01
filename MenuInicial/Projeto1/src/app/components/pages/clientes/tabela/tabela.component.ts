@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { ClienteIdService } from '../services/cliente-id.service';
 
 @Component({
   selector: 'tabela',
   templateUrl: './tabela.component.html',
-  styleUrls: ['./tabela.component.css']
+  styleUrls: ['./tabela.component.css'],
 })
-
 export class TabelaComponent implements OnInit {
-  constructor(private router: Router, private clienteIdService: ClienteIdService) {}
+  
   tarefas: any[] = []; // Array para armazenar os dados dos clientes
   emModoEdicao: boolean = false; // Adicione a variável de modo de edição
   dadosFormulario: any = {}; // Dados do formulário
 
+  constructor(
+    private router: Router,
+    private clienteIdService: ClienteIdService
+  ) { }
+  
   ngOnInit() {
     // Ao inicializar o componente, busque os clientes da API
     this.getClientes();

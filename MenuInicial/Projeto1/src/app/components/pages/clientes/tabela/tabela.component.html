@@ -1,9 +1,10 @@
 <h1>Clientes</h1>
 
 <div class="card">
-    <body> 
+
+    <body>
         <div class="botoes">
-            <a routerLink="../formulario" >
+            <a routerLink="../formulario">
                 <button>
                     <span class="material-symbols-outlined buttonIcon">
                         add
@@ -12,9 +13,9 @@
                 </button>
             </a>
         </div>
-        
+
         <table>
-         
+
             <tbody>
                 <tr *ngFor="let cliente of tarefas; let i = index">
                     <td>{{ cliente.apelido }}</td>
@@ -22,11 +23,11 @@
                     <td>
                         <span class="material-symbols-outlined iconTable" (click)="navegarParaInformation(cliente.id)">
                             more_vert
-                          </span>
+                        </span>
                     </td>
-                  </tr>
+                </tr>
             </tbody>
-          </table>
-          
-        </body>
+        </table>
+
+    </body>
 </div>

@@ -1,161 +1,164 @@
 h1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color:var(--icon-menu);
-    font-size: 22px;
-    background-color: var(--body);
-    padding: 15px;
-    margin: 60px auto 0 auto;
-  }
-  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--icon-menu);
+  font-size: 22px;
+  background-color: var(--body);
+  padding: 15px;
+  margin: 60px auto 0 auto;
+}
+
+.Menu-Linha ul {
+  list-style: none;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: -5px;
+  width: 530px;
+  margin-left: 10px;
+
+
+
+}
+
+.Menu-Linha li {
+  margin: 0px 0px;
+  border: none;
+
+}
+
+
+.Menu-Linha a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000ad;
+  cursor: pointer;
+  padding: 16px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+  background: none;
+
+}
+
+.Menu-Linha a:hover {
+
+  border-bottom: 3px solid #01519c6b;
+
+}
+
+.Menu-Linha li a.active {
+  border-bottom: 3px solid #01519c6b;
+
+}
+
+.card {
+  height: 100%;
+  width: auto;
+  padding: 10px;
+
+  margin-top: -6px;
+  background-color: var(--body);
+  border-radius: 1px;
+}
+
+@media screen and (max-width: 650px) {
   .Menu-Linha ul {
     list-style: none;
-    padding: 12px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     padding-top: -5px;
-    width: 530px;
-    margin-left: 10px;
-  
-    
-  
+    width: 400px;
+
+
   }
-  
+
   .Menu-Linha li {
     margin: 0px 0px;
     border: none;
-  
+
   }
-  
-  
+
+
   .Menu-Linha a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    color:#000000ad;
+    color: #000000ad;
     cursor: pointer;
-    padding: 16px;
-    border-bottom:1px solid rgb(0, 0, 0);
+    padding: 13px;
+    border-bottom: 1px solid rgb(0, 0, 0);
     text-align: center;
-    font-size: 20px;
-    background: none;
- 
+    font-size: 17px;
+
   }
-  .Menu-Linha a:hover{
-     
-    border-bottom: 3px solid #01519c6b;
-  
+
+}
+
+
+@media screen and (max-width: 525px) {
+
+  .Menu-Linha ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: -5px;
+    width: 300px;
+
+
   }
-  
-  .Menu-Linha li a.active {
-    border-bottom: 3px solid #01519c6b;
-   
+
+  .Menu-Linha li {
+    margin: 0px 0px;
+    border: none;
+
   }
-  
-    .card{
-      height: 100%;
-      width: auto;
-      padding: 10px;
-      
-      margin-top: -6px;
-      background-color: var(--body);
-      border-radius: 1px;
-    }
-    @media screen and (max-width: 650px){
-      .Menu-Linha ul {
-        list-style: none;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        padding-top: -5px;
-        width: 400px;
-        
-      
-      }
-      
-      .Menu-Linha li {
-        margin: 0px 0px;
-        border: none;
-      
-      }
-      
-      
-      .Menu-Linha a {
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        color:#000000ad;
-        cursor: pointer;
-        padding: 13px;
-        border-bottom:1px solid rgb(0, 0, 0);
-        text-align: center;
-        font-size: 17px;
-     
-      }
-      
-    }
-    
-    
-    @media screen and (max-width: 525px) {
-     
-      .Menu-Linha ul {
-        list-style: none;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        padding-top: -5px;
-        width: 300px;
-        
-      
-      }
-      
-      .Menu-Linha li {
-        margin: 0px 0px;
-        border: none;
-      
-      }
-      
-      
-      .Menu-Linha a {
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        color:#000000ad;
-        cursor: pointer;
-        padding: 9px;
-        border-bottom:1px solid rgb(0, 0, 0);
-        text-align: center;
-        font-size: 14px;
-     
-      }
-    }
-    @media screen and (max-width: 425px) {
-      .Menu-Linha ul {
-        list-style: none;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        padding-top: -5px;
-        width: 300px;
-        
-      
-      }
-      
-      .Menu-Linha li {
-        margin: -10px 0px;
-        border: none;
-      
-      
-      }
-      
-      
-      .Menu-Linha a {
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        color:#000000ad;
-        cursor: pointer;
-        padding: 9px;
-        border-bottom:1px solid rgb(0, 0, 0);
-        text-align: center;
-        font-size: 12px;
-     
-      }
-    }
+
+
+  .Menu-Linha a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000ad;
+    cursor: pointer;
+    padding: 9px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    font-size: 14px;
+
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Menu-Linha ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: -5px;
+    width: 300px;
+
+
+  }
+
+  .Menu-Linha li {
+    margin: -10px 0px;
+    border: none;
+
+
+  }
+
+
+  .Menu-Linha a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000ad;
+    cursor: pointer;
+    padding: 9px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    font-size: 12px;
+
+  }
+}
