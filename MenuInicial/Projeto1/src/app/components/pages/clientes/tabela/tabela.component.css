@@ -6,7 +6,7 @@ h1 {
     font-size: 25px;
     background-color: var(--body);
     padding: 20px;
-    margin: 50px auto 0 auto;
+    margin: 60px auto 0 auto;
   }
   
   /* Adicione o espaçamento ao redor do site */
@@ -56,6 +56,7 @@ h1 {
     margin: 0; /* Remover margem padrão do h4 */
     font-size: 10x;
     text-decoration: none;
+    
   }
   a {
     text-decoration: none; /* Remove o sublinhado */
@@ -63,8 +64,10 @@ h1 {
   }
   /* Estilize a tabela */
   table {
+    margin-bottom: 20px;
     border-collapse: collapse;
     width: 100%;
+    color: var(--icon-menu-color);
   }
   
   /* Remova as bordas das células, exceto a borda inferior */
