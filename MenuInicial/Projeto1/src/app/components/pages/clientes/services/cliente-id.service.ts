@@ -31,7 +31,17 @@ export class ClienteIdService {
   }
 
   adicionarCliente(cliente: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl, cliente);
+    // Verifica se os campos obrigatórios estão preenchidos
+    if (!cliente.apelido || !cliente.razaoSocial || !cliente.cnpj || !cliente.cidade || !cliente.cep || !cliente.estado || !cliente.endereco) {
+      return throwError('Todos os campos obrigatórios devem ser preenchidos.');
+    }
+
+    return this.http.post<any>(this.baseUrl, cliente).pipe(
+      catchError((error) => {
+        console.error('Erro ao adicionar cliente:', error);
+        return throwError('Erro ao adicionar cliente. Por favor, verifique os dados e tente novamente.');
+      })
+    );
   }
 
   atualizarCliente(cliente: any): Observable<any> {

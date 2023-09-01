@@ -12,6 +12,18 @@
               <p>{{ mensagemErro }}</p>
             </div>
           </div>
+          
+          <div class="card-flutuante card-confirmacao-exclusao" *ngIf="mostrarConfirmacaoExclusao">
+            <div class="confirmacao-exclusao">
+                <span class="material-symbols-outlined antecao">
+                    warning
+                    </span>
+              <p>Tem certeza de que deseja excluir este cliente?</p>
+              <button class="btn-confirmar-exclusao" type="button" (click)="excluirCliente()">Confirmar</button>
+              <button class="btn-cancelar-exclusao" type="button" (click)="cancelarExclusao()">Cancelar</button>
+            </div>
+          </div>
+          
         <form>
             <div class="linha">
                 <div class="campo">
@@ -75,7 +87,8 @@
                   </div>
 
                   <div>
-                    <button class="grid-item-button3" type="button" (click)="excluirCliente()">Excluir</button>
+                    <button class="grid-item-button3" type="button" (click)="mostrarConfirmacao()">Excluir</button>
+
                   </div>
                     
                 </div>

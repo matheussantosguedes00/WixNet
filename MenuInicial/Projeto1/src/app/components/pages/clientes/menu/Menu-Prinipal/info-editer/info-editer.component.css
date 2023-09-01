@@ -27,7 +27,7 @@
 background-color: #fff;
 border-radius: 40px;
 color: #4CAF50;
-font-weight: bold;
+
 }
 
 .card-flutuante p {
@@ -56,6 +56,55 @@ font-weight: bold;
   border-radius: 40px;
   color: #ff4652;
   font-weight: bold;
+}
+
+.card-confirmacao-exclusao {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%); /* Cor de fundo do cartão */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 40px;
+  z-index: 9999; /* Certifique-se de que o cartão esteja na parte superior */
+}
+.antecao{
+  background: none;
+border-radius: 20px;
+color: #3a3411;
+font-size: 35px;
+
+}
+
+.confirmacao-exclusao p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.btn-confirmar-exclusao, .btn-cancelar-exclusao {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-confirmar-exclusao {
+  background-color: #e74c3c; /* Cor de fundo do botão de confirmação */
+  color: #fff; /* Cor do texto do botão de confirmação */
+}
+
+.btn-cancelar-exclusao {
+  background-color: #3498db; /* Cor de fundo do botão de cancelamento */
+  color: #fff; /* Cor do texto do botão de cancelamento */
+}
+
+.btn-confirmar-exclusao:hover, .btn-cancelar-exclusao:hover {
+  background-color: #c0392b; /* Cor de fundo do botão ao passar o mouse */
 }
 
   h1 {

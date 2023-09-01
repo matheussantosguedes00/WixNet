@@ -66,8 +66,11 @@ export class FormularioComponent {
             (error) => {
                 console.error('Erro ao adicionar cliente:', error);
                 // Configure a mensagem de erro
-                this.mensagemErro = 'Erro ao adicionar cliente. Por favor, verifique os dados e tente novamente.';
+                this.mensagemErro = 'Erro ao adicionar cliente.Todos os campos devem ser preenchidos.';
                 this.exibirMensagemErro = true;
+                setTimeout(() => {
+                    this.exibirMensagemErro = false;
+                }, 5000);
                 this.exibirMensagemCarregamento = false; // Certifique-se de ocultar a mensagem de carregamento se ocorrer um erro
             }
         );

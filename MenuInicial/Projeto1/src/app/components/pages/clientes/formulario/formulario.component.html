@@ -1,6 +1,5 @@
 <h1>Clientes</h1>
 
-
 <div class="pagina-em-branco">
     <button (click)="sairPagina()">
         <span class="material-symbols-outlined">
@@ -35,47 +34,47 @@
                 <div class="linha">
                     <div class="campo">
                         <label for="apelido">Apelido</label>
-                        <input type="text" id="apelido" name="apelido" placeholder="Ex: Cliente123" [(ngModel)]="novoCliente.apelido">
+                        <input type="text" id="apelido" name="apelido" placeholder="Ex: Cliente123" [(ngModel)]="novoCliente.apelido" required>
                     </div>
                 </div>
 
                 <div class="linha">
                     <div class="campo">
                         <label for="razaoSocial">Razão Social</label>
-                        <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Ex: Minha Empresa Ltda." [(ngModel)]="novoCliente.razaoSocial">
+                        <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Ex: Minha Empresa Ltda." [(ngModel)]="novoCliente.razaoSocial" required>
                     </div>
                     <div class="campo">
                         <label for="nomeFantasia">Nome Fantasia</label>
-                        <input type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Ex: Minha Empresa" [(ngModel)]="novoCliente.nomeFantasia">
+                        <input type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Ex: Minha Empresa" [(ngModel)]="novoCliente.nomeFantasia" required>
                     </div>
                 </div>
 
                 <div class="linha">
                     <div class="campo">
                         <label for="cnpj">CNPJ</label>
-                        <input type="text" id="cnpj" name="cnpj" placeholder="Ex: 12.345.678/0001-90" [(ngModel)]="novoCliente.cnpj">
+                        <input type="text" id="cnpj" name="cnpj" placeholder="Ex: 12.345.678/0001-90" [(ngModel)]="novoCliente.cnpj" required>
                     </div>
                     <div class="campo">
                         <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo" [(ngModel)]="novoCliente.cidade">
+                        <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo" [(ngModel)]="novoCliente.cidade" required>
                     </div>
                 </div>
 
                 <div class="linha">
                     <div class="campo">
                         <label for="cep">CEP</label>
-                        <input type="text" id="cep" name="cep" placeholder="Ex: 12345-678" [(ngModel)]="novoCliente.cep">
+                        <input type="text" id="cep" name="cep" placeholder="Ex: 12345-678" [(ngModel)]="novoCliente.cep" required>
                     </div>
                     <div class="campo">
                         <label for="estado">Estado</label>
-                        <input type="text" id="estado" name="estado" placeholder="Ex: SP" [(ngModel)]="novoCliente.estado">
+                        <input type="text" id="estado" name="estado" placeholder="Ex: SP" [(ngModel)]="novoCliente.estado" required>
                     </div>
                 </div>
 
                 <div class="linha">
                     <div class="campo">
                         <label for="endereco">Endereço</label>
-                        <input type="text" id="endereco" name="endereco" placeholder="Ex: Rua Exemplo, 123" [(ngModel)]="novoCliente.endereco">
+                        <input type="text" id="endereco" name="endereco" placeholder="Ex: Rua Exemplo, 123" [(ngModel)]="novoCliente.endereco" required>
                     </div>
                 </div>
 
